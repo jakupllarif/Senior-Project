@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeniorProject", "SeniorProject\SeniorProject.csproj", "{D52D2E63-B172-4170-92DC-7A0617858053}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://seniorprojectfg.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SeniorProject\\SeniorProject.csproj
+		SccProjectName1 = SeniorProject
+		SccLocalPath1 = SeniorProject
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		Ad-Hoc|iPhoneSimulator = Ad-Hoc|iPhoneSimulator
+		Ad-Hoc|Mixed Platforms = Ad-Hoc|Mixed Platforms
+		AppStore|Any CPU = AppStore|Any CPU
+		AppStore|iPhone = AppStore|iPhone
+		AppStore|iPhoneSimulator = AppStore|iPhoneSimulator
+		AppStore|Mixed Platforms = AppStore|Mixed Platforms
+		Debug|Any CPU = Debug|Any CPU
+		Debug|iPhone = Debug|iPhone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|Any CPU = Release|Any CPU
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhoneSimulator
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Ad-Hoc|Mixed Platforms.ActiveCfg = Ad-Hoc|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Ad-Hoc|Mixed Platforms.Build.0 = Ad-Hoc|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.AppStore|Any CPU.ActiveCfg = AppStore|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
+		{D52D2E63-B172-4170-92DC-7A0617858053}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
+		{D52D2E63-B172-4170-92DC-7A0617858053}.AppStore|Mixed Platforms.ActiveCfg = AppStore|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.AppStore|Mixed Platforms.Build.0 = AppStore|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Debug|iPhone.Build.0 = Debug|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Debug|Mixed Platforms.ActiveCfg = Debug|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Debug|Mixed Platforms.Build.0 = Debug|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Release|iPhone.ActiveCfg = Release|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Release|iPhone.Build.0 = Release|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Release|Mixed Platforms.ActiveCfg = Release|iPhone
+		{D52D2E63-B172-4170-92DC-7A0617858053}.Release|Mixed Platforms.Build.0 = Release|iPhone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = SeniorProject\SeniorProject.csproj
+	EndGlobalSection
+EndGlobal

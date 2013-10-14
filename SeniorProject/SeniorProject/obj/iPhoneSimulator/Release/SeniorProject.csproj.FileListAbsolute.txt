@@ -1,0 +1,4 @@
+C:\SeniorProject\SeniorProject\SeniorProject\bin\iPhoneSimulator\Release\SeniorProject.exe
+C:\SeniorProject\SeniorProject\SeniorProject\bin\iPhoneSimulator\Release\SeniorProject.pdb
+C:\SeniorProject\SeniorProject\SeniorProject\obj\iPhoneSimulator\Release\SeniorProject.exe
+C:\SeniorProject\SeniorProject\SeniorProject\obj\iPhoneSimulator\Release\SeniorProject.pdb

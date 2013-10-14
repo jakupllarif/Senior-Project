@@ -1,0 +1,9 @@
+C:\Users\Gabriel Liu\Desktop\SeniorProject\SeniorProject\bin\iPhoneSimulator\Debug\SeniorProject.exe
+C:\Users\Gabriel Liu\Desktop\SeniorProject\SeniorProject\bin\iPhoneSimulator\Debug\SeniorProject.pdb
+C:\Users\Gabriel Liu\Desktop\SeniorProject\SeniorProject\obj\iPhoneSimulator\Debug\SeniorProject.exe
+C:\Users\Gabriel Liu\Desktop\SeniorProject\SeniorProject\obj\iPhoneSimulator\Debug\SeniorProject.pdb
+C:\SeniorProject\SeniorProject\SeniorProject\bin\iPhoneSimulator\Debug\SeniorProject.exe
+C:\SeniorProject\SeniorProject\SeniorProject\bin\iPhoneSimulator\Debug\SeniorProject.pdb
+C:\SeniorProject\SeniorProject\SeniorProject\obj\iPhoneSimulator\Debug\SeniorProject.csprojResolveAssemblyReference.cache
+C:\SeniorProject\SeniorProject\SeniorProject\obj\iPhoneSimulator\Debug\SeniorProject.exe
+C:\SeniorProject\SeniorProject\SeniorProject\obj\iPhoneSimulator\Debug\SeniorProject.pdb
