@@ -14,7 +14,7 @@ namespace SeniorProject
         //the list and int id is use to test register model. 
         List<RegisterModel> list = new List<RegisterModel>();
         private int id = 1;
-        
+        //comment
         public RegisterController() : base(UITableViewStyle.Grouped, null, true)
         {
             Initialize();
