@@ -8,7 +8,7 @@ namespace SeniorProject
     {
         private RegisterController _registerController;
         private LoginDialogModel _loginDialog;
-
+		private MainController _mainController;
         public LoginController() : base(UITableViewStyle.Grouped, null)
         {
             Initialize();
@@ -32,6 +32,8 @@ namespace SeniorProject
                                                                 _loginDialog.Password.Value);
                                     var alert = new UIAlertView("Succeed!", message, null, "Cancel", "Ok");
                                     alert.Show();
+						_mainController = new MainController("Welcome Back!");
+									NavigationController.PushViewController(_mainController, true);
                                 }),
                             new StringElement("Register", () =>
                                 {
