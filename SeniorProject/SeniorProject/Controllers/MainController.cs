@@ -8,6 +8,7 @@ namespace SeniorProject
 	public partial class MainController : UIViewController
 	{
 		private string _welcomeMessage;
+
 		public MainController (string element) : base ("MainController", null)
 		{
 			_welcomeMessage = element;
@@ -24,6 +25,7 @@ namespace SeniorProject
 		{
 			base.ViewDidLoad ();
 			this.WelcomeMessage.Text = _welcomeMessage;
+			//this.InformationTable.Source = //
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 

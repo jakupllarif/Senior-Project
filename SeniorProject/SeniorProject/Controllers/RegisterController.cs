@@ -11,6 +11,7 @@ namespace SeniorProject
     public partial class RegisterController : DialogViewController
     {
         private RegisterDialogModel _registerDialog;
+		private MainController _mainController;
         //the list and int id is use to test register model. 
         List<RegisterModel> list = new List<RegisterModel>();
         private int id = 1;
@@ -51,6 +52,7 @@ namespace SeniorProject
                                             Birthday = _registerDialog.Birthday.DateValue
                                         };
                                     UploadRegister(item);
+									_mainController = new MainController("Welcome Using App Name!");
                                 })
                         }
                 };
