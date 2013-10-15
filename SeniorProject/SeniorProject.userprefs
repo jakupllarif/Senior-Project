@@ -4,8 +4,23 @@
     <Files>
       <File FileName="SeniorProject/AppDelegate.cs" Line="1" Column="1" />
       <File FileName="SeniorProject/Controllers/LoginController.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/Controllers/RegisterController.cs" Line="1" Column="1" />
+      <File FileName="SeniorProject/Controllers/RegisterController.cs" Line="19" Column="10" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True" selected="True">
+          <Node name="SeniorProject" expanded="True">
+            <Node name="Controllers" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
