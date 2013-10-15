@@ -102,7 +102,4 @@
     <Compile Include="Models\RegisterModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
-  <ItemGroup>
-    <InterfaceDefinition Include="test.storyboard" />
-  </ItemGroup>
 </Project>
