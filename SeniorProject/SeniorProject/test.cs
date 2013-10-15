@@ -4,8 +4,10 @@ namespace SeniorProject
 {
 	public class test
 	{
-		public test ()
+		private string Test;
+		public test (string element)
 		{
+			Test = element;
 		}
 	}
 }
