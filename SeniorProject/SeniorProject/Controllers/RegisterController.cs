@@ -53,6 +53,7 @@ namespace SeniorProject
                                         };
                                     UploadRegister(item);
 									_mainController = new MainController("Welcome Using App Name!");
+									NavigationController.PushViewController(_mainController, true);
                                 })
                         }
                 };

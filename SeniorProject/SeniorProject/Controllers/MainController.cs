@@ -29,6 +29,11 @@ namespace SeniorProject
 			this.WelcomeMessage.Text = _welcomeMessage;
 			var soucre = new MockData (new List<string> { "911 help", "driving texting detect", "drinking driving", "block text"});
 			this.InformationTable.Source = soucre;
+			InformationSettingBtn.TouchUpInside += (sender, e) => {
+				var message = string.Format("This will take user to a information about features setting dialog!");
+				var dialogController = new UIAlertView("Succeed!", message, null, "Cancel", "Ok");
+				dialogController.Show();
+			}; 
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
