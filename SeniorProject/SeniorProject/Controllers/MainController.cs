@@ -1,5 +1,7 @@
 using System;
 using System.Drawing;
+using System.Collections.Generic;
+
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
@@ -25,7 +27,8 @@ namespace SeniorProject
 		{
 			base.ViewDidLoad ();
 			this.WelcomeMessage.Text = _welcomeMessage;
-			//this.InformationTable.Source = //
+			var soucre = new MockData (new List<string> { "911 help", "driving texting detect", "drinking driving", "block text"});
+			this.InformationTable.Source = soucre;
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
