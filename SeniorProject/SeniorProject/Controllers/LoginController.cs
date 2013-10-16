@@ -9,6 +9,7 @@ namespace SeniorProject
         private RegisterController _registerController;
         private LoginDialogModel _loginDialog;
 		private MainController _mainController;
+
         public LoginController() : base(UITableViewStyle.Grouped, null)
         {
             Initialize();

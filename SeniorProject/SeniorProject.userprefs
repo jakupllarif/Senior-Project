@@ -1,17 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/LoginController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.7.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/MainController.cs">
     <Files>
-      <File FileName="SeniorProject/AppDelegate.cs" Line="10" Column="2" />
-      <File FileName="SeniorProject/Controllers/LoginController.cs" Line="22" Column="32" />
-      <File FileName="SeniorProject/Controllers/RegisterController.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/Controllers/MainController.cs" Line="21" Column="4" />
+      <File FileName="SeniorProject/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="SeniorProject/Controllers/LoginController.cs" Line="12" Column="3" />
+      <File FileName="SeniorProject/Controllers/RegisterController.cs" Line="47" Column="50" />
+      <File FileName="SeniorProject/Controllers/MainController.cs" Line="28" Column="6" />
+      <File FileName="SeniorProject/Controllers/MainController.designer.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
+        <State expanded="True">
           <Node name="SeniorProject" expanded="True">
-            <Node name="Controllers" expanded="True" />
+            <Node name="Controllers" expanded="True">
+              <Node name="MainController.cs" expanded="True" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
