@@ -40,6 +40,8 @@ namespace SeniorProject
                                 {
                                     if (_registerController == null)
                                         _registerController = new RegisterController();
+                                    var alert = new UIAlertView("Go to Register", "Go to register", null, "Cancel", "Ok");
+                                    alert.Show();
                                     NavigationController.PushViewController(_registerController, true);
                                 })
                         },
