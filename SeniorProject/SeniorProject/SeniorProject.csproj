@@ -105,9 +105,20 @@
       <DependentUpon>MainController.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\MockData.cs" />
+    <Compile Include="Controllers\MainViewTabBarController.cs" />
+    <Compile Include="Controllers\SpeedController.cs" />
+    <Compile Include="Controllers\SpeedController.designer.cs">
+      <DependentUpon>SpeedController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SettingController.cs" />
+    <Compile Include="Controllers\SettingController.designer.cs">
+      <DependentUpon>SettingController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <InterfaceDefinition Include="Controllers\MainController.xib" />
+    <InterfaceDefinition Include="Controllers\SpeedController.xib" />
+    <InterfaceDefinition Include="Controllers\SettingController.xib" />
   </ItemGroup>
 </Project>

@@ -8,7 +8,7 @@ namespace SeniorProject
     {
         private RegisterController _registerController;
         private LoginDialogModel _loginDialog;
-		private MainController _mainController;
+		private MainViewTabBarController _mainController;
 
         public LoginController() : base(UITableViewStyle.Grouped, null)
         {
@@ -29,19 +29,14 @@ namespace SeniorProject
                         {
                             new StringElement("Login", () =>
                                 {
-                                    var message = string.Format("User: {0}\nPassword: {1}", _loginDialog.UserName.Value,
-                                                                _loginDialog.Password.Value);
-                                    var alert = new UIAlertView("Succeed!", message, null, "Cancel", "Ok");
-                                    alert.Show();
-									_mainController = new MainController("Welcome Back!");
-									NavigationController.PushViewController(_mainController, true);
-                                }),
+									var welcomeMessage = string.Format("Welcome Back " + _loginDialog.UserName.Value + "!");
+									_mainController = new MainViewTabBarController(welcomeMessage);
+									NavigationController.PushViewController(_mainController, true);                
+								}),
                             new StringElement("Register", () =>
                                 {
                                     if (_registerController == null)
                                         _registerController = new RegisterController();
-                                    var alert = new UIAlertView("Go to Register", "Go to register", null, "Cancel", "Ok");
-                                    alert.Show();
                                     NavigationController.PushViewController(_registerController, true);
                                 })
                         },
@@ -50,20 +45,36 @@ namespace SeniorProject
 
         #region override ViewWillAppear/ViewWillDisappear
 
-/*
-        public override void ViewWillAppear(bool animated)
-        {
-            base.ViewWillAppear(animated);
-            NavigationController.SetNavigationBarHidden(true, animated);
-        }
-
-        public override void ViewWillDisappear(bool animated)
-        {
-            base.ViewWillDisappear(animated);
-            NavigationController.SetNavigationBarHidden(false, animated);
-        }
-*/
+//        public override void ViewWillAppear(bool animated)
+//        {
+//            base.ViewWillAppear(animated);
+//            NavigationController.SetNavigationBarHidden(true, animated);
+//        }
+//
+//        public override void ViewWillDisappear(bool animated)
+//        {
+//            base.ViewWillDisappear(animated);
+//            NavigationController.SetNavigationBarHidden(false, animated);
+//        }
 
         #endregion
+
+		//remove login view when click either register or login button
+		public override void ViewDidDisappear (bool animated)
+		{
+			if (this.NavigationController != null) {
+				var controllers = this.NavigationController.ViewControllers;
+				var newcontrollers = new UIViewController[controllers.Length - 1];
+				int index = 0;
+				foreach (var item in controllers) {
+					if (item != this) {
+						newcontrollers [index] = item;
+						index++;
+					}
+				}
+				this.NavigationController.ViewControllers = newcontrollers;
+			}
+			base.ViewDidDisappear (animated);
+		}
     }
 }

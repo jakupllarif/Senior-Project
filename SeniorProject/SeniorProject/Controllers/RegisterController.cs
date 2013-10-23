@@ -11,7 +11,7 @@ namespace SeniorProject
     public partial class RegisterController : DialogViewController
     {
         private RegisterDialogModel _registerDialog;
-		private MainController _mainController;
+		private MainViewTabBarController _mainController;
         //the list and int id is use to test register model. 
         List<RegisterModel> list = new List<RegisterModel>();
         private int id = 1;
@@ -52,7 +52,8 @@ namespace SeniorProject
                                             Birthday = _registerDialog.Birthday.DateValue
                                         };
                                     UploadRegister(item);
-									_mainController = new MainController("Welcome Using App Name!");
+									var welcomeMessage = string.Format("Welcome using App Name " + _registerDialog.Name.Value + "!");
+									_mainController = new MainViewTabBarController(welcomeMessage);
 									NavigationController.PushViewController(_mainController, true);
                                 })
                         }
@@ -65,5 +66,23 @@ namespace SeniorProject
             id++;
             Console.WriteLine("there are {0} registers in the list", list.Count);
         }
+
+		//remove register view when click register
+		public override void ViewDidDisappear (bool animated)
+		{
+			if (this.NavigationController != null) {
+				var controllers = this.NavigationController.ViewControllers;
+				var newcontrollers = new UIViewController[controllers.Length - 1];
+				int index = 0;
+				foreach (var item in controllers) {
+					if (item != this) {
+						newcontrollers [index] = item;
+						index++;
+					}
+				}
+				this.NavigationController.ViewControllers = newcontrollers;
+			}
+			base.ViewDidDisappear (animated);
+		}
     }
 }
