@@ -12,8 +12,6 @@ namespace SeniorProject
 	[Register ("MainController")]
 	partial class MainController
 	{
-		[Outlet]
-		MonoTouch.UIKit.UIButton InformationSettingBtn { get; set; }
 
 		[Outlet]
 		MonoTouch.UIKit.UITableView InformationTable { get; set; }
@@ -31,11 +29,6 @@ namespace SeniorProject
 			if (InformationTable != null) {
 				InformationTable.Dispose ();
 				InformationTable = null;
-			}
-
-			if (InformationSettingBtn != null) {
-				InformationSettingBtn.Dispose ();
-				InformationSettingBtn = null;
 			}
 		}
 	}
