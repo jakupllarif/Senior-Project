@@ -22,16 +22,23 @@ namespace SeniorProject
                 {
                     new Section
                         {
-                            (_loginDialog.UserName = new EntryElement("Login", "Enter your unique #", "")),
-                            (_loginDialog.Password = new EntryElement("Password", "Enter your password", "", true))
+                            (_loginDialog.UserName = new EntryElement("Login", "Please Enter Unique #", null)),
+                            (_loginDialog.Password = new EntryElement("Password", "Enter your password", null, true))
                         },
                     new Section
                         {
                             new StringElement("Login", () =>
                                 {
-									var welcomeMessage = string.Format("Welcome Back " + _loginDialog.UserName.Value + "!");
-									_mainController = new MainViewTabBarController(welcomeMessage);
-									NavigationController.PushViewController(_mainController, true);                
+									if (_loginDialog.UserName.Value == "" || _loginDialog.Password.Value == "")
+									{
+										var message = string.Format("Please enter User/Password");
+										var alert = new UIAlertView("Error", message, null, "Cancel", "Ok");
+										alert.Show();
+									} else {
+										var welcomeMessage = string.Format("Welcome Back " + _loginDialog.UserName.Value + "!");
+										_mainController = new MainViewTabBarController(welcomeMessage);
+										NavigationController.PushViewController(_mainController, true);
+									}                
 								}),
                             new StringElement("Register", () =>
                                 {

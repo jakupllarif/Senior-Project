@@ -65,6 +65,7 @@ namespace SeniorProject
             list.Add(model);
             id++;
             Console.WriteLine("there are {0} registers in the list", list.Count);
+			list.Remove (model);
         }
 
 		//remove register view when click register
