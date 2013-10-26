@@ -7,12 +7,10 @@ namespace SeniorProject
 {
 	public partial class LoginScreen : UIViewController
 	{
-		private RegisterController _registerController;
-		//private LoginDialogModel _loginDialog;
-		private MainViewTabBarController _mainController;
 
 		public LoginScreen () : base ("LoginScreen", null)
 		{
+
 		}
 
 		public override void DidReceiveMemoryWarning ()
