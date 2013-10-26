@@ -28,7 +28,7 @@ namespace SeniorProject
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
             var rootNavigationController = new UINavigationController();
-            var loginController = new LoginController();
+            var loginController = new LoginScreen();
             rootNavigationController.PushViewController(loginController, false);
             this.window.RootViewController = rootNavigationController; 			
 			// make the window visible
