@@ -7,8 +7,3 @@ C:\SeniorProject\SeniorProject\SeniorProject\bin\iPhoneSimulator\Debug\SeniorPro
 C:\SeniorProject\SeniorProject\SeniorProject\obj\iPhoneSimulator\Debug\SeniorProject.csprojResolveAssemblyReference.cache
 C:\SeniorProject\SeniorProject\SeniorProject\obj\iPhoneSimulator\Debug\SeniorProject.exe
 C:\SeniorProject\SeniorProject\SeniorProject\obj\iPhoneSimulator\Debug\SeniorProject.pdb
-C:\Users\Gabriel Liu\Documents\GitHub\Senior-Project\SeniorProject\SeniorProject\bin\iPhoneSimulator\Debug\SeniorProject.exe
-C:\Users\Gabriel Liu\Documents\GitHub\Senior-Project\SeniorProject\SeniorProject\bin\iPhoneSimulator\Debug\SeniorProject.pdb
-C:\Users\Gabriel Liu\Documents\GitHub\Senior-Project\SeniorProject\SeniorProject\obj\iPhoneSimulator\Debug\SeniorProject.csprojResolveAssemblyReference.cache
-C:\Users\Gabriel Liu\Documents\GitHub\Senior-Project\SeniorProject\SeniorProject\obj\iPhoneSimulator\Debug\SeniorProject.exe
-C:\Users\Gabriel Liu\Documents\GitHub\Senior-Project\SeniorProject\SeniorProject\obj\iPhoneSimulator\Debug\SeniorProject.pdb

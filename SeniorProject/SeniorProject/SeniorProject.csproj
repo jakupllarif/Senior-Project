@@ -110,15 +110,12 @@
     <Compile Include="Controllers\SpeedController.designer.cs">
       <DependentUpon>SpeedController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\SettingController.cs" />
-    <Compile Include="Controllers\SettingController.designer.cs">
-      <DependentUpon>SettingController.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="DialogModels\SettingsDialogModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <InterfaceDefinition Include="Controllers\MainController.xib" />
     <InterfaceDefinition Include="Controllers\SpeedController.xib" />
-    <InterfaceDefinition Include="Controllers\SettingController.xib" />
   </ItemGroup>
 </Project>
