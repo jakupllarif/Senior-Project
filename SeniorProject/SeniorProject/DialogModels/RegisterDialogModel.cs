@@ -12,5 +12,9 @@ namespace SeniorProject.DialogModels
         public DateElement ExpireDate;
         public EntryElement BloodGroup;
         public EntryElement Password;
+		public EntryElement RepeatPassword;
+		public EntryElement EmailAddress;
+		public EntryElement PhoneNumber;
+		public BoolElement ReceiveEmail;
     }
 }
