@@ -1,258 +1,0 @@
-TSeniorProject
-v6
-r1
-cCheck dependencies
-cCompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/AppDelegate-267FF207C614B5CA.o /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SettingController-EC63D7AD2690DED7.o /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SettingController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SpeedController-9BCCF76ED5F9B9F3.o /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SpeedController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/MainController-46CA745821B3E4E8.o /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/MainController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/SeniorProject.app/SeniorProject normal i386
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk
-c00000000521BCCE50000000000000176
-t1377553637
-s374
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/SDKSettings.plist
-c0000000052574B8B00000000000003B5
-t1381452683
-s949
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/CoreServices/SystemVersion.plist
-c0000000052574B92000000000000019E
-t1381452690
-s414
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c0000000052574B940000000000445830
-t1381452692
-s4479024
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c0000000052574B97000000000088B570
-t1381452695
-s8959344
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/MapKit.framework/MapKit
-c0000000052574B9700000000002C77C0
-t1381452695
-s2914240
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c0000000052574B9C0000000001DB1C90
-t1381452700
-s31136912
-
-N/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/AppDelegate.m
-c00000000526157E00000000000000144
-t1382111200
-s324
-
-N/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/AppDelegate-267FF207C614B5CA.o
-t1382805802
-s3292
-
-N/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/MainController-46CA745821B3E4E8.o
-t1382805802
-s44348
-
-N/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SeniorProject.LinkFileList
-c00000000526BF12900000000000003E1
-t1382805801
-s993
-
-N/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SettingController-EC63D7AD2690DED7.o
-t1382805802
-s38972
-
-N/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SpeedController-9BCCF76ED5F9B9F3.o
-t1382805802
-s38952
-
-N/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/SeniorProject.app/SeniorProject
-t2
-s0
-
-N/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/MainController.m
-c000000005268F70000000000000001AB
-t1382610688
-s427
-
-N/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SettingController.m
-c000000005268F7000000000000000150
-t1382610688
-s336
-
-N/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SpeedController.m
-c000000005268F700000000000000014C
-t1382610688
-s332
-
-CBuild AST from /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/AppDelegate.m
-r0
-
-CBuild AST from /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/MainController.m
-r0
-
-CBuild AST from /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SettingController.m
-r0
-
-CBuild AST from /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SpeedController.m
-r0
-
-CCheck dependencies
-r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies8787e8a9281cb841^446aeea9281cb841^-717"warning: no rule to process file '/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/AppDelegate.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/MainController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SpeedController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SettingController.h' of type sourcecode.c.h for architecture i3864(21%IDEActivityLogMessage2@175"Warning: no rule to process file '/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/AppDelegate.h' of type sourcecode.c.h for architecture i386-404498601#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@178"Warning: no rule to process file '/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/MainController.h' of type sourcecode.c.h for architecture i386-404498601#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@179"Warning: no rule to process file '/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SpeedController.h' of type sourcecode.c.h for architecture i386-404498601#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@181"Warning: no rule to process file '/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SettingController.h' of type sourcecode.c.h for architecture i386-404498601#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#1#--18"Check dependencies36"8DCF5001-CC77-43AC-96E5-DC3BE5DF6B8D-
-
-CCompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/AppDelegate-267FF207C614B5CA.o /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s404498601.937181
-e404498602.550170
-r1
-xCompileC
-xDerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/AppDelegate-267FF207C614B5CA.o
-x/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/AppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/AppDelegate.m
-d/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/AppDelegate.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/AppDelegate.m253"CompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/AppDelegate-267FF207C614B5CA.o AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler5c76f0a9281cb841^bfd78caa281cb841^---0#0#1#-19%DVTDocumentLocation2@111"file://localhost/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/AppDelegate.m0000000000000000^4460"CompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/AppDelegate-267FF207C614B5CA.o AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-generated-files.hmap -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-own-target-headers.hmap -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-all-target-headers.hmap -iquote /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-project-headers.hmap -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/DerivedSources/i386 -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/DerivedSources -F/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/AppDelegate-267FF207C614B5CA.d --serialize-diagnostics /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/AppDelegate-267FF207C614B5CA.dia -c /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/AppDelegate.m -o /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/AppDelegate-267FF207C614B5CA.o36"BE826904-3A26-4D37-92AF-6BDD35D63E6E-
-bC4F42D28-B04A-49B7-B062-FF1B6D0FFF2E
-
-CCompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/MainController-46CA745821B3E4E8.o /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/MainController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s404498601.937274
-e404498602.574826
-r1
-xCompileC
-xDerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/MainController-46CA745821B3E4E8.o
-x/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/MainController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/MainController.m
-d/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/MainController.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Compile /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/MainController.m259"CompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/MainController-46CA745821B3E4E8.o MainController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilere97cf0a9281cb841^312893aa281cb841^---0#0#1#-19%DVTDocumentLocation2@114"file://localhost/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/MainController.m0000000000000000^4478"CompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/MainController-46CA745821B3E4E8.o MainController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-generated-files.hmap -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-own-target-headers.hmap -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-all-target-headers.hmap -iquote /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-project-headers.hmap -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/DerivedSources/i386 -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/DerivedSources -F/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/MainController-46CA745821B3E4E8.d --serialize-diagnostics /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/MainController-46CA745821B3E4E8.dia -c /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/MainController.m -o /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/MainController-46CA745821B3E4E8.o36"6B44FA5C-F5FB-43D1-9B22-F5CA7A5BCD62-
-bC4F42D28-B04A-49B7-B062-FF1B6D0FFF2E
-
-CCompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SettingController-EC63D7AD2690DED7.o /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SettingController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s404498601.937189
-e404498602.556716
-r1
-xCompileC
-xDerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SettingController-EC63D7AD2690DED7.o
-x/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SettingController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SettingController.m
-d/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SettingController.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SettingController.m265"CompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SettingController-EC63D7AD2690DED7.o SettingController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler3a76f0a9281cb841^058c8eaa281cb841^---0#0#1#-19%DVTDocumentLocation2@117"file://localhost/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SettingController.m0000000000000000^4496"CompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SettingController-EC63D7AD2690DED7.o SettingController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-generated-files.hmap -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-own-target-headers.hmap -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-all-target-headers.hmap -iquote /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-project-headers.hmap -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/DerivedSources/i386 -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/DerivedSources -F/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SettingController-EC63D7AD2690DED7.d --serialize-diagnostics /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SettingController-EC63D7AD2690DED7.dia -c /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SettingController.m -o /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SettingController-EC63D7AD2690DED7.o36"66D7EA95-817C-411A-861E-2A5A0CEE7E88-
-bC4F42D28-B04A-49B7-B062-FF1B6D0FFF2E
-
-CCompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SpeedController-9BCCF76ED5F9B9F3.o /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SpeedController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s404498601.937261
-e404498602.556212
-r1
-xCompileC
-xDerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SpeedController-9BCCF76ED5F9B9F3.o
-x/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SpeedController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SpeedController.m
-d/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SpeedController.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SpeedController.m261"CompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SpeedController-9BCCF76ED5F9B9F3.o SpeedController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler4278f0a9281cb841^1b648eaa281cb841^---0#0#1#-19%DVTDocumentLocation2@115"file://localhost/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SpeedController.m0000000000000000^4484"CompileC DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SpeedController-9BCCF76ED5F9B9F3.o SpeedController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-generated-files.hmap -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-own-target-headers.hmap -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-all-target-headers.hmap -iquote /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/SeniorProject-project-headers.hmap -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/DerivedSources/i386 -I/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/DerivedSources -F/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SpeedController-9BCCF76ED5F9B9F3.d --serialize-diagnostics /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SpeedController-9BCCF76ED5F9B9F3.dia -c /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/SpeedController.m -o /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SpeedController-9BCCF76ED5F9B9F3.o36"DB009851-4445-4AEE-AF5D-10210D6CC053-
-bC4F42D28-B04A-49B7-B062-FF1B6D0FFF2E
-
-CCompileXIB /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/Controllers/MainController.xib
-r0
-
-CCompileXIB /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/Controllers/SettingController.xib
-r0
-
-CCompileXIB /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/Controllers/SpeedController.xib
-r0
-
-CGenerateDSYMFile /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/SeniorProject.app.dSYM /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/SeniorProject.app/SeniorProject
-r0
-
-CLd /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/SeniorProject.app/SeniorProject normal i386
-s404498602.584475
-e404498602.751321
-r0
-xLd
-x/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/SeniorProject.app/SeniorProject
-xnormal
-xi386
-d/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SeniorProject.LinkFileList
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/crt1.o
-d/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/AppDelegate-267FF207C614B5CA.o
-d/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/MainController-46CA745821B3E4E8.o
-d/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SpeedController-9BCCF76ED5F9B9F3.o
-d/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SettingController-EC63D7AD2690DED7.o
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/MapKit.framework/MapKit
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libobjc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libSystem.dylib
-d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_override.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcache_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcommonCrypto_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcompiler_rt_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcopyfile_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdispatch.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdyld_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libmacho_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libnotify_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libremovefile_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_blocks.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_c.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_info.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_m.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_network.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libunwind_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libxpc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_configuration.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_asl.dylib
-d/usr/lib/libSystem.B.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/host/libdyld.dylib
-d/usr/lib/system/libcache.dylib
-d/usr/lib/system/libcommonCrypto.dylib
-d/usr/lib/system/libcompiler_rt.dylib
-d/usr/lib/system/libcopyfile.dylib
-d/usr/lib/system/libdnsinfo.dylib
-d/usr/lib/system/libkeymgr.dylib
-d/usr/lib/system/liblaunch.dylib
-d/usr/lib/system/libmacho.dylib
-d/usr/lib/system/libquarantine.dylib
-d/usr/lib/system/libremovefile.dylib
-d/usr/lib/system/libsystem_blocks.dylib
-d/usr/lib/system/libsystem_c.dylib
-d/usr/lib/system/libsystem_dnssd.dylib
-d/usr/lib/system/libsystem_info.dylib
-d/usr/lib/system/libsystem_kernel.dylib
-d/usr/lib/system/libsystem_m.dylib
-d/usr/lib/system/libsystem_notify.dylib
-d/usr/lib/system/libsystem_sandbox.dylib
-d/usr/lib/system/libunc.dylib
-d/usr/lib/system/libunwind.dylib
-oUndefined symbols for architecture i386:
-o  "_main", referenced from:
-o      start in crt1.o
-old: symbol(s) not found for architecture i386
-oclang: error: linker command failed with exit code 1 (use -v to see invocation)
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection185"Link /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/SeniorProject.app/SeniorProject113"Ld DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/SeniorProject.app/SeniorProject normal i38612bc95aa281cb841^8256c0aa281cb841^-217"Undefined symbols for architecture i386:  "_main", referenced from:      start in crt1.old: symbol(s) not found for architecture i386clang: error: linker command failed with exit code 1 (use -v to see invocation)4(21%IDEActivityLogMessage2@25""_main", referenced from:-404498602#41#28#-2#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#25"Apple Mach-O Linker Error--2@15"Start in crt1.o-404498602#69#22#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#26"Apple Mach-O Linker Notice--2@41"Symbol(s) not found for architecture i386-404498602#91#46#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#26"Apple Mach-O Linker Notice--2@65"Linker command failed with exit code 1 (use -v to see invocation)-404498602#137#80#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#25"Apple Mach-O Linker Error--0#0#1#--1942"Ld DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/SeniorProject.app/SeniorProject normal i386    cd /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2    setenv IPHONEOS_DEPLOYMENT_TARGET 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -L/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator -F/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator -filelist /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SeniorProject.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.0 -framework UIKit -framework MapKit -framework Foundation -framework CoreGraphics -Xlinker -dependency_info -Xlinker /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Intermediates/SeniorProject.build/MonoTouch-iphonesimulator/SeniorProject.build/Objects-normal/i386/SeniorProject_dependency_info.dat -o /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/SeniorProject.app/SeniorProject36"8D46CB7D-16AF-4317-8B4C-7E51278A4CCB-
-bC4F42D28-B04A-49B7-B062-FF1B6D0FFF2E
-
-CTouch /Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/obj/Xcode/2/DerivedData/SeniorProject/Build/Products/MonoTouch-iphonesimulator/SeniorProject.app
-r0
-
