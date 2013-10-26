@@ -53,6 +53,9 @@
                     <state key="normal" title="Create an account">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="registerButtonClick:" destination="-1" eventType="touchUpInside" id="iNh-l0-RZp"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.74607022157399339" green="0.8393519011114714" blue="0.93639605978260865" alpha="1" colorSpace="calibratedRGB"/>

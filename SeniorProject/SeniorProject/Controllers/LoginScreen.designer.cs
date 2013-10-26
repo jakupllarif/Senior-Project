@@ -10,6 +10,7 @@ using MonoTouch.UIKit;
 using MonoTouch.Dialog;
 using SeniorProject.DialogModels;
 
+
 namespace SeniorProject
 {
 	[Register ("LoginScreen")]
@@ -27,17 +28,27 @@ namespace SeniorProject
 		[Action ("loginButtonClick:")]
 		partial void loginButtonClick (MonoTouch.Foundation.NSObject sender);
 
+		[Action ("registerButtonClick:")]
+		partial void registerButtonClick (MonoTouch.Foundation.NSObject sender);
+		
 		void ReleaseDesignerOutlets ()
 		{
-			if (usernameTxtField != null) {
-				usernameTxtField.Dispose ();
-				usernameTxtField = null;
-			}
-
 			if (passwordTxtField != null) {
 				passwordTxtField.Dispose ();
 				passwordTxtField = null;
 			}
+
+			if (usernameTxtField != null) {
+				usernameTxtField.Dispose ();
+				usernameTxtField = null;
+			}
+		}
+
+		partial void registerButtonClick (NSObject sender)
+		{
+			if (_registerController == null)
+				_registerController = new RegisterController();
+			NavigationController.PushViewController(_registerController, true);
 		}
 
 		partial void loginButtonClick (MonoTouch.Foundation.NSObject sender)
@@ -46,9 +57,9 @@ namespace SeniorProject
 		}
 
 		protected void UserLogin(){
-			if (passwordTxtField.Text == "" || usernameTxtField.Text == "")
+			if (usernameTxtField.Text == "" || passwordTxtField.Text == "")
 			{
-				var message = string.Format("Please enter User/Password");
+				var message = string.Format("Please enter Username/Password");
 				var alert = new UIAlertView("Error", message, null, "Cancel", "Ok");
 				alert.Show();
 			} else {
