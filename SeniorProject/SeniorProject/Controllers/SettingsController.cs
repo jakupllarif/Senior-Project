@@ -17,7 +17,7 @@ namespace SeniorProject
 			Initialize ();
 			//below is for data change and save new data (true or false)
 //			_settingsDialog.TextMessage.ValueChanged += delegate {
-//				
+//
 //			};
 		}
 

@@ -9,7 +9,6 @@ namespace SeniorProject
         private RegisterController _registerController;
         private LoginDialogModel _loginDialog;
 		private MainViewTabBarController _mainController;
-
         public LoginController() : base(UITableViewStyle.Grouped, null)
         {
             Initialize();
@@ -29,16 +28,7 @@ namespace SeniorProject
                         {
                             new StringElement("Login", () =>
                                 {
-									if (_loginDialog.UserName.Value == "" || _loginDialog.Password.Value == "")
-									{
-										var message = string.Format("Please enter User/Password");
-										var alert = new UIAlertView("Error", message, null, "Cancel", "Ok");
-										alert.Show();
-									} else {
-										var welcomeMessage = string.Format("Welcome Back " + _loginDialog.UserName.Value + "!");
-										_mainController = new MainViewTabBarController(welcomeMessage);
-										NavigationController.PushViewController(_mainController, true);
-									}                
+									UserLogin(); 
 								}),
                             new StringElement("Register", () =>
                                 {
@@ -49,6 +39,19 @@ namespace SeniorProject
                         },
                 };
         }
+
+		protected void UserLogin(){
+			if (_loginDialog.UserName.Value == "" || _loginDialog.Password.Value == "")
+			{
+				var message = string.Format("Please enter User/Password");
+				var alert = new UIAlertView("Error", message, null, "Cancel", "Ok");
+				alert.Show();
+			} else {
+				var welcomeMessage = string.Format("Welcome Back " + _loginDialog.UserName.Value + "!");
+				_mainController = new MainViewTabBarController(welcomeMessage);
+				NavigationController.PushViewController(_mainController, true);
+			}       
+		}
 
         #region override ViewWillAppear/ViewWillDisappear
 

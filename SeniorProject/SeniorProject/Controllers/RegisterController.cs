@@ -55,6 +55,7 @@ namespace SeniorProject
 									var welcomeMessage = string.Format("Welcome using App Name " + _registerDialog.Name.Value + "!");
 									_mainController = new MainViewTabBarController(welcomeMessage);
 									NavigationController.PushViewController(_mainController, true);
+									DeleteView();
                                 })
                         }
                 };
@@ -69,8 +70,7 @@ namespace SeniorProject
         }
 
 		//remove register view when click register
-		public override void ViewDidDisappear (bool animated)
-		{
+		protected void DeleteView(){
 			if (this.NavigationController != null) {
 				var controllers = this.NavigationController.ViewControllers;
 				var newcontrollers = new UIViewController[controllers.Length - 1];
@@ -83,7 +83,6 @@ namespace SeniorProject
 				}
 				this.NavigationController.ViewControllers = newcontrollers;
 			}
-			base.ViewDidDisappear (animated);
 		}
     }
 }
