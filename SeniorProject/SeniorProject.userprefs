@@ -1,39 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.7.0" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/MainController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/LoginController.cs">
     <Files>
-      <File FileName="SeniorProject/Controllers/SettingController.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/Controllers/SpeedController.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/Controllers/LoginController.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/Controllers/RegisterController.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/Controllers/MainController.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/SettingsController.cs">
-    <Files>
-      <File FileName="SeniorProject/Controllers/LoginController.cs" Line="30" Column="34" />
+      <File FileName="SeniorProject/Controllers/LoginController.cs" Line="23" Column="7" />
       <File FileName="SeniorProject/Controllers/MainController.cs" Line="10" Column="52" />
-      <File FileName="SeniorProject/Controllers/RegisterController.cs" Line="58" Column="35" />
+      <File FileName="SeniorProject/Controllers/RegisterController.cs" Line="72" Column="45" />
       <File FileName="SeniorProject/Controllers/MainViewTabBarController.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/Controllers/SpeedController.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/Controllers/SettingsController.cs" Line="13" Column="3" />
->>>>>>> 45a737549e47aca7887fa2ca08a4682edeee413b
+      <File FileName="SeniorProject/Controllers/SettingsController.cs" Line="17" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
+        <State expanded="True" selected="True">
           <Node name="SeniorProject" expanded="True">
-            <Node name="Controllers" expanded="True">
-<<<<<<< HEAD
-              <Node name="MainController.cs" selected="True" />
-            </Node>
-=======
-              <Node name="SettingsController.cs" selected="True" />
-            </Node>
+            <Node name="Controllers" expanded="True" />
             <Node name="Data" expanded="True" />
             <Node name="Models" expanded="True" />
->>>>>>> 45a737549e47aca7887fa2ca08a4682edeee413b
           </Node>
         </State>
       </Pad>
@@ -41,9 +22,6 @@
         <State expanded="True" selected="True" />
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
-<<<<<<< HEAD
-        <State />
-=======
         <State>
           <Value>element</Value>
           <Value>WelcomeMessage.Text</Value>
@@ -54,7 +32,6 @@
           <Value>_settingTab.NavigationItem.Title</Value>
           <Value>_loginDialog.UserName</Value>
         </State>
->>>>>>> 45a737549e47aca7887fa2ca08a4682edeee413b
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
