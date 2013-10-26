@@ -18,22 +18,23 @@ namespace SeniorProject
         protected void Initialize()
         {
             _loginDialog = new LoginDialogModel();
-            Root = new RootElement("App Name")
+            Root = new RootElement("Safe Driving")
                 {
                     new Section
                         {
-                            (_loginDialog.UserName = new EntryElement("Login", "Enter your unique #", "")),
-                            (_loginDialog.Password = new EntryElement("Password", "Enter your password", "", true))
-                        },
-                    new Section
-                        {
-                            new StringElement("Login", () =>
+                            (_loginDialog.UserName = new EntryElement("", "Username", "")),
+                            (_loginDialog.Password = new EntryElement("", "Password", "", true)),
+                        
+                            new StringElement("Sign In", () =>
                                 {
 									var welcomeMessage = string.Format("Welcome Back " + _loginDialog.UserName.Value + "!");
 									_mainController = new MainViewTabBarController(welcomeMessage);
 									NavigationController.PushViewController(_mainController, true);                
-								}),
-                            new StringElement("Register", () =>
+								})
+						},
+					new Section ("Don't have an account:")
+						{
+                            new StringElement("Create an account", () =>
                                 {
                                     if (_registerController == null)
                                         _registerController = new RegisterController();
