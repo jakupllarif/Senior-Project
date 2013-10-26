@@ -26,17 +26,36 @@ namespace SeniorProject
             _registerDialog = new RegisterDialogModel();
             Root = new RootElement("Register")
                 {
-                    new Section("Enter information")
+                    new Section()
                         {
                             (_registerDialog.Name = new EntryElement("Name", "Enter full name", "")),
                             (_registerDialog.Birthday = new DateElement("Date of Birth",DateTime.Now) {BackgroundColor = UIColor.White}),
-                            (_registerDialog.LicenceNo = new EntryElement("License #", "Enter driver license/ID number", "")),
-                            (_registerDialog.Address = new EntryElement("Address", "Enter address", "")),
-                            (_registerDialog.IssueState = new EntryElement("Issue State", "Enter driver license/ID issue state", "")),
-                            (_registerDialog.ExpireDate = new DateElement("Expire Date", DateTime.Now) {BackgroundColor = UIColor.White}),
-                            (_registerDialog.BloodGroup = new EntryElement("Blood Group", "Enter blood Group", "")),
-                            (_registerDialog.Password = new EntryElement("Password", "Enter new password", "", true))
+							(_registerDialog.BloodGroup = new EntryElement("Blood Group", "Enter blood Group", "")) 
                         },
+					new Section()
+					{
+						(_registerDialog.LicenceNo = new EntryElement("License #", "Enter driver license/ID number", "")),
+						(_registerDialog.Address = new EntryElement("Address", "Enter address", "")),
+						(_registerDialog.IssueState = new EntryElement("Issue State", "Enter driver license/ID issue state", "")),
+						(_registerDialog.ExpireDate = new DateElement("Expire Date", DateTime.Now) {BackgroundColor = UIColor.White})
+					},
+					new Section()
+					{
+						(_registerDialog.Password = new EntryElement("Password", "Enter new password", "", true)),
+						(_registerDialog.RepeatPassword = new EntryElement("Repeat", "Re-enter password", "", true))
+					},
+					new Section()
+					{
+						(_registerDialog.EmailAddress = new EntryElement("Email", "Enter email address", ""))
+					},
+					new Section()
+					{
+						(_registerDialog.PhoneNumber = new EntryElement("Phone Number", "Please enter phone number", ""))
+					},
+					new Section("Tell me about new features:")
+					{
+						(_registerDialog.ReceiveEmail = new BooleanElement("By email", true))
+					},
                     new Section("Click to register")
                         {
                             new StringElement("Register", () =>
