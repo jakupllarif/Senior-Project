@@ -22,7 +22,6 @@ namespace SeniorProject
                     new Section("Have an account")
                         {
                             (_loginDialog.UserName = new EntryElement("", "Username", "")),
-<<<<<<< HEAD
                             (_loginDialog.Password = new EntryElement("", "Password", "", true))
 //                            new StringElement("Sign In", () =>
 //                                {
@@ -62,24 +61,21 @@ namespace SeniorProject
 //                                    NavigationController.PushViewController(_registerController, true);
 //                                })
 //                        },
-=======
-                            (_loginDialog.Password = new EntryElement("", "Password", "", true)),
                         
-						},
-                    new Section
-                        {
-                            new StringElement("Login", () =>
-                                {
-									UserLogin(); 
-								}),
-                            new StringElement("Register", () =>
-                                {
-                                    if (_registerController == null)
-                                        _registerController = new RegisterController();
-                                    NavigationController.PushViewController(_registerController, true);
-                                })
-                        },
->>>>>>> 4341569cf7220b141c1cc867d11bc7a29accd375
+						
+//                    new Section
+//                        {
+//                            new StringElement("Login", () =>
+//                                {
+//									UserLogin(); 
+//								}),
+//                            new StringElement("Register", () =>
+//                                {
+//                                    if (_registerController == null)
+//                                        _registerController = new RegisterController();
+//                                    NavigationController.PushViewController(_registerController, true);
+//                                })
+//                        },
                 };
         }
 
