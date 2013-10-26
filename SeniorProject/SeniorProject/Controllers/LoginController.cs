@@ -19,40 +19,48 @@ namespace SeniorProject
             _loginDialog = new LoginDialogModel();
             Root = new RootElement("Safe Driving")
                 {
-                    new Section
+                    new Section("Have an account")
                         {
-<<<<<<< HEAD
                             (_loginDialog.UserName = new EntryElement("", "Username", "")),
-                            (_loginDialog.Password = new EntryElement("", "Password", "", true)),
-                        
-                            new StringElement("Sign In", () =>
-                                {
-									var welcomeMessage = string.Format("Welcome Back " + _loginDialog.UserName.Value + "!");
-									_mainController = new MainViewTabBarController(welcomeMessage);
-									NavigationController.PushViewController(_mainController, true);                
-								})
+                            (_loginDialog.Password = new EntryElement("", "Password", "", true))
+//                            new StringElement("Sign In", () =>
+//                                {
+//									var welcomeMessage = string.Format("Welcome Back " + _loginDialog.UserName.Value + "!");
+//									_mainController = new MainViewTabBarController(welcomeMessage);
+//									NavigationController.PushViewController(_mainController, true);                
+//								})
 						},
+					new Section()
+					{
+						new StringElement("Login", () => UserLogin())
+					},
 					new Section ("Don't have an account:")
 						{
-                            new StringElement("Create an account", () =>
-=======
-                            (_loginDialog.UserName = new EntryElement("Login", "Please Enter Unique #", null)),
-                            (_loginDialog.Password = new EntryElement("Password", "Enter your password", null, true))
-                        },
-                    new Section
-                        {
-                            new StringElement("Login", () =>
-                                {
-									UserLogin(); 
-								}),
-                            new StringElement("Register", () =>
->>>>>>> 45a737549e47aca7887fa2ca08a4682edeee413b
-                                {
-                                    if (_registerController == null)
-                                        _registerController = new RegisterController();
-                                    NavigationController.PushViewController(_registerController, true);
-                                })
-                        },
+//                            new Section("Create an account")
+//					        {
+//								(_loginDialog.UserName = new EntryElement("Login", "Please Enter Unique #", null)),
+//								(_loginDialog.Password = new EntryElement("Password", "Enter your password", null, true))
+//                        	}
+							new StringElement("Register", () =>
+					        {
+								if (_registerController == null)
+								_registerController = new RegisterController();
+								NavigationController.PushViewController(_registerController, true);
+							})
+						}
+//                    new Section
+//                        {
+//                            new StringElement("Login", () =>
+//                                {
+//									UserLogin(); 
+//								}),
+//                            new StringElement("Register", () =>
+//                                {
+//                                    if (_registerController == null)
+//                                        _registerController = new RegisterController();
+//                                    NavigationController.PushViewController(_registerController, true);
+//                                })
+//                        },
                 };
         }
 
