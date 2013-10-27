@@ -117,10 +117,6 @@
     <Compile Include="Controllers\SettingsController.designer.cs">
       <DependentUpon>SettingsController.cs</DependentUpon>
     </Compile>
-    <Compile Include="SettingsController.cs" />
-    <Compile Include="SettingsController.designer.cs">
-      <DependentUpon>SettingsController.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
