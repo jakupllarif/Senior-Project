@@ -44,29 +44,6 @@ namespace SeniorProject
 			}
 		}
 
-		partial void registerButtonClick (NSObject sender)
-		{
-			if (_registerController == null)
-				_registerController = new RegisterController();
-			NavigationController.PushViewController(_registerController, true);
-		}
 
-		partial void loginButtonClick (MonoTouch.Foundation.NSObject sender)
-		{
-			UserLogin();
-		}
-
-		protected void UserLogin(){
-			if (usernameTxtField.Text == "" || passwordTxtField.Text == "")
-			{
-				var message = string.Format("Please enter Username/Password");
-				var alert = new UIAlertView("Error", message, null, "Cancel", "Ok");
-				alert.Show();
-			} else {
-				var welcomeMessage = string.Format("Welcome Back " + usernameTxtField.Text + "!");
-				_mainController = new MainViewTabBarController(welcomeMessage);
-				NavigationController.PushViewController(_mainController, true);
-			}       
-		}
 	}
 }
