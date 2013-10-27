@@ -1,14 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.7.0" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/LoginScreen.designer.cs">
     <Files>
       <File FileName="SeniorProject/Controllers/LoginController.cs" Line="118" Column="8" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/MainViewTabBarController.cs">
+    <Files>
+      <File FileName="SeniorProject/Controllers/LoginController.cs" Line="1" Column="1" />
+>>>>>>> 50aa18a6b51bc324ae60cef10758c1471ec63aaa
       <File FileName="SeniorProject/Controllers/LoginScreen.cs" Line="1" Column="1" />
       <File FileName="SeniorProject/Controllers/LoginScreen.designer.cs" Line="69" Column="10" />
       <File FileName="SeniorProject/Controllers/MainViewTabBarController.cs" Line="30" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
+<<<<<<< HEAD
         <State expanded="True">
           <Node name="SeniorProject" expanded="True">
             <Node name="Controllers" expanded="True">
@@ -17,6 +24,11 @@
               </Node>
               <Node name="SpeedController.cs" expanded="True" />
             </Node>
+=======
+        <State expanded="True" selected="True">
+          <Node name="SeniorProject" expanded="True">
+            <Node name="Controllers" expanded="True" />
+>>>>>>> 50aa18a6b51bc324ae60cef10758c1471ec63aaa
           </Node>
         </State>
       </Pad>
