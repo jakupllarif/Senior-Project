@@ -5,9 +5,9 @@ using MonoTouch.UIKit;
 
 namespace SeniorProject
 {
-	public partial class SettingsViewController : UIViewController
+	public partial class SettingsController : UIViewController
 	{
-		public SettingsViewController () : base ("SettingsViewController", null)
+		public SettingsController () : base ("SettingsViewController", null)
 		{
 			this.Title = "Settings";
 		}

@@ -1,116 +1,59 @@
+using System;
+using System.Drawing;
+using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-using MonoTouch.Dialog;
-using SeniorProject.DialogModels;
 
 namespace SeniorProject
 {
-    public partial class LoginController : DialogViewController
-    {
-        private RegisterController _registerController;
-        private LoginDialogModel _loginDialog;
-		private MainViewTabBarController _mainController;
-        public LoginController() : base(UITableViewStyle.Grouped, null)
-        {
-            Initialize();
-        }
-        
-        protected void Initialize()
-        {
-            _loginDialog = new LoginDialogModel();
-            Root = new RootElement("Safe Driving")
-                {
-                    new Section("Have an account")
-                        {
-                            (_loginDialog.UserName = new EntryElement("", "Username", "")),
-                            (_loginDialog.Password = new EntryElement("", "Password", "", true))
-//                            new StringElement("Sign In", () =>
-//                                {
-//									var welcomeMessage = string.Format("Welcome Back " + _loginDialog.UserName.Value + "!");
-//									_mainController = new MainViewTabBarController(welcomeMessage);
-//									NavigationController.PushViewController(_mainController, true);                
-//								})
-						},
-					new Section()
-					{
-						new StringElement("Login", () => UserLogin())
-					},
-					new Section ("Don't have an account:")
-						{
-//                            new Section("Create an account")
-//					        {
-//								(_loginDialog.UserName = new EntryElement("Login", "Please Enter Unique #", null)),
-//								(_loginDialog.Password = new EntryElement("Password", "Enter your password", null, true))
-//                        	}
-							new StringElement("Register", () =>
-					        {
-								if (_registerController == null)
-								_registerController = new RegisterController();
-								NavigationController.PushViewController(_registerController, true);
-							})
-						}
-//                    new Section
-//                        {
-//                            new StringElement("Login", () =>
-//                                {
-//									UserLogin(); 
-//								}),
-//                            new StringElement("Register", () =>
-//                                {
-//                                    if (_registerController == null)
-//                                        _registerController = new RegisterController();
-//                                    NavigationController.PushViewController(_registerController, true);
-//                                })
-//                        },
-                        
-						
-//                    new Section
-//                        {
-//                            new StringElement("Login", () =>
-//                                {
-//									UserLogin(); 
-//								}),
-//                            new StringElement("Register", () =>
-//                                {
-//                                    if (_registerController == null)
-//                                        _registerController = new RegisterController();
-//                                    NavigationController.PushViewController(_registerController, true);
-//                                })
-//                        },
-                };
-        }
+	public partial class LoginController : UIViewController
+	{
+
+		public LoginController () : base ("LoginScreen", null)
+		{
+		}
+
+		public override void DidReceiveMemoryWarning ()
+		{
+			// Releases the view if it doesn't have a superview.
+			base.DidReceiveMemoryWarning ();
+			
+			// Release any cached data, images, etc that aren't in use.
+		}
+
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+			
+			// Perform any additional setup after loading the view, typically from a nib.
+		}
+
+		partial void registerButtonClick (NSObject sender)
+		{
+			if (_registerController == null)
+				_registerController = new RegisterController();
+			NavigationController.PushViewController(_registerController, true);
+		}
+
+		partial void loginButtonClick (MonoTouch.Foundation.NSObject sender)
+		{
+			UserLogin();
+		}
 
 		protected void UserLogin(){
-			if (_loginDialog.UserName.Value == "" || _loginDialog.Password.Value == "")
+			if (usernameTxtField.Text == "" || passwordTxtField.Text == "")
 			{
-				var message = string.Format("Please enter User/Password");
+				var message = string.Format("Please enter Username/Password");
 				var alert = new UIAlertView("Error", message, null, "Cancel", "Ok");
 				alert.Show();
 			} else {
-				var welcomeMessage = string.Format("Welcome Back " + _loginDialog.UserName.Value + "!");
+				var welcomeMessage = string.Format("Welcome Back " + usernameTxtField.Text + "!");
 				_mainController = new MainViewTabBarController(welcomeMessage);
 				NavigationController.PushViewController(_mainController, true);
+				ReleaseViewController ();
 			}       
 		}
 
-        #region override ViewWillAppear/ViewWillDisappear
-
-//        public override void ViewWillAppear(bool animated)
-//        {
-//            base.ViewWillAppear(animated);
-//            NavigationController.SetNavigationBarHidden(true, animated);
-//        }
-//
-//        public override void ViewWillDisappear(bool animated)
-//        {
-//            base.ViewWillDisappear(animated);
-//            NavigationController.SetNavigationBarHidden(false, animated);
-//        }
-
-        #endregion
-
-		//remove login view when click either register or login button
-		public override void ViewDidDisappear (bool animated)
-		{
+		protected void ReleaseViewController() {
 			if (this.NavigationController != null) {
 				var controllers = this.NavigationController.ViewControllers;
 				var newcontrollers = new UIViewController[controllers.Length - 1];
@@ -123,7 +66,17 @@ namespace SeniorProject
 				}
 				this.NavigationController.ViewControllers = newcontrollers;
 			}
-			base.ViewDidDisappear (animated);
 		}
-    }
+
+		#region override ViewWillAppear/ViewWillDisappear
+
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+            NavigationController.SetNavigationBarHidden(true, animated);
+        }
+
+		#endregion
+	}
 }
+

@@ -9,7 +9,7 @@ using MonoTouch.Foundation;
 namespace SeniorProject
 {
 	[Register ("SettingsViewController")]
-	partial class SettingsViewController
+	partial class SettingsController
 	{
 		void ReleaseDesignerOutlets ()
 		{

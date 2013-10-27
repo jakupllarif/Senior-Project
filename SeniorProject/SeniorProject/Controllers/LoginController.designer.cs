@@ -14,7 +14,7 @@ using SeniorProject.DialogModels;
 namespace SeniorProject
 {
 	[Register ("LoginScreen")]
-	partial class LoginScreen
+	partial class LoginController
 	{
 		private RegisterController _registerController;
 		private MainViewTabBarController _mainController;
