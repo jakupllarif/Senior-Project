@@ -7,7 +7,7 @@ namespace SeniorProject
 {
 	public partial class SettingsController : UIViewController
 	{
-		public SettingsController () : base ("SettingsViewController", null)
+		public SettingsController () : base ("SettingsController", null)
 		{
 			this.Title = "Settings";
 		}
