@@ -8,8 +8,8 @@ namespace SeniorProject
 	public partial class LoginController : UIViewController
 	{
 
-		private UIViewController _registerController;
-		private UIViewController _mainController;
+		private RegisterController _registerController;
+		private MainViewTabBarController _mainController;
 
 		public LoginController () : base ("LoginController", null)
 		{
