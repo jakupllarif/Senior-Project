@@ -9,7 +9,7 @@ using System.CodeDom.Compiler;
 
 namespace SeniorProject
 {
-	[Register ("LoginScreen")]
+	[Register ("LoginController")]
 	partial class LoginController
 	{
 		[Outlet]

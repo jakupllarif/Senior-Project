@@ -11,7 +11,7 @@ namespace SeniorProject
 		private UIViewController _registerController;
 		private UIViewController _mainController;
 
-		public LoginController () : base ("LoginScreen", null)
+		public LoginController () : base ("LoginController", null)
 		{
 		}
 
@@ -40,6 +40,12 @@ namespace SeniorProject
 		partial void loginButtonClick (MonoTouch.Foundation.NSObject sender)
 		{
 			UserLogin();
+		}
+
+		partial void forgotPassButtonClick (NSObject sender)
+		{
+			var alert = new UIAlertView("Reset Password", "Are you sure?", null, "Cancel", "Ok");
+			alert.Show();
 		}
 
 		protected void UserLogin(){
