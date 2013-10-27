@@ -1,0 +1,262 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C42D3000000000000000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CCD4DE0000000000000000 /* UIKit.framework */; };
+		633209200000000000000000 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345DE17C0000000000000000 /* MapKit.framework */; };
+		2A213F400000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EEEE1A0000000000000000 /* Foundation.framework */; };
+		3F1107560000000000000000 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7FFAB80000000000000000 /* CoreGraphics.framework */; };
+		264C92200000000000000000 /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5539CE00000000000000000 /* MainController.xib */; };
+		22BB85820000000000000000 /* SpeedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E6466C0000000000000000 /* SpeedController.xib */; };
+		1F2A78E40000000000000000 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1477530A0000000000000000 /* LoginController.xib */; };
+		1B996C460000000000000000 /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18085FA80000000000000000 /* SettingsController.xib */; };
+		2DA18E780000000000000000 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 29DD9EBE0000000000000000 /* AppDelegate.h */; };
+		2A1081DA0000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6EAB5C0000000000000000 /* AppDelegate.m */; };
+		267F753C0000000000000000 /* MainController.h in Sources */ = {isa = PBXBuildFile; fileRef = 30FFB7FA0000000000000000 /* MainController.h */; };
+		22EE689E0000000000000000 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3490C4980000000000000000 /* MainController.m */; };
+		1F5D5C000000000000000000 /* SpeedController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3821D1360000000000000000 /* SpeedController.h */; };
+		1BCC4F620000000000000000 /* SpeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2DDD40000000000000000 /* SpeedController.m */; };
+		183B42C40000000000000000 /* LoginScreen.h in Sources */ = {isa = PBXBuildFile; fileRef = 3F43EA720000000000000000 /* LoginScreen.h */; };
+		14AA36260000000000000000 /* LoginScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F71000000000000000000 /* LoginScreen.m */; };
+		111929880000000000000000 /* SettingsViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 66603AE00000000000000000 /* SettingsViewController.h */; };
+		D881CEA00000000000000000 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7104C00000000000000000 /* SettingsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		307DA2C00000000000000000 /* SeniorProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "SeniorProject.app"; path = "SeniorProject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30CCD4DE0000000000000000 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; };
+		345DE17C0000000000000000 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; };
+		37EEEE1A0000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
+		3B7FFAB80000000000000000 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreGraphics.framework"; path = "System/Library/Frameworks/CoreGraphics.framework"; sourceTree = SDKROOT; };
+		D5539CE00000000000000000 /* MainController.xib */ = {isa = PBXFileReference; name = "MainController.xib"; path = "Controllers/MainController.xib"; sourceTree = "<group>"; };
+		10E6466C0000000000000000 /* SpeedController.xib */ = {isa = PBXFileReference; name = "SpeedController.xib"; path = "Controllers/SpeedController.xib"; sourceTree = "<group>"; };
+		1477530A0000000000000000 /* LoginController.xib */ = {isa = PBXFileReference; name = "LoginController.xib"; path = "Controllers/LoginController.xib"; sourceTree = "<group>"; };
+		18085FA80000000000000000 /* SettingsController.xib */ = {isa = PBXFileReference; name = "SettingsController.xib"; path = "Controllers/SettingsController.xib"; sourceTree = "<group>"; };
+		29DD9EBE0000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
+		2D6EAB5C0000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
+		30FFB7FA0000000000000000 /* MainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MainController.h"; path = "MainController.h"; sourceTree = "<group>"; };
+		3490C4980000000000000000 /* MainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MainController.m"; path = "MainController.m"; sourceTree = "<group>"; };
+		3821D1360000000000000000 /* SpeedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SpeedController.h"; path = "SpeedController.h"; sourceTree = "<group>"; };
+		3BB2DDD40000000000000000 /* SpeedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SpeedController.m"; path = "SpeedController.m"; sourceTree = "<group>"; };
+		3F43EA720000000000000000 /* LoginScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LoginScreen.h"; path = "LoginScreen.h"; sourceTree = "<group>"; };
+		2D4F71000000000000000000 /* LoginScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "LoginScreen.m"; path = "LoginScreen.m"; sourceTree = "<group>"; };
+		66603AE00000000000000000 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SettingsViewController.h"; path = "SettingsViewController.h"; sourceTree = "<group>"; };
+		9F7104C00000000000000000 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SettingsViewController.m"; path = "SettingsViewController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3854B4520000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C42D3000000000000000000 /* UIKit.framework in Frameworks */,
+				633209200000000000000000 /* MapKit.framework in Frameworks */,
+				2A213F400000000000000000 /* Foundation.framework in Frameworks */,
+				3F1107560000000000000000 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B92B82A0000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				639253D00000000000000000 /* SeniorProject */,
+				3B85FF630000000000000000 /* Frameworks */,
+				20DF92500000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20DF92500000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				307DA2C00000000000000000 /* SeniorProject.app */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		3B85FF630000000000000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30CCD4DE0000000000000000 /* UIKit.framework */,
+				345DE17C0000000000000000 /* MapKit.framework */,
+				37EEEE1A0000000000000000 /* Foundation.framework */,
+				3B7FFAB80000000000000000 /* CoreGraphics.framework */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		639253D00000000000000000 /* SeniorProject */ = {
+			isa = PBXGroup;
+			children = (
+				29DD9EBE0000000000000000 /* AppDelegate.h */,
+				3F43EA720000000000000000 /* LoginScreen.h */,
+				30FFB7FA0000000000000000 /* MainController.h */,
+				66603AE00000000000000000 /* SettingsViewController.h */,
+				3821D1360000000000000000 /* SpeedController.h */,
+				66C085900000000000000000 /* Controllers */,
+				2BC59B460000000000000000 /* Supporting Files */,
+			);
+			name = "SeniorProject";
+			sourceTree = "<group>";
+		};
+		66C085900000000000000000 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1477530A0000000000000000 /* LoginController.xib */,
+				D5539CE00000000000000000 /* MainController.xib */,
+				18085FA80000000000000000 /* SettingsController.xib */,
+				10E6466C0000000000000000 /* SpeedController.xib */,
+			);
+			name = "Controllers";
+			sourceTree = "<group>";
+		};
+		2BC59B460000000000000000 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D6EAB5C0000000000000000 /* AppDelegate.m */,
+				2D4F71000000000000000000 /* LoginScreen.m */,
+				3490C4980000000000000000 /* MainController.m */,
+				9F7104C00000000000000000 /* SettingsViewController.m */,
+				3BB2DDD40000000000000000 /* SpeedController.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3645DE040000000000000000 /* SeniorProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B9F70F10000000000000000 /* Build configuration list for PBXNativeTarget "SeniorProject" */;
+			buildPhases = (
+				31329B160000000000000000 /* Sources */,
+				3854B4520000000000000000 /* Frameworks */,
+				34C3A7B40000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SeniorProject";
+			productName = "SeniorProject";
+			productReference = 307DA2C00000000000000000 /* SeniorProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		147B144C0000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F903DE000000000000000000 /* Build configuration list for PBXProject "SeniorProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2B92B82A0000000000000000;
+			productRefGroup = 20DF92500000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3645DE040000000000000000 /* SeniorProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34C3A7B40000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				264C92200000000000000000 /* MainController.xib in Resources */,
+				22BB85820000000000000000 /* SpeedController.xib in Resources */,
+				1F2A78E40000000000000000 /* LoginController.xib in Resources */,
+				1B996C460000000000000000 /* SettingsController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31329B160000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DA18E780000000000000000 /* AppDelegate.h in Sources */,
+				2A1081DA0000000000000000 /* AppDelegate.m in Sources */,
+				267F753C0000000000000000 /* MainController.h in Sources */,
+				22EE689E0000000000000000 /* MainController.m in Sources */,
+				1F5D5C000000000000000000 /* SpeedController.h in Sources */,
+				1BCC4F620000000000000000 /* SpeedController.m in Sources */,
+				183B42C40000000000000000 /* LoginScreen.h in Sources */,
+				14AA36260000000000000000 /* LoginScreen.m in Sources */,
+				111929880000000000000000 /* SettingsViewController.h in Sources */,
+				D881CEA00000000000000000 /* SettingsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BE5C0F00000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = MonoTouch;
+		};
+		3F76CD8E0000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				PRODUCT_NAME = "SeniorProject";
+				WRAPPER_EXTENSION = app;
+			};
+			name = MonoTouch;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F903DE000000000000000000 /* Build configuration list for PBXProject "SeniorProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BE5C0F00000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+		1B9F70F10000000000000000 /* Build configuration list for PBXNativeTarget "SeniorProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F76CD8E0000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 147B144C0000000000000000 /* Project object */;
+}

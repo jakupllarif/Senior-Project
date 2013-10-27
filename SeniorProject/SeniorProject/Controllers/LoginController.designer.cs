@@ -6,24 +6,20 @@
 //
 using MonoTouch.Foundation;
 using System.CodeDom.Compiler;
-using MonoTouch.UIKit;
-using MonoTouch.Dialog;
-using SeniorProject.DialogModels;
-
 
 namespace SeniorProject
 {
 	[Register ("LoginScreen")]
 	partial class LoginController
 	{
-		private RegisterController _registerController;
-		private MainViewTabBarController _mainController;
-
 		[Outlet]
 		MonoTouch.UIKit.UITextField passwordTxtField { get; set; }
 
 		[Outlet]
 		MonoTouch.UIKit.UITextField usernameTxtField { get; set; }
+
+		[Action ("forgotPassButtonClick:")]
+		partial void forgotPassButtonClick (MonoTouch.Foundation.NSObject sender);
 
 		[Action ("loginButtonClick:")]
 		partial void loginButtonClick (MonoTouch.Foundation.NSObject sender);
@@ -43,7 +39,5 @@ namespace SeniorProject
 				usernameTxtField = null;
 			}
 		}
-
-
 	}
 }

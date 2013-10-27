@@ -57,6 +57,17 @@
                         <action selector="registerButtonClick:" destination="-1" eventType="touchUpInside" id="iNh-l0-RZp"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TwK-6i-xuM" userLabel="ForgotPassButton">
+                    <rect key="frame" x="5" y="397" width="315" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.53935660549999997" green="0.60679273759999997" blue="0.67694887910000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Forgot the password?">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="forgotPassButtonClick:" destination="-1" eventType="touchUpInside" id="mvo-Qm-Cm9"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.74607022157399339" green="0.8393519011114714" blue="0.93639605978260865" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
