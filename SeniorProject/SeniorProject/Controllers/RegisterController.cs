@@ -103,5 +103,11 @@ namespace SeniorProject
 				this.NavigationController.ViewControllers = newcontrollers;
 			}
 		}
+
+		public override void ViewWillAppear(bool animated)
+		{
+			base.ViewWillAppear(animated);
+			NavigationController.SetNavigationBarHidden(false, animated);
+		}
     }
 }

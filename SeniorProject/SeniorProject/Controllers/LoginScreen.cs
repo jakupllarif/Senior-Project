@@ -76,12 +76,6 @@ namespace SeniorProject
             NavigationController.SetNavigationBarHidden(true, animated);
         }
 
-        public override void ViewWillDisappear(bool animated)
-        {
-            base.ViewWillDisappear(animated);
-            NavigationController.SetNavigationBarHidden(false, animated);
-        }
-
 		#endregion
 	}
 }
