@@ -93,7 +93,6 @@
     <None Include="Info.plist" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DialogModels\LoginDialogModel.cs" />
     <Compile Include="DialogModels\RegisterDialogModel.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
