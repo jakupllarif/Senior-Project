@@ -9,9 +9,12 @@ namespace SeniorProject
 {
 	public partial class SpeedController : UIViewController
 	{
+		private static string _message;
+
 		public SpeedController () : base ("SpeedController", null)
 		{
 			this.Title = "Current Speed";
+			//this.Title = map.UserLocation.Location.Speed.ToString() + "meters/s";
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -31,7 +34,6 @@ namespace SeniorProject
 
 			//tack user's location and update the map
 			trackLocation ();
-
 			//change the view of map according to the segment selected
 			changeMapView ();
 		}
@@ -58,6 +60,8 @@ namespace SeniorProject
 					MKCoordinateSpan span = new MKCoordinateSpan(MilesToLatitudeDegrees (2), MilesToLongitudeDegrees (2, coords.Latitude));
 					map.Region = new MKCoordinateRegion(coords, span);
 				}
+				_message = map.UserLocation.Location.Speed < 0 ? "0" : map.UserLocation.Location.Speed.ToString();
+				this.NavigationItem.Title = _message + " metters/s";
 			};
 		}
 
