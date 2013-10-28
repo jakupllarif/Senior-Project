@@ -16,18 +16,42 @@ namespace SeniorProject
 		MonoTouch.UIKit.UILabel CurrentSpeed { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UIProgressView greenBar { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIProgressView redBar { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIButton ViewMap { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIProgressView yellowBar { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (CurrentSpeed != null) {
+				CurrentSpeed.Dispose ();
+				CurrentSpeed = null;
+			}
+
 			if (ViewMap != null) {
 				ViewMap.Dispose ();
 				ViewMap = null;
 			}
 
-			if (CurrentSpeed != null) {
-				CurrentSpeed.Dispose ();
-				CurrentSpeed = null;
+			if (greenBar != null) {
+				greenBar.Dispose ();
+				greenBar = null;
+			}
+
+			if (yellowBar != null) {
+				yellowBar.Dispose ();
+				yellowBar = null;
+			}
+
+			if (redBar != null) {
+				redBar.Dispose ();
+				redBar = null;
 			}
 		}
 	}

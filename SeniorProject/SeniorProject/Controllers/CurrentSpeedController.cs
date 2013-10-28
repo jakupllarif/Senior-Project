@@ -44,7 +44,32 @@ namespace SeniorProject
 
 		protected void UpdateLocation(CLLocation newLocation)
 		{
-			CurrentSpeed.Text = newLocation.Speed.ToString() + " meters/s";
+			CurrentSpeed.Text = newLocation.Speed.ToString() + " meter/s";
+			updateProgressBars (newLocation);
+		}
+
+		//update progress bars according to the current speed
+		protected void updateProgressBars(CLLocation newLocation)
+		{
+			double speedNumber = newLocation.Speed;
+
+			//restart the progress bars
+			greenBar.Progress = 0.0f;
+			yellowBar.Progress = 0.0f;
+			redBar.Progress = 0.0f;
+
+			//update progress bars according to the current speed
+			if (speedNumber.CompareTo (30) <= 0)
+				greenBar.Progress = (float)speedNumber / 30.0f;
+			else if (speedNumber.CompareTo (30) > 0 && speedNumber.CompareTo (40) <= 0) {
+				greenBar.Progress = (float)100 / 10.0f;
+				yellowBar.Progress = (float)(speedNumber-30) / 10.0f;
+			} else {
+				greenBar.Progress = (float)100 / 10.0f;
+				yellowBar.Progress = (float)100 / 10.0f;
+				redBar.Progress = (float)(speedNumber-40) / 20.0f;
+			}
+
 		}
 
 		public override void ViewDidAppear (bool animated)
