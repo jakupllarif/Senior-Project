@@ -26,7 +26,8 @@ namespace SeniorProject
 			NavigationController.SetNavigationBarHidden(true, animated);
 
 			_mainTab = new MainController (_message);
-			_speedTab = new SpeedController ();
+			//_speedTab = new SpeedController ();
+			_speedTab = new CurrentSpeedController ();
 			_settingTab = new SettingsController ();
 
 			var mainTab = new UINavigationController (_mainTab) ;

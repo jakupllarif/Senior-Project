@@ -1,15 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/SpeedController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/CurrentSpeedController.cs">
     <Files>
-      <File FileName="SeniorProject/Controllers/SpeedController.cs" Line="66" Column="4" />
-      <File FileName="SeniorProject/Controllers/SpeedController.designer.cs" Line="1" Column="1" />
+      <File FileName="SeniorProject/Controllers/SpeedController.cs" Line="27" Column="3" />
+      <File FileName="SeniorProject/Controllers/CurrentSpeedController.cs" Line="39" Column="47" />
+      <File FileName="SeniorProject/Controllers/CurrentSpeedController.designer.cs" Line="1" Column="1" />
+      <File FileName="SeniorProject/Controllers/SpeedController.designer.cs" Line="18" Column="11" />
+      <File FileName="SeniorProject/Controllers/MainController.cs" Line="1" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True" selected="True">
           <Node name="SeniorProject" expanded="True">
             <Node name="Controllers" expanded="True">
+              <Node name="CurrentSpeedController.cs" expanded="True" />
               <Node name="SpeedController.cs" expanded="True" />
             </Node>
           </Node>
@@ -20,18 +24,24 @@
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State>
-          <Value>map.UserLocation.Location.Speed.ToString()</Value>
+          <Value>locationManager.Location</Value>
           <Value>this</Value>
           <Value>controller</Value>
           <Value>_message</Value>
           <Value>map.UserLocation.Location.Speed.ToString()</Value>
           <Value>this.Title</Value>
+          <Value>this.CurretSpeed</Value>
+          <Value>message</Value>
+          <Value>currentLocation</Value>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/gabrielliu/Documents/STUDY/GradSchool/Fin_Project/Senior-Project/SeniorProject/SeniorProject/LocationService.cs" line="17" column="1" />
+      <Breakpoint file="/Users/gabrielliu/Documents/STUDY/GradSchool/Fin_Project/Senior-Project/SeniorProject/SeniorProject/LocationService.cs" line="18" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
