@@ -75,7 +75,8 @@ namespace SeniorProject
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
-			_iPhoneLocationManager.StartUpdatingLocation ();
+			if (CLLocationManager.LocationServicesEnabled)
+				_iPhoneLocationManager.StartUpdatingLocation ();
 		}
 
 		public override void ViewDidDisappear (bool animated)
