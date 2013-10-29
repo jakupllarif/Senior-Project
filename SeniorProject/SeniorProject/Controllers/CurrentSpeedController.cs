@@ -3,6 +3,7 @@ using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.CoreLocation;
+using MonoTouch.CoreGraphics;
 
 namespace SeniorProject
 {
@@ -44,7 +45,7 @@ namespace SeniorProject
 
 		protected void UpdateLocation(CLLocation newLocation)
 		{
-			CurrentSpeed.Text = newLocation.Speed.ToString() + " meter/s";
+			CurrentSpeed.Text = newLocation.Speed.ToString();
 			updateProgressBars (newLocation);
 		}
 
@@ -59,15 +60,19 @@ namespace SeniorProject
 			redBar.Progress = 0.0f;
 
 			//update progress bars according to the current speed
-			if (speedNumber.CompareTo (30) <= 0)
+			if (speedNumber.CompareTo (30) <= 0) {
 				greenBar.Progress = (float)speedNumber / 30.0f;
+				CurrentSpeed.TextColor = UIColor.Green;
+			}
 			else if (speedNumber.CompareTo (30) > 0 && speedNumber.CompareTo (40) <= 0) {
 				greenBar.Progress = (float)100 / 10.0f;
 				yellowBar.Progress = (float)(speedNumber-30) / 10.0f;
+				CurrentSpeed.TextColor = UIColor.Yellow;
 			} else {
 				greenBar.Progress = (float)100 / 10.0f;
 				yellowBar.Progress = (float)100 / 10.0f;
 				redBar.Progress = (float)(speedNumber-40) / 20.0f;
+				CurrentSpeed.TextColor = UIColor.Red;
 			}
 
 		}
