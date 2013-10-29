@@ -28,8 +28,9 @@ namespace SeniorProject
 		{
 			base.ViewDidLoad ();
 			this.WelcomeMessage.Text = _welcomeMessage;
-			var soucre = new MockData (new List<string> { "911 help", "driving texting detect", "drinking driving", "block text"});
-			this.InformationTable.Source = soucre;
+			//var source = new MockData (new List<string> { "911 help", "driving texting detect", "drinking driving", "block text"});
+			var source = new MockData (new SettingsModel ());
+			this.InformationTable.Source = source;
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 	}
