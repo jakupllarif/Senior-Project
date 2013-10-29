@@ -34,24 +34,24 @@ namespace SeniorProject
 				CurrentSpeed = null;
 			}
 
-			if (ViewMap != null) {
-				ViewMap.Dispose ();
-				ViewMap = null;
-			}
-
 			if (greenBar != null) {
 				greenBar.Dispose ();
 				greenBar = null;
 			}
 
-			if (yellowBar != null) {
-				yellowBar.Dispose ();
-				yellowBar = null;
-			}
-
 			if (redBar != null) {
 				redBar.Dispose ();
 				redBar = null;
+			}
+
+			if (ViewMap != null) {
+				ViewMap.Dispose ();
+				ViewMap = null;
+			}
+
+			if (yellowBar != null) {
+				yellowBar.Dispose ();
+				yellowBar = null;
 			}
 		}
 	}

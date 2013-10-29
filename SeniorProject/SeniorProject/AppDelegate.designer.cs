@@ -9,8 +9,7 @@ using System.CodeDom.Compiler;
 
 namespace SeniorProject
 {
-	[Register ("SettingsController")]
-	partial class SettingsController
+	partial class AppDelegate
 	{
 		
 		void ReleaseDesignerOutlets ()

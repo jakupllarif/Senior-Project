@@ -12,7 +12,6 @@ namespace SeniorProject
 	[Register ("MainController")]
 	partial class MainController
 	{
-
 		[Outlet]
 		MonoTouch.UIKit.UITableView InformationTable { get; set; }
 
@@ -21,14 +20,14 @@ namespace SeniorProject
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (WelcomeMessage != null) {
-				WelcomeMessage.Dispose ();
-				WelcomeMessage = null;
-			}
-
 			if (InformationTable != null) {
 				InformationTable.Dispose ();
 				InformationTable = null;
+			}
+
+			if (WelcomeMessage != null) {
+				WelcomeMessage.Dispose ();
+				WelcomeMessage = null;
 			}
 		}
 	}
