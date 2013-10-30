@@ -28,19 +28,40 @@ namespace SeniorProject
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+
 			_iPhoneLocationManager = new CLLocationManager ();
-			_iPhoneLocationManager.DesiredAccuracy = 1000; // 1000 meters/1 kilometer
+
+			//change between km/h and m/h
+			changeMetricSystem ();
+
+			//update location based on the specified metric system
 			_iPhoneLocationManager.LocationsUpdated += (object sender, CLLocationsUpdatedEventArgs e) => {
 				UpdateLocation (e.Locations [e.Locations.Length - 1]);
 			};
+
 			if (CLLocationManager.LocationServicesEnabled)
 				_iPhoneLocationManager.StartUpdatingLocation ();
+
+			//if viewmap button is touched then display the map
 			ViewMap.TouchUpInside += (object sender, EventArgs e) => {
 				if (_speedController == null)
 				_speedController = new SpeedController();
 				NavigationController.PushViewController(_speedController, true);
 			};
-			// Perform any additional setup after loading the view, typically from a nib.
+
+		}
+
+		//change between km/h and m/h systems
+		protected void changeMetricSystem()
+		{
+			kmhourButton.ValueChanged += delegate {
+				if (kmhourButton.SelectedSegment == 0) {
+					_iPhoneLocationManager.DesiredAccuracy = 1000; // 1000 meters/1 kilometer
+
+				} else if (kmhourButton.SelectedSegment == 1) {
+					_iPhoneLocationManager.DesiredAccuracy = 0.621371; // 1000 meters/1 kilometer
+				}
+			};
 		}
 
 		protected void UpdateLocation(CLLocation newLocation)

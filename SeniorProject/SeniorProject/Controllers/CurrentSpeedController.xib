@@ -9,6 +9,7 @@
                 <outlet property="CurrentSpeed" destination="kvZ-as-Oa5" id="Ila-3X-YNh"/>
                 <outlet property="ViewMap" destination="SNg-Bn-NbP" id="Ako-Rz-i7f"/>
                 <outlet property="greenBar" destination="M0j-PX-fG1" id="cSa-aN-8bs"/>
+                <outlet property="kmhourButton" destination="j47-uo-EHm" id="AvQ-hh-rGm"/>
                 <outlet property="redBar" destination="5ME-qA-MSh" id="zcp-P6-7Kd"/>
                 <outlet property="view" destination="1" id="3"/>
                 <outlet property="yellowBar" destination="1Qk-yd-MFH" id="pgh-50-J8u"/>
@@ -55,11 +56,11 @@
                     </state>
                 </button>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" id="j47-uo-EHm">
-                    <rect key="frame" x="110" y="78" width="91" height="29"/>
+                    <rect key="frame" x="108" y="78" width="95" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <segments>
-                        <segment title="km/h"/>
-                        <segment title="m/h"/>
+                        <segment title="Km/h"/>
+                        <segment title="MPH"/>
                     </segments>
                     <color key="tintColor" red="0.77580067900000005" green="0.93147707479999997" blue="0.95403787360000003" alpha="1" colorSpace="calibratedRGB"/>
                 </segmentedControl>

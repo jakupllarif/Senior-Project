@@ -19,6 +19,9 @@ namespace SeniorProject
 		MonoTouch.UIKit.UIProgressView greenBar { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UISegmentedControl kmhourButton { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIProgressView redBar { get; set; }
 
 		[Outlet]
@@ -52,6 +55,11 @@ namespace SeniorProject
 			if (yellowBar != null) {
 				yellowBar.Dispose ();
 				yellowBar = null;
+			}
+
+			if (kmhourButton != null) {
+				kmhourButton.Dispose ();
+				kmhourButton = null;
 			}
 		}
 	}
