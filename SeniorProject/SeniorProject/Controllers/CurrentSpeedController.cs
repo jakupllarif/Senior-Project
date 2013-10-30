@@ -67,13 +67,10 @@ namespace SeniorProject
 			else if (speedSystem == 1)
 				speedNumber *= 2.24; //m/s to mph
 
-<<<<<<< HEAD
 			CurrentSpeed.Text = speedNumber.ToString();
-=======
+
 			//CurrentSpeed.Text = speedNumber.ToString();
 			CurrentSpeed.Text = String.Format ("{0:f2}", speedNumber);
-			updateProgressBars (speedNumber);
->>>>>>> 157fd5a61b203cc7e26e019ece7e676129a08996
 		}
 
 		//update progress bars according to the current speed
@@ -85,11 +82,11 @@ namespace SeniorProject
 			redBar.Progress = 0.0f;
 
 			//update progress bars according to the current speed
-			if (speedNumber.CompareTo (50) <= 0) {
+			if (speedNumber.CompareTo (30) <= 0) {
 				greenBar.Progress = (float)speedNumber / 30.0f;
 				CurrentSpeed.TextColor = UIColor.Green;
 			}
-			else if (speedNumber.CompareTo (50) > 0 && speedNumber.CompareTo (70) <= 0) {
+			else if (speedNumber.CompareTo (30) > 0 && speedNumber.CompareTo (36) <= 0) {
 				greenBar.Progress = (float)100 / 10.0f;
 				yellowBar.Progress = (float)(speedNumber-30) / 10.0f;
 				CurrentSpeed.TextColor = UIColor.Yellow;
