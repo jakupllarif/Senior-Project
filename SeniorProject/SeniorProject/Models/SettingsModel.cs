@@ -5,11 +5,11 @@ namespace SeniorProject
 {
 	public class SettingsModel
 	{
-		private bool _textMessage;
-		private bool _voiceUtility;
-		private bool _drunkDriving;
-		private bool _overSpeeding;
-		private bool _callForHelp;
+		private bool _textMessage = true;
+		private bool _voiceUtility = true;
+		private bool _drunkDriving = false;
+		private bool _overSpeeding = false;
+		private bool _callForHelp = true;
 
 		public bool TextMessage { 
 			get { return _textMessage;} 
