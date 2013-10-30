@@ -15,6 +15,7 @@ namespace SeniorProject
 		{
 			this.Title = "Main";
 			_welcomeMessage = element;
+
 		}
 
 		public override void DidReceiveMemoryWarning ()

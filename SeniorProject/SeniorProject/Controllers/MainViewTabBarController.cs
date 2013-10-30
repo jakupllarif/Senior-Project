@@ -11,7 +11,6 @@ namespace SeniorProject
 		UIViewController _mainTab;
 		UIViewController _speedTab;
 		UIViewController _settingTab;
-
 		private string _message;
 
 		public MainViewTabBarController (string message)
