@@ -4,10 +4,11 @@ namespace SeniorProject
 {
 	public class SettingsDialogModel
 	{
-		public BooleanElement TextMessage;
-		public BooleanElement CurrentSpeedTrack;
-		public BooleanElement DrunkDriveTrack;
-		public BooleanElement AutoHelp;
+		public BooleanElement BlockSMS;
+		public BooleanElement SMSVoiceUtility;
+		public BooleanElement NotifyOverspeeding;
+		public BooleanElement BlockDrunkDriving;
+		public BooleanElement EmergencyHelp;
 	}
 }
 

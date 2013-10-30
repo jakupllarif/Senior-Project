@@ -10,7 +10,7 @@ namespace SeniorProject
 	{
 		UIViewController _mainTab;
 		UIViewController _speedTab;
-		UIViewController _settingTab;
+		DialogViewController _settingsTab;
 		private string _message;
 
 		public MainViewTabBarController (string message)
@@ -27,13 +27,13 @@ namespace SeniorProject
 			_mainTab = new MainController (_message);
 			//_speedTab = new SpeedController ();
 			_speedTab = new CurrentSpeedController ();
-			_settingTab = new SettingsController ();
+			_settingsTab = new SettingsController ();
 
 			var mainTab = new UINavigationController (_mainTab) ;
 			var speedTab = new UINavigationController (_speedTab) { Title = "Speed"};
-			var settingTab = new UINavigationController (_settingTab);
+			var settingsTab = new UINavigationController (_settingsTab);
 
-			var tabs = new UIViewController [] { mainTab, speedTab, settingTab };
+			var tabs = new UIViewController [] { mainTab, speedTab, settingsTab };
 			ViewControllers = tabs;
 
 			SelectedViewController = mainTab;

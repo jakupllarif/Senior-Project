@@ -113,10 +113,6 @@
     <Compile Include="Controllers\LoginController.designer.cs">
       <DependentUpon>LoginController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\SettingsController.cs" />
-    <Compile Include="Controllers\SettingsController.designer.cs">
-      <DependentUpon>SettingsController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\CurrentSpeedController.cs" />
     <Compile Include="Controllers\CurrentSpeedController.designer.cs">
       <DependentUpon>CurrentSpeedController.cs</DependentUpon>
@@ -125,13 +121,13 @@
       <DependentUpon>AppDelegate.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\SettingsModel.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <InterfaceDefinition Include="Controllers\MainController.xib" />
     <InterfaceDefinition Include="Controllers\SpeedController.xib" />
     <InterfaceDefinition Include="Controllers\LoginController.xib" />
-    <InterfaceDefinition Include="Controllers\SettingsController.xib" />
     <InterfaceDefinition Include="Controllers\CurrentSpeedController.xib" />
   </ItemGroup>
 </Project>

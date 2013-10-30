@@ -18,13 +18,13 @@ namespace SeniorProject
 		}
 		protected void DataInit(SettingsModel model) {
 			if (model.CallForHelp == true)
-				data.Add ("911 help");
-			if (model.DrinkDrive == true)
-				data.Add ("drinking driving");
-			if (model.OverSpeedDrive == true)
-				data.Add ("Speed Limit Tracking");
+				data.Add ("Emergency Help");
+			if (model.DrunkDriving == true)
+				data.Add ("Drunk Driving Blocked");
+			if (model.OverSpeeding == true)
+				data.Add ("Overspeed Notifications");
 			if (model.TextMessage == true)
-				data.Add ("block text while driving");
+				data.Add ("Texting while Driving Blocked");
 		}
 		#region implemented abstract members of UITableViewSource
 

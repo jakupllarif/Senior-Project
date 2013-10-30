@@ -1,13 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/DialogModels/RegisterDialogModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/SettingsController.cs">
     <Files>
-      <File FileName="SeniorProject/Controllers/SettingsController.cs" Line="11" Column="47" />
-      <File FileName="SeniorProject/Controllers/RegisterController.cs" Line="18" Column="8" />
-      <File FileName="SeniorProject/Models/SettingsModel.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/Models/RegisterModel.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/DialogModels/SettingsDialogModel.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/DialogModels/RegisterDialogModel.cs" Line="1" Column="1" />
+      <File FileName="SeniorProject/Controllers/SettingsController.cs" Line="34" Column="91" />
+      <File FileName="SeniorProject/Controllers/RegisterController.cs" Line="73" Column="56" />
+      <File FileName="SeniorProject/Models/SettingsModel.cs" Line="12" Column="28" />
+      <File FileName="SeniorProject/Data/MockData.cs" Line="13" Column="36" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,12 +13,11 @@
           <Node name="SeniorProject" expanded="True">
             <Node name="Controllers" expanded="True">
               <Node name="CurrentSpeedController.cs" expanded="True" />
-              <Node name="SettingsController.cs" expanded="True" />
+              <Node name="SettingsController.cs" expanded="True" selected="True" />
               <Node name="SpeedController.cs" expanded="True" />
             </Node>
-            <Node name="DialogModels" expanded="True">
-              <Node name="RegisterDialogModel.cs" selected="True" />
-            </Node>
+            <Node name="Data" expanded="True" />
+            <Node name="DialogModels" expanded="True" />
             <Node name="Models" expanded="True" />
           </Node>
         </State>
