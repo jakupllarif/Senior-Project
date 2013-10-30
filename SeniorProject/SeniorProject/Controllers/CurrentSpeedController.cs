@@ -29,8 +29,11 @@ namespace SeniorProject
 		{
 			base.ViewDidLoad ();
 
-			int speedSystem = changeMetricSystem ();
+			int speedSystem = 0;
 
+			kmhourButton.ValueChanged += (sender,e) => {
+				speedSystem = kmhourButton.SelectedSegment;
+			};
 			_iPhoneLocationManager = new CLLocationManager ();
 			_iPhoneLocationManager.DesiredAccuracy = 1000; // 1000 meters/1 kilometer
 
@@ -55,13 +58,8 @@ namespace SeniorProject
 		protected int changeMetricSystem()
 		{
 			int x = 0;
-			kmhourButton.ValueChanged += delegate {
-				if (kmhourButton.SelectedSegment == 0) {
-					x = 0;//return 0;
-				} else if (kmhourButton.SelectedSegment == 1) {
-					x = 1;//return 1;
-				}
-
+			kmhourButton.ValueChanged += (sender,e) => {
+					x = kmhourButton.SelectedSegment;
 			};
 			return x;
 		}
