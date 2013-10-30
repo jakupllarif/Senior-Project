@@ -60,8 +60,8 @@ namespace SeniorProject
 					MKCoordinateSpan span = new MKCoordinateSpan(MilesToLatitudeDegrees (2), MilesToLongitudeDegrees (2, coords.Latitude));
 					map.Region = new MKCoordinateRegion(coords, span);
 				}
-				_message = map.UserLocation.Location.Speed < 0 ? "0" : map.UserLocation.Location.Speed.ToString();
-				this.NavigationItem.Title = _message + " metters/s";
+				_message = String.Format("{0:f2}", map.UserLocation.Location.Speed < 0 ? 0 : (map.UserLocation.Location.Speed* 2.23694));
+				this.NavigationItem.Title = _message + " MPH";
 			};
 		}
 
