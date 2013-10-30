@@ -34,6 +34,7 @@ namespace SeniorProject
 			kmhourButton.ValueChanged += (sender,e) => {
 				speedSystem = kmhourButton.SelectedSegment;
 			};
+
 			_iPhoneLocationManager = new CLLocationManager ();
 			_iPhoneLocationManager.DesiredAccuracy = 1000; // 1000 meters/1 kilometer
 
@@ -54,19 +55,11 @@ namespace SeniorProject
 
 		}
 
-		//change between km/h and m/h systems
-		protected int changeMetricSystem()
-		{
-			int x = 0;
-			kmhourButton.ValueChanged += (sender,e) => {
-					x = kmhourButton.SelectedSegment;
-			};
-			return x;
-		}
-
 		protected void UpdateLocation(int speedSystem, CLLocation newLocation)
 		{
 			double speedNumber = newLocation.Speed;
+
+			updateProgressBars (speedNumber);
 
 			//change between km/h and m/h
 			if (speedSystem == 0)
@@ -75,7 +68,6 @@ namespace SeniorProject
 				speedNumber *= 2.24; //m/s to mph
 
 			CurrentSpeed.Text = speedNumber.ToString();
-			updateProgressBars (speedNumber);
 		}
 
 		//update progress bars according to the current speed
