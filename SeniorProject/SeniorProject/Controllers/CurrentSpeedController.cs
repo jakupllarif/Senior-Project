@@ -89,11 +89,11 @@ namespace SeniorProject
 			redBar.Progress = 0.0f;
 
 			//update progress bars according to the current speed
-			if (speedNumber.CompareTo (30) <= 0) {
+			if (speedNumber.CompareTo (50) <= 0) {
 				greenBar.Progress = (float)speedNumber / 30.0f;
 				CurrentSpeed.TextColor = UIColor.Green;
 			}
-			else if (speedNumber.CompareTo (30) > 0 && speedNumber.CompareTo (40) <= 0) {
+			else if (speedNumber.CompareTo (50) > 0 && speedNumber.CompareTo (70) <= 0) {
 				greenBar.Progress = (float)100 / 10.0f;
 				yellowBar.Progress = (float)(speedNumber-30) / 10.0f;
 				CurrentSpeed.TextColor = UIColor.Yellow;
