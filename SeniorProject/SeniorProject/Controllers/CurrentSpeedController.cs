@@ -67,7 +67,13 @@ namespace SeniorProject
 			else if (speedSystem == 1)
 				speedNumber *= 2.24; //m/s to mph
 
+<<<<<<< HEAD
 			CurrentSpeed.Text = speedNumber.ToString();
+=======
+			//CurrentSpeed.Text = speedNumber.ToString();
+			CurrentSpeed.Text = String.Format ("{0:f2}", speedNumber);
+			updateProgressBars (speedNumber);
+>>>>>>> 157fd5a61b203cc7e26e019ece7e676129a08996
 		}
 
 		//update progress bars according to the current speed
