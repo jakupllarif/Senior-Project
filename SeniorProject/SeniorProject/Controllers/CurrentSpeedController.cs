@@ -54,15 +54,16 @@ namespace SeniorProject
 		//change between km/h and m/h systems
 		protected int changeMetricSystem()
 		{
+			int x = 0;
 			kmhourButton.ValueChanged += delegate {
 				if (kmhourButton.SelectedSegment == 0) {
-					return 0;
+					x = 0;//return 0;
 				} else if (kmhourButton.SelectedSegment == 1) {
-					return 1;
+					x = 1;//return 1;
 				}
 
 			};
-			return 0;
+			return x;
 		}
 
 		protected void UpdateLocation(int speedSystem, CLLocation newLocation)
