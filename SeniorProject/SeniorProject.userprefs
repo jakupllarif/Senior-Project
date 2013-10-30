@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.7.0" />
   <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/CurrentSpeedController.cs">
     <Files>
-      <File FileName="SeniorProject/Controllers/CurrentSpeedController.cs" Line="57" Column="17" />
+      <File FileName="SeniorProject/Controllers/CurrentSpeedController.cs" Line="59" Column="6" />
       <File FileName="SeniorProject/Controllers/SpeedController.cs" Line="44" Column="47" />
     </Files>
     <Pads>
@@ -41,6 +41,8 @@
     <BreakpointStore>
       <Breakpoint file="/Users/gabrielliu/Documents/STUDY/GradSchool/Fin_Project/Senior-Project/SeniorProject/SeniorProject/LocationService.cs" line="17" column="1" />
       <Breakpoint file="/Users/gabrielliu/Documents/STUDY/GradSchool/Fin_Project/Senior-Project/SeniorProject/SeniorProject/LocationService.cs" line="18" column="1" />
+      <Breakpoint file="/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/Controllers/CurrentSpeedController.cs" line="59" column="15" />
+      <Breakpoint file="/Users/Ajakupllari/Desktop/Senior-Project/SeniorProject/SeniorProject/Controllers/CurrentSpeedController.cs" line="61" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

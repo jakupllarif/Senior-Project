@@ -29,14 +29,14 @@ namespace SeniorProject
 		{
 			base.ViewDidLoad ();
 
-			_iPhoneLocationManager = new CLLocationManager ();
+			int speedSystem = changeMetricSystem ();
 
-			//change between km/h and m/h
-			changeMetricSystem ();
+			_iPhoneLocationManager = new CLLocationManager ();
+			_iPhoneLocationManager.DesiredAccuracy = 1000; // 1000 meters/1 kilometer
 
 			//update location based on the specified metric system
 			_iPhoneLocationManager.LocationsUpdated += (object sender, CLLocationsUpdatedEventArgs e) => {
-				UpdateLocation (e.Locations [e.Locations.Length - 1]);
+				UpdateLocation (speedSystem, e.Locations [e.Locations.Length - 1]);
 			};
 
 			if (CLLocationManager.LocationServicesEnabled)
@@ -52,29 +52,36 @@ namespace SeniorProject
 		}
 
 		//change between km/h and m/h systems
-		protected void changeMetricSystem()
+		protected int changeMetricSystem()
 		{
 			kmhourButton.ValueChanged += delegate {
 				if (kmhourButton.SelectedSegment == 0) {
-					_iPhoneLocationManager.DesiredAccuracy = 1000; // 1000 meters/1 kilometer
-
+					return 0;
 				} else if (kmhourButton.SelectedSegment == 1) {
-					_iPhoneLocationManager.DesiredAccuracy = 0.621371; // 1000 meters/1 kilometer
+					return 1;
 				}
+
 			};
+			return 0;
 		}
 
-		protected void UpdateLocation(CLLocation newLocation)
-		{
-			CurrentSpeed.Text = newLocation.Speed.ToString();
-			updateProgressBars (newLocation);
-		}
-
-		//update progress bars according to the current speed
-		protected void updateProgressBars(CLLocation newLocation)
+		protected void UpdateLocation(int speedSystem, CLLocation newLocation)
 		{
 			double speedNumber = newLocation.Speed;
 
+			//change between km/h and m/h
+			if (speedSystem == 0)
+				speedNumber *= 3.6; //m/s to km/h
+			else if (speedSystem == 1)
+				speedNumber *= 2.24; //m/s to mph
+
+			CurrentSpeed.Text = speedNumber.ToString();
+			updateProgressBars (speedNumber);
+		}
+
+		//update progress bars according to the current speed
+		protected void updateProgressBars(double speedNumber)
+		{
 			//restart the progress bars
 			greenBar.Progress = 0.0f;
 			yellowBar.Progress = 0.0f;
