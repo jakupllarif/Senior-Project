@@ -1,16 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/CurrentSpeedController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/SettingsController.cs">
     <Files>
-      <File FileName="SeniorProject/Controllers/CurrentSpeedController.cs" Line="89" Column="72" />
+      <File FileName="SeniorProject/Controllers/CurrentSpeedController.cs" Line="72" Column="49" />
       <File FileName="SeniorProject/Controllers/SpeedController.cs" Line="1" Column="1" />
+      <File FileName="SeniorProject/Controllers/SettingsController.cs" Line="36" Column="73" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="SeniorProject" expanded="True">
             <Node name="Controllers" expanded="True">
-              <Node name="CurrentSpeedController.cs" expanded="True" selected="True" />
+              <Node name="CurrentSpeedController.cs" expanded="True" />
+              <Node name="SettingsController.cs" selected="True" />
               <Node name="SpeedController.cs" expanded="True" />
             </Node>
             <Node name="Data" expanded="True" />
