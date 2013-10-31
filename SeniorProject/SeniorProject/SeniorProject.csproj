@@ -85,13 +85,9 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="MonoTouch.Dialog-1" />
-<<<<<<< HEAD
     <Reference Include="GoogleMaps">
       <HintPath>..\Components\googlemapsios-1.5.0\lib\ios\GoogleMaps.dll</HintPath>
-      <HintPath>..\..\lib\ios\GoogleMaps.dll</HintPath>
     </Reference>
-=======
->>>>>>> 816f9083ec2ae66cf8dd755ec3e1c2ad539f5555
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -136,7 +132,6 @@
     <InterfaceDefinition Include="Controllers\SpeedController.xib" />
     <InterfaceDefinition Include="Controllers\LoginController.xib" />
     <InterfaceDefinition Include="Controllers\CurrentSpeedController.xib" />
-<<<<<<< HEAD
     <InterfaceDefinition Include="Controllers\MapController.xib" />
   </ItemGroup>
   <ItemGroup>
@@ -144,7 +139,5 @@
       <Version>1.5.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
-=======
->>>>>>> 816f9083ec2ae66cf8dd755ec3e1c2ad539f5555
   </ItemGroup>
 </Project>

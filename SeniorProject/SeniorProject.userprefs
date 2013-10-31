@@ -1,26 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/CurrentSpeedController.cs">
-    <Files>
-<<<<<<< HEAD
-      <File FileName="SeniorProject/Controllers/CurrentSpeedController.cs" Line="1" Column="1" />
-=======
-      <File FileName="SeniorProject/Controllers/CurrentSpeedController.cs" Line="89" Column="72" />
->>>>>>> 816f9083ec2ae66cf8dd755ec3e1c2ad539f5555
-      <File FileName="SeniorProject/Controllers/SpeedController.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="SeniorProject" expanded="True">
-            <Node name="Controllers" expanded="True">
-<<<<<<< HEAD
-              <Node name="SettingsController.cs" selected="True" />
-=======
-              <Node name="CurrentSpeedController.cs" expanded="True" selected="True" />
-              <Node name="SpeedController.cs" expanded="True" />
->>>>>>> 816f9083ec2ae66cf8dd755ec3e1c2ad539f5555
-            </Node>
+          <Node name="SeniorProject" expanded="True" selected="True">
+            <Node name="ComponentReferenceFolder" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -43,10 +28,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/gabrielliu/Documents/STUDY/GradSchool/Fin_Project/Senior-Project/SeniorProject/SeniorProject/LocationService.cs" line="17" column="1" />
-      <Breakpoint file="/Users/gabrielliu/Documents/STUDY/GradSchool/Fin_Project/Senior-Project/SeniorProject/SeniorProject/LocationService.cs" line="18" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
