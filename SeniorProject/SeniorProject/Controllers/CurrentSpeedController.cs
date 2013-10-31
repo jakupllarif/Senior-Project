@@ -4,6 +4,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.CoreLocation;
 using MonoTouch.CoreGraphics;
+using MonoTouch.AudioToolbox;
 
 namespace SeniorProject
 {
@@ -11,6 +12,7 @@ namespace SeniorProject
 	{
 		private CLLocationManager _iPhoneLocationManager;
 		private SpeedController _speedController;
+		//private   _sound;
 
 		public CurrentSpeedController () : base ("CurrentSpeedController", null)
 		{
@@ -29,6 +31,7 @@ namespace SeniorProject
 		{
 			base.ViewDidLoad ();
 
+			//_sound = SystemSound.FromFile ("Sound/tap.aif");
 			int speedSystem = 0;
 
 			kmhourButton.ValueChanged += (sender,e) => {
@@ -57,8 +60,9 @@ namespace SeniorProject
 
 		protected void UpdateLocation(int speedSystem, CLLocation newLocation)
 		{
-			double speedNumber = newLocation.Speed;
-
+			double speedNumber = newLocation.Speed < 0 ? 0 : newLocation.Speed;
+//			if (speedNumber >= 30)
+//				_sound.PlaySystemSound ();
 			updateProgressBars (speedNumber);
 
 			//change between km/h and m/h
