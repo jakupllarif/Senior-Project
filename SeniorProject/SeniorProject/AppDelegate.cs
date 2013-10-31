@@ -5,7 +5,6 @@ using MonoTouch.Dialog;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using SeniorProject.Models;
-using Google.Maps;
 
 namespace SeniorProject
 {
@@ -24,13 +23,9 @@ namespace SeniorProject
 		//
 		// You have 17 seconds to return from this method, or iOS will terminate your application.
 		//
-
-		const string MapsApiKey = "AIzaSyCMB3jHSGGAtDuPMsB9DG1dexyLDgLRp3I";
-
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			// create a new window instance based on the screen size
-			MapServices.ProvideAPIKey (MapsApiKey);
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
             var rootNavigationController = new UINavigationController();
             var loginController = new LoginController();

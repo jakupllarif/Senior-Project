@@ -1,6 +1,0 @@
-/Users/gabrielliu/Documents/STUDY/GradSchool/Fin_Project/Senior-Project/SeniorProject/SeniorProject/obj/iPhone/Debug/mtouch-cache/Link/monotouch.dll
-/Users/gabrielliu/Documents/STUDY/GradSchool/Fin_Project/Senior-Project/SeniorProject/SeniorProject/obj/iPhone/Debug/mtouch-cache/Link/System.dll
-/Users/gabrielliu/Documents/STUDY/GradSchool/Fin_Project/Senior-Project/SeniorProject/SeniorProject/obj/iPhone/Debug/mtouch-cache/Link/SeniorProject.exe
-/Users/gabrielliu/Documents/STUDY/GradSchool/Fin_Project/Senior-Project/SeniorProject/SeniorProject/obj/iPhone/Debug/mtouch-cache/Link/MonoTouch.Dialog-1.dll
-/Users/gabrielliu/Documents/STUDY/GradSchool/Fin_Project/Senior-Project/SeniorProject/SeniorProject/obj/iPhone/Debug/mtouch-cache/Link/System.Core.dll
-/Users/gabrielliu/Documents/STUDY/GradSchool/Fin_Project/Senior-Project/SeniorProject/SeniorProject/obj/iPhone/Debug/mtouch-cache/Link/mscorlib.dll

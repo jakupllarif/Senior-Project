@@ -85,21 +85,12 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="MonoTouch.Dialog-1" />
-    <Reference Include="GoogleMaps">
-<<<<<<< HEAD
-      <HintPath>..\Components\googlemapsios-1.5.0\lib\ios\GoogleMaps.dll</HintPath>
-=======
-      <HintPath>..\..\lib\ios\GoogleMaps.dll</HintPath>
->>>>>>> 980f84280b380f642a5743bc05a628a4be764fcc
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="Sound\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
-    <None Include="Sound\tap.aif" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DialogModels\RegisterDialogModel.cs" />
@@ -131,10 +122,6 @@
     </Compile>
     <Compile Include="Models\SettingsModel.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
-    <Compile Include="Controllers\MapController.cs" />
-    <Compile Include="Controllers\MapController.designer.cs">
-      <DependentUpon>MapController.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
@@ -142,13 +129,5 @@
     <InterfaceDefinition Include="Controllers\SpeedController.xib" />
     <InterfaceDefinition Include="Controllers\LoginController.xib" />
     <InterfaceDefinition Include="Controllers\CurrentSpeedController.xib" />
-    <InterfaceDefinition Include="Controllers\MapController.xib" />
-  </ItemGroup>
-  <ItemGroup>
-    <XamarinComponentReference Include="googlemapsios">
-      <InstallationInProgress>True</InstallationInProgress>
-      <Version>1.5.0</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
   </ItemGroup>
 </Project>
