@@ -88,9 +88,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Sound\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
+    <None Include="Sound\tap.aif" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DialogModels\RegisterDialogModel.cs" />
