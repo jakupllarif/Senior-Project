@@ -26,6 +26,10 @@ namespace SeniorProject
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+			usernameTxtField.ShouldReturn = delegate {
+				usernameTxtField.ResignFirstResponder();
+				return true;
+			};
 			passwordTxtField.ShouldReturn = delegate {
 				passwordTxtField.ResignFirstResponder();
 				return true;
