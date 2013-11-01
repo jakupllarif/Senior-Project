@@ -10,7 +10,7 @@ namespace SeniorProject
 	public partial class CurrentSpeedController : UIViewController
 	{
 		private CLLocationManager _iPhoneLocationManager;
-		private MapController _speedController;
+		private SpeedController _speedController;
 
 		public CurrentSpeedController () : base ("CurrentSpeedController", null)
 		{
@@ -49,8 +49,8 @@ namespace SeniorProject
 			//if viewmap button is touched then display the map
 			ViewMap.TouchUpInside += (object sender, EventArgs e) => {
 				if (_speedController == null)
-				//_speedController = new SpeedController();
-					_speedController = new MapController();
+					_speedController = new SpeedController();
+					//_speedController = new MapController();
 				NavigationController.PushViewController(_speedController, true);
 			};
 
