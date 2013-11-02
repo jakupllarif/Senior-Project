@@ -58,7 +58,7 @@ namespace SeniorProject
 
 		protected void UpdateLocation(int speedSystem, CLLocation newLocation)
 		{
-			double speedNumber = newLocation.Speed;
+			double speedNumber = newLocation.Speed <= 0 ? 0 : newLocation.Speed;
 
 			updateProgressBars (speedNumber);
 
