@@ -1,7 +1,7 @@
 MonoTouch.Dialog-1.dll
 mscorlib.dll
-System.Core.dll
 System.dll
+System.Core.dll
 System.Xml.dll
 System.Json.dll
 GoogleMaps.dll

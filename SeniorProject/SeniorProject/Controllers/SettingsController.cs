@@ -44,6 +44,16 @@ namespace SeniorProject
 				new Section ("Emergency Situation", "Send your personal information and current location to 911 to ask for help.") {
 					(_settingsDialog.EmergencyHelp = new BooleanElement ("Inform 911", _settingsModel.CallForHelp))
 				},
+				new Section("Save change") {
+					new StringElement("Save", () =>
+						{
+							_settingsModel.TextMessage = _settingsDialog.BlockSMS.Value;
+							_settingsModel.VoiceUtility = _settingsDialog.SMSVoiceUtility.Value;
+							_settingsModel.OverSpeeding = _settingsDialog.NotifyOverspeeding.Value;
+							_settingsModel.DrunkDriving = _settingsDialog.BlockDrunkDriving.Value;
+							_settingsModel.CallForHelp = _settingsDialog.EmergencyHelp.Value;
+						})
+				},
 				new Section ("Privacy"){
 					new StringElement("Sign Out", () => { new UIAlertView("","Are you sure you want to sign out?"
 						                                                      , null,"No", "Yes").Show(); })

@@ -25,6 +25,8 @@ namespace SeniorProject
 				data.Add ("Overspeed Notifications");
 			if (model.TextMessage == true)
 				data.Add ("Texting while Driving Blocked");
+			if (model.VoiceUtility == true)
+				data.Add ("Voice Utility Active");
 		}
 		#region implemented abstract members of UITableViewSource
 
