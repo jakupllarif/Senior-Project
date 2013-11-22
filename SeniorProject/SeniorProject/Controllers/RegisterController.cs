@@ -16,7 +16,7 @@ namespace SeniorProject
         List<RegisterModel> list = new List<RegisterModel>();
         private int id = 1;
         //comment test//see which is betters
-        public RegisterController() : base(UITableViewStyle.Grouped, null, true)
+		public RegisterController() : base(UITableViewStyle.Grouped, null, true)
         {
             Initialize();
         }
@@ -85,7 +85,7 @@ namespace SeniorProject
             list.Add(model);
             id++;
             Console.WriteLine("there are {0} registers in the list", list.Count);
-			list.Remove (model);
+			//list.Remove (model);
         }
 
 		//remove register view when click register

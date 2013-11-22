@@ -1,7 +1,10 @@
 using System;
 using System.Drawing;
+using System.Linq;
+using System.Collections.Generic;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using SeniorProject.Models;
 
 namespace SeniorProject
 {
@@ -10,9 +13,11 @@ namespace SeniorProject
 
 		private RegisterController _registerController;
 		private MainViewTabBarController _mainController;
+		static public List<RegisterModel> _users;
 
 		public LoginController () : base ("LoginController", null)
 		{
+			_users = new List<RegisterModel> ();
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -25,6 +30,17 @@ namespace SeniorProject
 
 		public override void ViewDidLoad ()
 		{
+			//test Login
+			var user = new RegisterModel()
+			{
+				Name = "Gabriel",
+				Password = "123456"
+			};
+
+			_users.Add (user);
+
+			//done test code
+			/*-------------------------------*/
 			base.ViewDidLoad ();
 			passwordTxtField.ShouldReturn = delegate {
 				passwordTxtField.ResignFirstResponder();
@@ -58,10 +74,26 @@ namespace SeniorProject
 				var alert = new UIAlertView("Error", message, null, "Cancel", "Ok");
 				alert.Show();
 			} else {
-				var welcomeMessage = string.Format("Welcome Back " + usernameTxtField.Text + "!");
-				_mainController = new MainViewTabBarController(welcomeMessage);
-				NavigationController.PushViewController(_mainController, true);
-				ReleaseViewController ();
+				var has = _users.Any (s => s.Name == usernameTxtField.Text.ToString ());
+				if (has) {
+					var user = _users.First(s => s.Name == usernameTxtField.Text.ToString ());
+					if (user.Password == passwordTxtField.Text.ToString ()) {
+						var welcomeMessage = string.Format ("Welcome Back " + usernameTxtField.Text + "!");
+						_mainController = new MainViewTabBarController (welcomeMessage);
+						NavigationController.PushViewController (_mainController, true);
+						ReleaseViewController ();
+					} else {
+						var alert = new UIAlertView("Password doesn't match", "Please re-enter your password", null, "Cancel", "Ok");
+						alert.Show();
+						passwordTxtField.Text = "";
+					}
+				} else {
+					var alert = new UIAlertView("User Doesn't exist", "You need to create user first", null, "Cancel", "Ok");
+					alert.Show();
+					if (_registerController == null)
+						_registerController = new RegisterController();
+					NavigationController.PushViewController(_registerController, true);
+				}
 			}       
 		}
 
