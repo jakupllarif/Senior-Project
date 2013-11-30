@@ -8,66 +8,23 @@
 
 static MonoMethod *method_1 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManagerDelegate__ctor (id this, SEL sel)
+native_to_managed_trampoline_MonoTouch_UIKit_UIControlEventProxy_Activated (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
-	if (monotouch_try_get_nsobject (this))
-		return this;
 	if (!method_1)
 		method_1 = get_method_for_selector ([this class], sel).method->method;
-	int handle = (int) this;
-	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_1));
-	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_1)));
+		}
 	mono_runtime_invoke (method_1, mthis, arg_ptrs, NULL);
-	monotouch_create_managed_ref (this, mthis, true);
-	void *params[2];
-	params[0] = mthis;
-	params[1] = &this;
-	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
-	return this;
+	return NULL;
 }
 
 static MonoMethod *method_2 = NULL;
-void *
-native_to_managed_trampoline_MonoTouch_Foundation_NSActionDispatcher_Apply (id this, SEL sel)
-{
-	void *arg_ptrs [0];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_2)
-		method_2 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_2)));
-		}
-	mono_runtime_invoke (method_2, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_3 = NULL;
-void *
-native_to_managed_trampoline_MonoTouch_Foundation_NSAsyncActionDispatcher_Apply (id this, SEL sel)
-{
-	void *arg_ptrs [0];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_3)
-		method_3 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_3)));
-		}
-	mono_runtime_invoke (method_3, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_4 = NULL;
 void *
 native_to_managed_trampoline_MonoTouch_Foundation_NSObject_NSObject_Disposer__ctor (id this, SEL sel)
 {
@@ -77,13 +34,13 @@ native_to_managed_trampoline_MonoTouch_Foundation_NSObject_NSObject_Disposer__ct
 		mono_jit_thread_attach (NULL);
 	if (monotouch_try_get_nsobject (this))
 		return this;
-	if (!method_4)
-		method_4 = get_method_for_selector ([this class], sel).method->method;
+	if (!method_2)
+		method_2 = get_method_for_selector ([this class], sel).method->method;
 	int handle = (int) this;
 	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_4));
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_2));
 	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
-	mono_runtime_invoke (method_4, mthis, arg_ptrs, NULL);
+	mono_runtime_invoke (method_2, mthis, arg_ptrs, NULL);
 	monotouch_create_managed_ref (this, mthis, true);
 	void *params[2];
 	params[0] = mthis;
@@ -92,46 +49,90 @@ native_to_managed_trampoline_MonoTouch_Foundation_NSObject_NSObject_Disposer__ct
 	return this;
 }
 
-static MonoMethod *method_5 = NULL;
+static MonoMethod *method_3 = NULL;
 void *
 native_to_managed_trampoline_MonoTouch_Foundation_NSObject_NSObject_Disposer_Drain (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
-	if (!method_5)
-		method_5 = get_method_for_selector ([this class], sel).method->method;
+	if (!method_3)
+		method_3 = get_method_for_selector ([this class], sel).method->method;
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_5, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_3, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_5, NULL, arg_ptrs, NULL);
+	mono_runtime_invoke (method_3, NULL, arg_ptrs, NULL);
 	return NULL;
 }
 
-static MonoMethod *method_6 = NULL;
+static MonoMethod *method_4 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_UIKit_UIControlEventProxy_Activated (id this, SEL sel)
+native_to_managed_trampoline_MonoTouch_Foundation_NSAsyncActionDispatcher_Apply (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
-	if (!method_6)
-		method_6 = get_method_for_selector ([this class], sel).method->method;
+	if (!method_4)
+		method_4 = get_method_for_selector ([this class], sel).method->method;
 		mthis = NULL;
 		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_6)));
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_4)));
 		}
-	mono_runtime_invoke (method_6, mthis, arg_ptrs, NULL);
+	mono_runtime_invoke (method_4, mthis, arg_ptrs, NULL);
 	return NULL;
+}
+
+static MonoMethod *method_5 = NULL;
+void *
+native_to_managed_trampoline_MonoTouch_Foundation_NSActionDispatcher_Apply (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_5)
+		method_5 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_5)));
+		}
+	mono_runtime_invoke (method_5, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_6 = NULL;
+void *
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManagerDelegate__ctor (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (monotouch_try_get_nsobject (this))
+		return this;
+	if (!method_6)
+		method_6 = get_method_for_selector ([this class], sel).method->method;
+	int handle = (int) this;
+	handle |= 1;
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_6));
+	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
+	mono_runtime_invoke (method_6, mthis, arg_ptrs, NULL);
+	monotouch_create_managed_ref (this, mthis, true);
+	void *params[2];
+	params[0] = mthis;
+	params[1] = &this;
+	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
+	return this;
 }
 
 static MonoMethod *method_7 = NULL;
 void *
-native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate__ctor (id this, SEL sel)
+native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate__ctor (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -156,9 +157,9 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate__ctor (id this
 
 static MonoMethod *method_8 = NULL;
 void *
-native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_WillMove (id this, SEL sel, id p0, bool p1)
+native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_ShouldStartLoad (id this, SEL sel, id p0, id p1, int p2)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [3];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -170,20 +171,30 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_WillMove (id t
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_8, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_8, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
-	mono_runtime_invoke (method_8, mthis, arg_ptrs, NULL);
-	return NULL;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_8, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	arg_ptrs [2] = &p2;
+	void* retval = (void *) mono_runtime_invoke (method_8, mthis, arg_ptrs, NULL);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
+	return res;
 }
 
 static MonoMethod *method_9 = NULL;
 void *
-native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidChangeCameraPosition (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadStarted (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -195,25 +206,20 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidChangeCamer
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_9, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_9, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_9, 1));
-		}
-		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_9, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_10 = NULL;
 void *
-native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_IdleAtCameraPosition (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadingFinished (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -225,23 +231,18 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_IdleAtCameraPo
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_10, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_10, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_10, 1));
-		}
-		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_10, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_11 = NULL;
 void *
-native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidTapAtCoordinate (id this, SEL sel, id p0, CLLocationCoordinate2D p1)
+native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadFailed (id this, SEL sel, id p0, id p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -255,43 +256,50 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidTapAtCoordi
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_11, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_11, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_11, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_11, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_12 = NULL;
 void *
-native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidLongPressAtCoordinate (id this, SEL sel, id p0, CLLocationCoordinate2D p1)
+native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate__ctor (id this, SEL sel)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
+	if (monotouch_try_get_nsobject (this))
+		return this;
 	if (!method_12)
 		method_12 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_12)));
-		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_12, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
+	int handle = (int) this;
+	handle |= 1;
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_12));
+	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
 	mono_runtime_invoke (method_12, mthis, arg_ptrs, NULL);
-	return NULL;
+	monotouch_create_managed_ref (this, mthis, true);
+	void *params[2];
+	params[0] = mthis;
+	params[1] = &this;
+	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
+	return this;
 }
 
 static MonoMethod *method_13 = NULL;
 void *
-native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_TappedMarker (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_WillMove (id this, SEL sel, id p0, bool p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -305,25 +313,19 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_TappedMarker (
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_13, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_13, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_13, 1));
-		}
-		arg_ptrs [1] = mobj1;
-	void* retval = (void *) mono_runtime_invoke (method_13, mthis, arg_ptrs, NULL);
-	void * res;
-	res = *(void * *) mono_object_unbox (retval);
-	return res;
+	arg_ptrs [1] = &p1;
+	mono_runtime_invoke (method_13, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_14 = NULL;
 void *
-native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidTapInfoWindowOfMarker (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidChangeCameraPosition (id this, SEL sel, id p0, id p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -337,14 +339,16 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidTapInfoWind
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_14, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_14, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_14, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_14, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_14, mthis, arg_ptrs, NULL);
@@ -353,7 +357,7 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidTapInfoWind
 
 static MonoMethod *method_15 = NULL;
 void *
-native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidTapOverlay (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_IdleAtCameraPosition (id this, SEL sel, id p0, id p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -367,14 +371,16 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidTapOverlay 
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_15, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_15, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_15, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_15, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_15, mthis, arg_ptrs, NULL);
@@ -383,7 +389,7 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidTapOverlay 
 
 static MonoMethod *method_16 = NULL;
 void *
-native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_MarkerInfoWindow (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidTapAtCoordinate (id this, SEL sel, id p0, CLLocationCoordinate2D p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -397,33 +403,19 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_MarkerInfoWind
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_16, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_16, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_16, 1));
-		}
-		arg_ptrs [1] = mobj1;
-	void* retval = (void *) mono_runtime_invoke (method_16, mthis, arg_ptrs, NULL);
-	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
-	}
-	return res;
+	arg_ptrs [1] = &p1;
+	mono_runtime_invoke (method_16, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_17 = NULL;
 void *
-native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidBeginDraggingMarker (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidLongPressAtCoordinate (id this, SEL sel, id p0, CLLocationCoordinate2D p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -437,23 +429,19 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidBeginDraggi
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_17, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_17, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_17, 1));
-		}
-		arg_ptrs [1] = mobj1;
+	arg_ptrs [1] = &p1;
 	mono_runtime_invoke (method_17, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_18 = NULL;
 void *
-native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidEndDraggingMarker (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_TappedMarker (id this, SEL sel, id p0, id p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -467,23 +455,27 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidEndDragging
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_18, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_18, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_18, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_18, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
-	mono_runtime_invoke (method_18, mthis, arg_ptrs, NULL);
-	return NULL;
+	void* retval = (void *) mono_runtime_invoke (method_18, mthis, arg_ptrs, NULL);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
+	return res;
 }
 
 static MonoMethod *method_19 = NULL;
 void *
-native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidDragMarker (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidTapInfoWindowOfMarker (id this, SEL sel, id p0, id p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -497,14 +489,16 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidDragMarker 
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_19, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_19, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_19, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_19, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_19, mthis, arg_ptrs, NULL);
@@ -513,34 +507,41 @@ native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidDragMarker 
 
 static MonoMethod *method_20 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate__ctor (id this, SEL sel)
+native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidTapOverlay (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
-	if (monotouch_try_get_nsobject (this))
-		return this;
 	if (!method_20)
 		method_20 = get_method_for_selector ([this class], sel).method->method;
-	int handle = (int) this;
-	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_20));
-	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_20)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_20, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_20, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_20, mthis, arg_ptrs, NULL);
-	monotouch_create_managed_ref (this, mthis, true);
-	void *params[2];
-	params[0] = mthis;
-	params[1] = &this;
-	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
-	return this;
+	return NULL;
 }
 
 static MonoMethod *method_21 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_ShouldStartLoad (id this, SEL sel, id p0, id p1, int p2)
+native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_MarkerInfoWindow (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [3];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -552,28 +553,37 @@ native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_Should
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_21, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_21, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_21, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_21, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
-	arg_ptrs [2] = &p2;
 	void* retval = (void *) mono_runtime_invoke (method_21, mthis, arg_ptrs, NULL);
 	void * res;
-	res = *(void * *) mono_object_unbox (retval);
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
 	return res;
 }
 
 static MonoMethod *method_22 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadStarted (id this, SEL sel, id p0)
+native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidBeginDraggingMarker (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -585,19 +595,27 @@ native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadSt
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_22, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_22, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_22, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_22, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_23 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadingFinished (id this, SEL sel, id p0)
+native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidEndDraggingMarker (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -609,17 +627,25 @@ native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_Loadin
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_23, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_23, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_23, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_23, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_24 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadFailed (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidDragMarker (id this, SEL sel, id p0, id p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -633,14 +659,16 @@ native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadFa
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_24, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_24, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_24, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_24, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_24, mthis, arg_ptrs, NULL);
@@ -688,8 +716,9 @@ native_to_managed_trampoline_Google_Maps_IndoorDisplay__IndoorDisplayDelegate_Di
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_26, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_26, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_26, mthis, arg_ptrs, NULL);
@@ -712,8 +741,9 @@ native_to_managed_trampoline_Google_Maps_IndoorDisplay__IndoorDisplayDelegate_Di
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_27, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_27, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_27, mthis, arg_ptrs, NULL);
@@ -761,8 +791,9 @@ native_to_managed_trampoline_Google_Maps_PanoramaView__PanoramaViewDelegate_Will
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_29, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_29, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	arg_ptrs [1] = p1 ? mono_string_new (mono_domain_get (), [p1 UTF8String]) : NULL;
@@ -786,14 +817,16 @@ native_to_managed_trampoline_Google_Maps_PanoramaView__PanoramaViewDelegate_DidM
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_30, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_30, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_30, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_30, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_30, mthis, arg_ptrs, NULL);
@@ -816,14 +849,16 @@ native_to_managed_trampoline_Google_Maps_PanoramaView__PanoramaViewDelegate_DidM
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_31, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_31, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_31, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_31, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	arg_ptrs [2] = &p2;
@@ -847,14 +882,16 @@ native_to_managed_trampoline_Google_Maps_PanoramaView__PanoramaViewDelegate_OnMo
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_32, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_32, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_32, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_32, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	arg_ptrs [2] = &p2;
@@ -878,14 +915,16 @@ native_to_managed_trampoline_Google_Maps_PanoramaView__PanoramaViewDelegate_OnMo
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_33, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_33, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_33, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_33, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	arg_ptrs [2] = p2 ? mono_string_new (mono_domain_get (), [p2 UTF8String]) : NULL;
@@ -909,14 +948,16 @@ native_to_managed_trampoline_Google_Maps_PanoramaView__PanoramaViewDelegate_DidM
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_34, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_34, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_34, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_34, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_34, mthis, arg_ptrs, NULL);
@@ -939,8 +980,9 @@ native_to_managed_trampoline_Google_Maps_PanoramaView__PanoramaViewDelegate_DidT
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_35, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_35, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	arg_ptrs [1] = &p1;
@@ -964,14 +1006,16 @@ native_to_managed_trampoline_Google_Maps_PanoramaView__PanoramaViewDelegate_Tapp
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_36, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_36, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_36, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_36, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	void* retval = (void *) mono_runtime_invoke (method_36, mthis, arg_ptrs, NULL);
@@ -1021,14 +1065,16 @@ native_to_managed_trampoline_SeniorProject_AppDelegate_FinishedLaunching (id thi
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_38, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_38, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_38, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_38, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	void* retval = (void *) mono_runtime_invoke (method_38, mthis, arg_ptrs, NULL);
@@ -1039,7 +1085,7 @@ native_to_managed_trampoline_SeniorProject_AppDelegate_FinishedLaunching (id thi
 
 static MonoMethod *method_39 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate__ctor (id this, SEL sel)
+native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate__ctor (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -1064,9 +1110,9 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 
 static MonoMethod *method_40 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_UpdatedLocation (id this, SEL sel, id p0, id p1, id p2)
+native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldBeginEditing (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [3];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1078,31 +1124,22 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_40, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_40, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_40, 1));
-		}
-		arg_ptrs [1] = mobj1;
-	NSObject *nsobj2 = (NSObject *) p2;
-		MonoObject *mobj2 = NULL;
-		if (nsobj2) {
-			mobj2 = get_nsobject_with_type_for_ptr (nsobj2, false, monotouch_get_parameter_type (method_40, 2));
-		}
-		arg_ptrs [2] = mobj2;
-	mono_runtime_invoke (method_40, mthis, arg_ptrs, NULL);
-	return NULL;
+	void* retval = (void *) mono_runtime_invoke (method_40, mthis, arg_ptrs, NULL);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
+	return res;
 }
 
 static MonoMethod *method_41 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_UpdatedHeading (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_EditingStarted (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1114,23 +1151,18 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_41, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_41, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_41, 1));
-		}
-		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_41, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_42 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_ShouldDisplayHeadingCalibration (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldEndEditing (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -1144,8 +1176,9 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_42, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_42, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	void* retval = (void *) mono_runtime_invoke (method_42, mthis, arg_ptrs, NULL);
@@ -1156,9 +1189,9 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 
 static MonoMethod *method_43 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_Failed (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_EditingEnded (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1170,25 +1203,20 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_43, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_43, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_43, 1));
-		}
-		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_43, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_44 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_RegionEntered (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldClear (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1200,25 +1228,22 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_44, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_44, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_44, 1));
-		}
-		arg_ptrs [1] = mobj1;
-	mono_runtime_invoke (method_44, mthis, arg_ptrs, NULL);
-	return NULL;
+	void* retval = (void *) mono_runtime_invoke (method_44, mthis, arg_ptrs, NULL);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
+	return res;
 }
 
 static MonoMethod *method_45 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_RegionLeft (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldReturn (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1230,23 +1255,20 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_45, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_45, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_45, 1));
-		}
-		arg_ptrs [1] = mobj1;
-	mono_runtime_invoke (method_45, mthis, arg_ptrs, NULL);
-	return NULL;
+	void* retval = (void *) mono_runtime_invoke (method_45, mthis, arg_ptrs, NULL);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
+	return res;
 }
 
 static MonoMethod *method_46 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_MonitoringFailed (id this, SEL sel, id p0, id p1, id p2)
+native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldChangeCharacters (id this, SEL sel, id p0, NSRange p1, NSString * p2)
 {
 	void *arg_ptrs [3];
 	MonoObject *mthis;
@@ -1260,59 +1282,47 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_46, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_46, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_46, 1));
-		}
-		arg_ptrs [1] = mobj1;
-	NSObject *nsobj2 = (NSObject *) p2;
-		MonoObject *mobj2 = NULL;
-		if (nsobj2) {
-			mobj2 = get_nsobject_with_type_for_ptr (nsobj2, false, monotouch_get_parameter_type (method_46, 2));
-		}
-		arg_ptrs [2] = mobj2;
-	mono_runtime_invoke (method_46, mthis, arg_ptrs, NULL);
-	return NULL;
+	arg_ptrs [1] = &p1;
+	arg_ptrs [2] = p2 ? mono_string_new (mono_domain_get (), [p2 UTF8String]) : NULL;
+	void* retval = (void *) mono_runtime_invoke (method_46, mthis, arg_ptrs, NULL);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
+	return res;
 }
 
 static MonoMethod *method_47 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_DidStartMonitoringForRegion (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate__ctor (id this, SEL sel)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
+	if (monotouch_try_get_nsobject (this))
+		return this;
 	if (!method_47)
 		method_47 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_47)));
-		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_47, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_47, 1));
-		}
-		arg_ptrs [1] = mobj1;
+	int handle = (int) this;
+	handle |= 1;
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_47));
+	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
 	mono_runtime_invoke (method_47, mthis, arg_ptrs, NULL);
-	return NULL;
+	monotouch_create_managed_ref (this, mthis, true);
+	void *params[2];
+	params[0] = mthis;
+	params[1] = &this;
+	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
+	return this;
 }
 
 static MonoMethod *method_48 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_DidDetermineState (id this, SEL sel, id p0, int p1, id p2)
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_UpdatedLocation (id this, SEL sel, id p0, id p1, id p2)
 {
 	void *arg_ptrs [3];
 	MonoObject *mthis;
@@ -1326,15 +1336,23 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_48, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_48, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_48, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
 	NSObject *nsobj2 = (NSObject *) p2;
 		MonoObject *mobj2 = NULL;
+		bool created2 = false;
 		if (nsobj2) {
-			mobj2 = get_nsobject_with_type_for_ptr (nsobj2, false, monotouch_get_parameter_type (method_48, 2));
+			mobj2 = get_nsobject_with_type_for_ptr_created (nsobj2, false, monotouch_get_parameter_type (method_48, 2), &created2);
 		}
 		arg_ptrs [2] = mobj2;
 	mono_runtime_invoke (method_48, mthis, arg_ptrs, NULL);
@@ -1343,9 +1361,9 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 
 static MonoMethod *method_49 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_DidRangeBeacons (id this, SEL sel, id p0, id p1, id p2)
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_UpdatedHeading (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [3];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1357,48 +1375,27 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_49, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_49, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	if (p1) {
-		NSArray *arr = (NSArray *) p1;
-		MonoClass *e_class;
-		MonoArray *marr;
-		MonoType *p;
-		int j;
-			MonoClass *p_class;
-		p = monotouch_get_parameter_type (method_49, 1);
-		e_class = mono_class_get_element_class (mono_class_from_mono_type (p));
-		marr = mono_array_new (mono_domain_get (), e_class, [arr count]);
-		for (j = 0; j < [arr count]; j++) {
-			NSObject *nobj = [arr objectAtIndex: j];
-			MonoObject *mobj1 = NULL;
-			p_class = mono_class_get_type (e_class);
-			if (nobj) {
-				mobj1 = get_nsobject_with_type_for_ptr (nobj, false, p_class);
-			}
-			mono_array_set (marr, MonoObject *, j, mobj1);
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_49, 1), &created1);
 		}
-		arg_ptrs [1] = marr;
-	} else {
-		arg_ptrs [1] = NULL;
-	}
-	NSObject *nsobj2 = (NSObject *) p2;
-		MonoObject *mobj2 = NULL;
-		if (nsobj2) {
-			mobj2 = get_nsobject_with_type_for_ptr (nsobj2, false, monotouch_get_parameter_type (method_49, 2));
-		}
-		arg_ptrs [2] = mobj2;
+		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_49, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_50 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_RangingBeaconsDidFailForRegion (id this, SEL sel, id p0, id p1, id p2)
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_ShouldDisplayHeadingCalibration (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [3];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1410,29 +1407,20 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_50, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_50, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_50, 1));
-		}
-		arg_ptrs [1] = mobj1;
-	NSObject *nsobj2 = (NSObject *) p2;
-		MonoObject *mobj2 = NULL;
-		if (nsobj2) {
-			mobj2 = get_nsobject_with_type_for_ptr (nsobj2, false, monotouch_get_parameter_type (method_50, 2));
-		}
-		arg_ptrs [2] = mobj2;
-	mono_runtime_invoke (method_50, mthis, arg_ptrs, NULL);
-	return NULL;
+	void* retval = (void *) mono_runtime_invoke (method_50, mthis, arg_ptrs, NULL);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
+	return res;
 }
 
 static MonoMethod *method_51 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_AuthorizationChanged (id this, SEL sel, id p0, int p1)
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_Failed (id this, SEL sel, id p0, id p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -1446,18 +1434,25 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_51, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_51, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_51, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_51, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_52 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_LocationsUpdated (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_RegionEntered (id this, SEL sel, id p0, id p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -1471,8 +1466,177 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_52, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_52, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_52, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	mono_runtime_invoke (method_52, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_53 = NULL;
+void *
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_RegionLeft (id this, SEL sel, id p0, id p1)
+{
+	void *arg_ptrs [2];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_53)
+		method_53 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_53)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_53, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_53, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	mono_runtime_invoke (method_53, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_54 = NULL;
+void *
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_MonitoringFailed (id this, SEL sel, id p0, id p1, id p2)
+{
+	void *arg_ptrs [3];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_54)
+		method_54 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_54)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_54, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_54, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	NSObject *nsobj2 = (NSObject *) p2;
+		MonoObject *mobj2 = NULL;
+		bool created2 = false;
+		if (nsobj2) {
+			mobj2 = get_nsobject_with_type_for_ptr_created (nsobj2, false, monotouch_get_parameter_type (method_54, 2), &created2);
+		}
+		arg_ptrs [2] = mobj2;
+	mono_runtime_invoke (method_54, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_55 = NULL;
+void *
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_DidStartMonitoringForRegion (id this, SEL sel, id p0, id p1)
+{
+	void *arg_ptrs [2];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_55)
+		method_55 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_55)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_55, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_55, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	mono_runtime_invoke (method_55, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_56 = NULL;
+void *
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_DidDetermineState (id this, SEL sel, id p0, int p1, id p2)
+{
+	void *arg_ptrs [3];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_56)
+		method_56 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_56)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_56, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	arg_ptrs [1] = &p1;
+	NSObject *nsobj2 = (NSObject *) p2;
+		MonoObject *mobj2 = NULL;
+		bool created2 = false;
+		if (nsobj2) {
+			mobj2 = get_nsobject_with_type_for_ptr_created (nsobj2, false, monotouch_get_parameter_type (method_56, 2), &created2);
+		}
+		arg_ptrs [2] = mobj2;
+	mono_runtime_invoke (method_56, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_57 = NULL;
+void *
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_DidRangeBeacons (id this, SEL sel, id p0, id p1, id p2)
+{
+	void *arg_ptrs [3];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_57)
+		method_57 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_57)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_57, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	if (p1) {
@@ -1481,8 +1645,8 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 		MonoArray *marr;
 		MonoType *p;
 		int j;
-			MonoClass *p_class;
-		p = monotouch_get_parameter_type (method_52, 1);
+			MonoType *p_class;
+		p = monotouch_get_parameter_type (method_57, 1);
 		e_class = mono_class_get_element_class (mono_class_from_mono_type (p));
 		marr = mono_array_new (mono_domain_get (), e_class, [arr count]);
 		for (j = 0; j < [arr count]; j++) {
@@ -1498,144 +1662,22 @@ native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocatio
 	} else {
 		arg_ptrs [1] = NULL;
 	}
-	mono_runtime_invoke (method_52, mthis, arg_ptrs, NULL);
+	NSObject *nsobj2 = (NSObject *) p2;
+		MonoObject *mobj2 = NULL;
+		bool created2 = false;
+		if (nsobj2) {
+			mobj2 = get_nsobject_with_type_for_ptr_created (nsobj2, false, monotouch_get_parameter_type (method_57, 2), &created2);
+		}
+		arg_ptrs [2] = mobj2;
+	mono_runtime_invoke (method_57, mthis, arg_ptrs, NULL);
 	return NULL;
-}
-
-static MonoMethod *method_53 = NULL;
-void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_LocationUpdatesPaused (id this, SEL sel, id p0)
-{
-	void *arg_ptrs [1];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_53)
-		method_53 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_53)));
-		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_53, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_53, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_54 = NULL;
-void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_LocationUpdatesResumed (id this, SEL sel, id p0)
-{
-	void *arg_ptrs [1];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_54)
-		method_54 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_54)));
-		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_54, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_54, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_55 = NULL;
-void *
-native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_DeferredUpdatesFinished (id this, SEL sel, id p0, id p1)
-{
-	void *arg_ptrs [2];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_55)
-		method_55 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_55)));
-		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_55, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_55, 1));
-		}
-		arg_ptrs [1] = mobj1;
-	mono_runtime_invoke (method_55, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_56 = NULL;
-void *
-native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate__ctor (id this, SEL sel)
-{
-	void *arg_ptrs [0];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (monotouch_try_get_nsobject (this))
-		return this;
-	if (!method_56)
-		method_56 = get_method_for_selector ([this class], sel).method->method;
-	int handle = (int) this;
-	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_56));
-	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
-	mono_runtime_invoke (method_56, mthis, arg_ptrs, NULL);
-	monotouch_create_managed_ref (this, mthis, true);
-	void *params[2];
-	params[0] = mthis;
-	params[1] = &this;
-	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
-	return this;
-}
-
-static MonoMethod *method_57 = NULL;
-void *
-native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldBeginEditing (id this, SEL sel, id p0)
-{
-	void *arg_ptrs [1];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_57)
-		method_57 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_57)));
-		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_57, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	void* retval = (void *) mono_runtime_invoke (method_57, mthis, arg_ptrs, NULL);
-	void * res;
-	res = *(void * *) mono_object_unbox (retval);
-	return res;
 }
 
 static MonoMethod *method_58 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_EditingStarted (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_RangingBeaconsDidFailForRegion (id this, SEL sel, id p0, id p1, id p2)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [3];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1647,19 +1689,34 @@ native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_Ed
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_58, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_58, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_58, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	NSObject *nsobj2 = (NSObject *) p2;
+		MonoObject *mobj2 = NULL;
+		bool created2 = false;
+		if (nsobj2) {
+			mobj2 = get_nsobject_with_type_for_ptr_created (nsobj2, false, monotouch_get_parameter_type (method_58, 2), &created2);
+		}
+		arg_ptrs [2] = mobj2;
 	mono_runtime_invoke (method_58, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_59 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldEndEditing (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_AuthorizationChanged (id this, SEL sel, id p0, int p1)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1671,21 +1728,21 @@ native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_Sh
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_59, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_59, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	void* retval = (void *) mono_runtime_invoke (method_59, mthis, arg_ptrs, NULL);
-	void * res;
-	res = *(void * *) mono_object_unbox (retval);
-	return res;
+	arg_ptrs [1] = &p1;
+	mono_runtime_invoke (method_59, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_60 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_EditingEnded (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_LocationsUpdated (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1697,17 +1754,41 @@ native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_Ed
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_60, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_60, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
+	if (p1) {
+		NSArray *arr = (NSArray *) p1;
+		MonoClass *e_class;
+		MonoArray *marr;
+		MonoType *p;
+		int j;
+			MonoType *p_class;
+		p = monotouch_get_parameter_type (method_60, 1);
+		e_class = mono_class_get_element_class (mono_class_from_mono_type (p));
+		marr = mono_array_new (mono_domain_get (), e_class, [arr count]);
+		for (j = 0; j < [arr count]; j++) {
+			NSObject *nobj = [arr objectAtIndex: j];
+			MonoObject *mobj1 = NULL;
+			p_class = mono_class_get_type (e_class);
+			if (nobj) {
+				mobj1 = get_nsobject_with_type_for_ptr (nobj, false, p_class);
+			}
+			mono_array_set (marr, MonoObject *, j, mobj1);
+		}
+		arg_ptrs [1] = marr;
+	} else {
+		arg_ptrs [1] = NULL;
+	}
 	mono_runtime_invoke (method_60, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_61 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldClear (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_LocationUpdatesPaused (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -1721,19 +1802,18 @@ native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_Sh
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_61, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_61, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	void* retval = (void *) mono_runtime_invoke (method_61, mthis, arg_ptrs, NULL);
-	void * res;
-	res = *(void * *) mono_object_unbox (retval);
-	return res;
+	mono_runtime_invoke (method_61, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_62 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldReturn (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_LocationUpdatesResumed (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -1747,21 +1827,20 @@ native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_Sh
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_62, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_62, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	void* retval = (void *) mono_runtime_invoke (method_62, mthis, arg_ptrs, NULL);
-	void * res;
-	res = *(void * *) mono_object_unbox (retval);
-	return res;
+	mono_runtime_invoke (method_62, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_63 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldChangeCharacters (id this, SEL sel, id p0, NSRange p1, NSString * p2)
+native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_DeferredUpdatesFinished (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [3];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1773,16 +1852,20 @@ native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_Sh
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_63, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_63, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
-	arg_ptrs [2] = p2 ? mono_string_new (mono_domain_get (), [p2 UTF8String]) : NULL;
-	void* retval = (void *) mono_runtime_invoke (method_63, mthis, arg_ptrs, NULL);
-	void * res;
-	res = *(void * *) mono_object_unbox (retval);
-	return res;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_63, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	mono_runtime_invoke (method_63, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_64 = NULL;
@@ -1826,8 +1909,9 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_Regio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_65, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_65, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	arg_ptrs [1] = &p1;
@@ -1851,8 +1935,9 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_Regio
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_66, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_66, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	arg_ptrs [1] = &p1;
@@ -1876,8 +1961,9 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_WillS
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_67, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_67, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_67, mthis, arg_ptrs, NULL);
@@ -1900,8 +1986,9 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_MapLo
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_68, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_68, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_68, mthis, arg_ptrs, NULL);
@@ -1924,14 +2011,16 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_Loadi
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_69, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_69, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_69, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_69, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_69, mthis, arg_ptrs, NULL);
@@ -1954,14 +2043,16 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_GetVi
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_70, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_70, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_70, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_70, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	void* retval = (void *) mono_runtime_invoke (method_70, mthis, arg_ptrs, NULL);
@@ -1994,8 +2085,9 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_DidAd
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_71, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_71, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	if (p1) {
@@ -2004,7 +2096,7 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_DidAd
 		MonoArray *marr;
 		MonoType *p;
 		int j;
-			MonoClass *p_class;
+			MonoType *p_class;
 		p = monotouch_get_parameter_type (method_71, 1);
 		e_class = mono_class_get_element_class (mono_class_from_mono_type (p));
 		marr = mono_array_new (mono_domain_get (), e_class, [arr count]);
@@ -2041,20 +2133,23 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_Callo
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_72, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_72, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_72, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_72, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	NSObject *nsobj2 = (NSObject *) p2;
 		MonoObject *mobj2 = NULL;
+		bool created2 = false;
 		if (nsobj2) {
-			mobj2 = get_nsobject_with_type_for_ptr (nsobj2, false, monotouch_get_parameter_type (method_72, 2));
+			mobj2 = get_nsobject_with_type_for_ptr_created (nsobj2, false, monotouch_get_parameter_type (method_72, 2), &created2);
 		}
 		arg_ptrs [2] = mobj2;
 	mono_runtime_invoke (method_72, mthis, arg_ptrs, NULL);
@@ -2077,14 +2172,16 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_Chang
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_73, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_73, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_73, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_73, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	arg_ptrs [2] = &p2;
@@ -2109,14 +2206,16 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_GetVi
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_74, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_74, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_74, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_74, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	void* retval = (void *) mono_runtime_invoke (method_74, mthis, arg_ptrs, NULL);
@@ -2149,14 +2248,16 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_DidAd
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_75, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_75, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_75, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_75, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_75, mthis, arg_ptrs, NULL);
@@ -2179,14 +2280,16 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_DidSe
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_76, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_76, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_76, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_76, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_76, mthis, arg_ptrs, NULL);
@@ -2209,14 +2312,16 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_DidFa
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_77, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_77, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_77, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_77, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_77, mthis, arg_ptrs, NULL);
@@ -2239,14 +2344,16 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_DidDe
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_78, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_78, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_78, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_78, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_78, mthis, arg_ptrs, NULL);
@@ -2269,8 +2376,9 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_WillS
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_79, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_79, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_79, mthis, arg_ptrs, NULL);
@@ -2293,8 +2401,9 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_DidSt
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_80, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_80, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_80, mthis, arg_ptrs, NULL);
@@ -2317,14 +2426,16 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_DidUp
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_81, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_81, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_81, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_81, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_81, mthis, arg_ptrs, NULL);
@@ -2347,8 +2458,9 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_DidCh
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_82, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_82, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	arg_ptrs [1] = &p1;
@@ -2373,8 +2485,9 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_Overl
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_83, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_83, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	arg_ptrs [1] = monotouch_get_inative_object_static (p1, false, "MonoTouch.MapKit.MKOverlayWrapper, monotouch", "MonoTouch.MapKit.IMKOverlay, monotouch");
@@ -2408,8 +2521,9 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_DidAd
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_84, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_84, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	if (p1) {
@@ -2418,7 +2532,7 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_DidAd
 		MonoArray *marr;
 		MonoType *p;
 		int j;
-			MonoClass *p_class;
+			MonoType *p_class;
 		p = monotouch_get_parameter_type (method_84, 1);
 		e_class = mono_class_get_element_class (mono_class_from_mono_type (p));
 		marr = mono_array_new (mono_domain_get (), e_class, [arr count]);
@@ -2455,8 +2569,9 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_WillS
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_85, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_85, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_85, mthis, arg_ptrs, NULL);
@@ -2479,8 +2594,9 @@ native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_DidFi
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_86, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_86, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	arg_ptrs [1] = &p1;
@@ -2515,9 +2631,9 @@ native_to_managed_trampoline_MonoTouch_UIKit_UITableViewSource__ctor (id this, S
 
 static MonoMethod *method_88 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_AccessoryButtonTapped (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_MonoTouch_Dialog_RefreshTableHeaderView_LayoutSubviews (id this, SEL sel)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2527,27 +2643,15 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_Access
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_88)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_88, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_88, 1));
-		}
-		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_88, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_89 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_RowsInSection (id this, SEL sel, id p0, int p1)
+native_to_managed_trampoline_MonoTouch_Dialog_RefreshTableHeaderView_Draw (id this, SEL sel, CGRect p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2557,24 +2661,16 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_RowsIn
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_89)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_89, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
-	void* retval = (void *) mono_runtime_invoke (method_89, mthis, arg_ptrs, NULL);
-	void * res;
-	res = *(void * *) mono_object_unbox (retval);
-	return res;
+	arg_ptrs [0] = &p0;
+	mono_runtime_invoke (method_89, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_90 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_NumberOfSections (id this, SEL sel, id p0)
+native_to_managed_trampoline_SeniorProject_SpeedController_get_map (id this, SEL sel)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2584,23 +2680,25 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_Number
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_90)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_90, 0));
-		}
-		arg_ptrs [0] = mobj0;
 	void* retval = (void *) mono_runtime_invoke (method_90, mthis, arg_ptrs, NULL);
 	void * res;
-	res = *(void * *) mono_object_unbox (retval);
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
 	return res;
 }
 
 static MonoMethod *method_91 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_TitleForHeader (id this, SEL sel, id p0, int p1)
+native_to_managed_trampoline_SeniorProject_SpeedController_set_map (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2612,30 +2710,20 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_TitleF
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_91, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_91, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
-	void* retval = (void *) mono_runtime_invoke (method_91, mthis, arg_ptrs, NULL);
-	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		char *str = mono_string_to_utf8 ((MonoString *) retval);
-		NSString *nsstr = [[NSString alloc] initWithUTF8String:str];
-		[nsstr autorelease];
-		mono_free (str);
-		res = nsstr;
-	}
-	return res;
+	mono_runtime_invoke (method_91, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_92 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_TitleForFooter (id this, SEL sel, id p0, int p1)
+native_to_managed_trampoline_SeniorProject_SpeedController_get_segmentedControl (id this, SEL sel)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2645,32 +2733,25 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_TitleF
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_92)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_92, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
 	void* retval = (void *) mono_runtime_invoke (method_92, mthis, arg_ptrs, NULL);
 	void * res;
 	if (!retval) {
 		res = NULL;
 	} else {
-		char *str = mono_string_to_utf8 ((MonoString *) retval);
-		NSString *nsstr = [[NSString alloc] initWithUTF8String:str];
-		[nsstr autorelease];
-		mono_free (str);
-		res = nsstr;
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
 	}
 	return res;
 }
 
 static MonoMethod *method_93 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetCell (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_SeniorProject_SpeedController_set_segmentedControl (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2682,71 +2763,45 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetCel
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_93, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_93, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_93, 1));
-		}
-		arg_ptrs [1] = mobj1;
-	void* retval = (void *) mono_runtime_invoke (method_93, mthis, arg_ptrs, NULL);
-	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
-	}
-	return res;
+	mono_runtime_invoke (method_93, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_94 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_WillDisplay (id this, SEL sel, id p0, id p1, id p2)
+native_to_managed_trampoline_SeniorProject_SpeedController__ctor (id this, SEL sel)
 {
-	void *arg_ptrs [3];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
+	if (monotouch_try_get_nsobject (this))
+		return this;
 	if (!method_94)
 		method_94 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_94)));
-		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_94, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_94, 1));
-		}
-		arg_ptrs [1] = mobj1;
-	NSObject *nsobj2 = (NSObject *) p2;
-		MonoObject *mobj2 = NULL;
-		if (nsobj2) {
-			mobj2 = get_nsobject_with_type_for_ptr (nsobj2, false, monotouch_get_parameter_type (method_94, 2));
-		}
-		arg_ptrs [2] = mobj2;
+	int handle = (int) this;
+	handle |= 1;
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_94));
+	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
 	mono_runtime_invoke (method_94, mthis, arg_ptrs, NULL);
-	return NULL;
+	monotouch_create_managed_ref (this, mthis, true);
+	void *params[2];
+	params[0] = mthis;
+	params[1] = &this;
+	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
+	return this;
 }
 
 static MonoMethod *method_95 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_RowDeselected (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_SeniorProject_SpeedController_DidReceiveMemoryWarning (id this, SEL sel)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2756,27 +2811,15 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_RowDes
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_95)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_95, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_95, 1));
-		}
-		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_95, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_96 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_RowSelected (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_SeniorProject_SpeedController_ViewDidLoad (id this, SEL sel)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2786,27 +2829,15 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_RowSel
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_96)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_96, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_96, 1));
-		}
-		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_96, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_97 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetViewForHeader (id this, SEL sel, id p0, int p1)
+native_to_managed_trampoline_SeniorProject_SpeedController_ViewWillAppear (id this, SEL sel, bool p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2816,32 +2847,16 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetVie
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_97)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_97, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
-	void* retval = (void *) mono_runtime_invoke (method_97, mthis, arg_ptrs, NULL);
-	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
-	}
-	return res;
+	arg_ptrs [0] = &p0;
+	mono_runtime_invoke (method_97, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_98 = NULL;
-float
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetHeightForHeader (id this, SEL sel, id p0, int p1)
+void *
+native_to_managed_trampoline_SeniorProject_SpeedController_ViewWillDisappear (id this, SEL sel, bool p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2851,24 +2866,16 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetHei
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_98)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_98, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
-	void* retval = (void *) mono_runtime_invoke (method_98, mthis, arg_ptrs, NULL);
-	float res;
-	res = *(float *) mono_object_unbox (retval);
-	return res;
+	arg_ptrs [0] = &p0;
+	mono_runtime_invoke (method_98, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_99 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetViewForFooter (id this, SEL sel, id p0, int p1)
+native_to_managed_trampoline_MonoTouch_Dialog_HtmlElement_WebViewController_ShouldAutorotateToInterfaceOrientation (id this, SEL sel, int p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2878,30 +2885,16 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetVie
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_99)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_99, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
+	arg_ptrs [0] = &p0;
 	void* retval = (void *) mono_runtime_invoke (method_99, mthis, arg_ptrs, NULL);
 	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
-	}
+	res = *(void * *) mono_object_unbox (retval);
 	return res;
 }
 
 static MonoMethod *method_100 = NULL;
-float
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetHeightForFooter (id this, SEL sel, id p0, int p1)
+void *
+native_to_managed_trampoline_SeniorProject_MockData_RowsInSection (id this, SEL sel, id p0, int p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -2915,22 +2908,23 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetHei
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_100, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_100, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	arg_ptrs [1] = &p1;
 	void* retval = (void *) mono_runtime_invoke (method_100, mthis, arg_ptrs, NULL);
-	float res;
-	res = *(float *) mono_object_unbox (retval);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
 	return res;
 }
 
 static MonoMethod *method_101 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_Scrolled (id this, SEL sel, id p0)
+native_to_managed_trampoline_SeniorProject_MockData_GetCell (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2942,19 +2936,37 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_Scroll
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_101, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_101, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_101, mthis, arg_ptrs, NULL);
-	return NULL;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_101, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	void* retval = (void *) mono_runtime_invoke (method_101, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
 }
 
 static MonoMethod *method_102 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_DraggingStarted (id this, SEL sel, id p0)
+native_to_managed_trampoline_SeniorProject_MainController_get_InformationTable (id this, SEL sel)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2964,21 +2976,25 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_Draggi
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_102)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_102, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_102, mthis, arg_ptrs, NULL);
-	return NULL;
+	void* retval = (void *) mono_runtime_invoke (method_102, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
 }
 
 static MonoMethod *method_103 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_DraggingEnded (id this, SEL sel, id p0, bool p1)
+native_to_managed_trampoline_SeniorProject_MainController_set_InformationTable (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -2990,43 +3006,46 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_Draggi
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_103, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_103, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
 	mono_runtime_invoke (method_103, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_104 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_MessageSummaryView__ctor (id this, SEL sel)
+native_to_managed_trampoline_SeniorProject_MainController_get_WelcomeMessage (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
-	if (monotouch_try_get_nsobject (this))
-		return this;
 	if (!method_104)
 		method_104 = get_method_for_selector ([this class], sel).method->method;
-	int handle = (int) this;
-	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_104));
-	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
-	mono_runtime_invoke (method_104, mthis, arg_ptrs, NULL);
-	monotouch_create_managed_ref (this, mthis, true);
-	void *params[2];
-	params[0] = mthis;
-	params[1] = &this;
-	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
-	return this;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_104)));
+		}
+	void* retval = (void *) mono_runtime_invoke (method_104, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
 }
 
 static MonoMethod *method_105 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_MessageSummaryView_Draw (id this, SEL sel, CGRect p0)
+native_to_managed_trampoline_SeniorProject_MainController_set_WelcomeMessage (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -3038,16 +3057,22 @@ native_to_managed_trampoline_MonoTouch_Dialog_MessageSummaryView_Draw (id this, 
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_105)));
 		}
-	arg_ptrs [0] = &p0;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_105, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_105, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_106 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_OwnerDrawnElement_OwnerDrawnCellView_Draw (id this, SEL sel, CGRect p0)
+native_to_managed_trampoline_SeniorProject_MainController_DidReceiveMemoryWarning (id this, SEL sel)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3057,14 +3082,13 @@ native_to_managed_trampoline_MonoTouch_Dialog_OwnerDrawnElement_OwnerDrawnCellVi
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_106)));
 		}
-	arg_ptrs [0] = &p0;
 	mono_runtime_invoke (method_106, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_107 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_RefreshTableHeaderView_LayoutSubviews (id this, SEL sel)
+native_to_managed_trampoline_SeniorProject_MainController_ViewDidLoad (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -3082,7 +3106,7 @@ native_to_managed_trampoline_MonoTouch_Dialog_RefreshTableHeaderView_LayoutSubvi
 
 static MonoMethod *method_108 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_RefreshTableHeaderView_Draw (id this, SEL sel, CGRect p0)
+native_to_managed_trampoline_MonoTouch_Dialog_OwnerDrawnElement_OwnerDrawnCellView_Draw (id this, SEL sel, CGRect p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -3101,7 +3125,7 @@ native_to_managed_trampoline_MonoTouch_Dialog_RefreshTableHeaderView_Draw (id th
 
 static MonoMethod *method_109 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_OnEditingStarted (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_ViewWillDisappear (id this, SEL sel, bool p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -3113,19 +3137,14 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegat
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_109)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_109, 0));
-		}
-		arg_ptrs [0] = mobj0;
+	arg_ptrs [0] = &p0;
 	mono_runtime_invoke (method_109, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_110 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_OnEditingStopped (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_DidRotate (id this, SEL sel, int p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -3137,21 +3156,16 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegat
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_110)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_110, 0));
-		}
-		arg_ptrs [0] = mobj0;
+	arg_ptrs [0] = &p0;
 	mono_runtime_invoke (method_110, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_111 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_TextChanged (id this, SEL sel, id p0, NSString * p1)
+native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_ShouldAutorotateToInterfaceOrientation (id this, SEL sel, int p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3161,20 +3175,16 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegat
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_111)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_111, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = p1 ? mono_string_new (mono_domain_get (), [p1 UTF8String]) : NULL;
-	mono_runtime_invoke (method_111, mthis, arg_ptrs, NULL);
-	return NULL;
+	arg_ptrs [0] = &p0;
+	void* retval = (void *) mono_runtime_invoke (method_111, mthis, arg_ptrs, NULL);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
+	return res;
 }
 
 static MonoMethod *method_112 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_CancelButtonClicked (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_OnEditingStarted (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -3188,8 +3198,9 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegat
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_112, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_112, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_112, mthis, arg_ptrs, NULL);
@@ -3198,7 +3209,7 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegat
 
 static MonoMethod *method_113 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_SearchButtonClicked (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_OnEditingStopped (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -3212,8 +3223,9 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegat
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_113, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_113, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_113, mthis, arg_ptrs, NULL);
@@ -3222,9 +3234,9 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegat
 
 static MonoMethod *method_114 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_MainController_get_InformationTable (id this, SEL sel)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_TextChanged (id this, SEL sel, id p0, NSString * p1)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3234,23 +3246,21 @@ native_to_managed_trampoline_SeniorProject_MainController_get_InformationTable (
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_114)));
 		}
-	void* retval = (void *) mono_runtime_invoke (method_114, mthis, arg_ptrs, NULL);
-	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
-	}
-	return res;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_114, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	arg_ptrs [1] = p1 ? mono_string_new (mono_domain_get (), [p1 UTF8String]) : NULL;
+	mono_runtime_invoke (method_114, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_115 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_MainController_set_InformationTable (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_CancelButtonClicked (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -3264,8 +3274,9 @@ native_to_managed_trampoline_SeniorProject_MainController_set_InformationTable (
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_115, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_115, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_115, mthis, arg_ptrs, NULL);
@@ -3274,9 +3285,9 @@ native_to_managed_trampoline_SeniorProject_MainController_set_InformationTable (
 
 static MonoMethod *method_116 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_MainController_get_WelcomeMessage (id this, SEL sel)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_SearchButtonClicked (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3286,25 +3297,22 @@ native_to_managed_trampoline_SeniorProject_MainController_get_WelcomeMessage (id
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_116)));
 		}
-	void* retval = (void *) mono_runtime_invoke (method_116, mthis, arg_ptrs, NULL);
-	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
-	}
-	return res;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_116, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	mono_runtime_invoke (method_116, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_117 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_MainController_set_WelcomeMessage (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_AccessoryButtonTapped (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3316,19 +3324,27 @@ native_to_managed_trampoline_SeniorProject_MainController_set_WelcomeMessage (id
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_117, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_117, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_117, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_117, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_118 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_MainController_DidReceiveMemoryWarning (id this, SEL sel)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_RowsInSection (id this, SEL sel, id p0, int p1)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3338,15 +3354,25 @@ native_to_managed_trampoline_SeniorProject_MainController_DidReceiveMemoryWarnin
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_118)));
 		}
-	mono_runtime_invoke (method_118, mthis, arg_ptrs, NULL);
-	return NULL;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_118, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	arg_ptrs [1] = &p1;
+	void* retval = (void *) mono_runtime_invoke (method_118, mthis, arg_ptrs, NULL);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
+	return res;
 }
 
 static MonoMethod *method_119 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_MainController_ViewDidLoad (id this, SEL sel)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_NumberOfSections (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3356,13 +3382,22 @@ native_to_managed_trampoline_SeniorProject_MainController_ViewDidLoad (id this, 
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_119)));
 		}
-	mono_runtime_invoke (method_119, mthis, arg_ptrs, NULL);
-	return NULL;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_119, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	void* retval = (void *) mono_runtime_invoke (method_119, mthis, arg_ptrs, NULL);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
+	return res;
 }
 
 static MonoMethod *method_120 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_MockData_RowsInSection (id this, SEL sel, id p0, int p1)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_TitleForHeader (id this, SEL sel, id p0, int p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -3376,20 +3411,29 @@ native_to_managed_trampoline_SeniorProject_MockData_RowsInSection (id this, SEL 
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_120, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_120, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	arg_ptrs [1] = &p1;
 	void* retval = (void *) mono_runtime_invoke (method_120, mthis, arg_ptrs, NULL);
 	void * res;
-	res = *(void * *) mono_object_unbox (retval);
+	if (!retval) {
+		res = NULL;
+	} else {
+		char *str = mono_string_to_utf8 ((MonoString *) retval);
+		NSString *nsstr = [[NSString alloc] initWithUTF8String:str];
+		[nsstr autorelease];
+		mono_free (str);
+		res = nsstr;
+	}
 	return res;
 }
 
 static MonoMethod *method_121 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_MockData_GetCell (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_TitleForFooter (id this, SEL sel, id p0, int p1)
 {
 	void *arg_ptrs [2];
 	MonoObject *mthis;
@@ -3403,35 +3447,31 @@ native_to_managed_trampoline_SeniorProject_MockData_GetCell (id this, SEL sel, i
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_121, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_121, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_121, 1));
-		}
-		arg_ptrs [1] = mobj1;
+	arg_ptrs [1] = &p1;
 	void* retval = (void *) mono_runtime_invoke (method_121, mthis, arg_ptrs, NULL);
 	void * res;
 	if (!retval) {
 		res = NULL;
 	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
+		char *str = mono_string_to_utf8 ((MonoString *) retval);
+		NSString *nsstr = [[NSString alloc] initWithUTF8String:str];
+		[nsstr autorelease];
+		mono_free (str);
+		res = nsstr;
 	}
 	return res;
 }
 
 static MonoMethod *method_122 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_SpeedController_get_map (id this, SEL sel)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetCell (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3441,6 +3481,20 @@ native_to_managed_trampoline_SeniorProject_SpeedController_get_map (id this, SEL
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_122)));
 		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_122, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_122, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
 	void* retval = (void *) mono_runtime_invoke (method_122, mthis, arg_ptrs, NULL);
 	void * res;
 	if (!retval) {
@@ -3457,9 +3511,9 @@ native_to_managed_trampoline_SeniorProject_SpeedController_get_map (id this, SEL
 
 static MonoMethod *method_123 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_SpeedController_set_map (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_WillDisplay (id this, SEL sel, id p0, id p1, id p2)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [3];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3471,19 +3525,34 @@ native_to_managed_trampoline_SeniorProject_SpeedController_set_map (id this, SEL
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_123, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_123, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_123, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	NSObject *nsobj2 = (NSObject *) p2;
+		MonoObject *mobj2 = NULL;
+		bool created2 = false;
+		if (nsobj2) {
+			mobj2 = get_nsobject_with_type_for_ptr_created (nsobj2, false, monotouch_get_parameter_type (method_123, 2), &created2);
+		}
+		arg_ptrs [2] = mobj2;
 	mono_runtime_invoke (method_123, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_124 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_SpeedController_get_segmentedControl (id this, SEL sel)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_RowDeselected (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3493,25 +3562,29 @@ native_to_managed_trampoline_SeniorProject_SpeedController_get_segmentedControl 
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_124)));
 		}
-	void* retval = (void *) mono_runtime_invoke (method_124, mthis, arg_ptrs, NULL);
-	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
-	}
-	return res;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_124, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_124, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	mono_runtime_invoke (method_124, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_125 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_SpeedController_set_segmentedControl (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_RowSelected (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3523,44 +3596,63 @@ native_to_managed_trampoline_SeniorProject_SpeedController_set_segmentedControl 
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_125, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_125, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_125, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_125, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_126 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_SpeedController__ctor (id this, SEL sel)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetViewForHeader (id this, SEL sel, id p0, int p1)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
-	if (monotouch_try_get_nsobject (this))
-		return this;
 	if (!method_126)
 		method_126 = get_method_for_selector ([this class], sel).method->method;
-	int handle = (int) this;
-	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_126));
-	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
-	mono_runtime_invoke (method_126, mthis, arg_ptrs, NULL);
-	monotouch_create_managed_ref (this, mthis, true);
-	void *params[2];
-	params[0] = mthis;
-	params[1] = &this;
-	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
-	return this;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_126)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_126, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	arg_ptrs [1] = &p1;
+	void* retval = (void *) mono_runtime_invoke (method_126, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
 }
 
 static MonoMethod *method_127 = NULL;
-void *
-native_to_managed_trampoline_SeniorProject_SpeedController_DidReceiveMemoryWarning (id this, SEL sel)
+float
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetHeightForHeader (id this, SEL sel, id p0, int p1)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3570,15 +3662,25 @@ native_to_managed_trampoline_SeniorProject_SpeedController_DidReceiveMemoryWarni
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_127)));
 		}
-	mono_runtime_invoke (method_127, mthis, arg_ptrs, NULL);
-	return NULL;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_127, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	arg_ptrs [1] = &p1;
+	void* retval = (void *) mono_runtime_invoke (method_127, mthis, arg_ptrs, NULL);
+	float res;
+	res = *(float *) mono_object_unbox (retval);
+	return res;
 }
 
 static MonoMethod *method_128 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_SpeedController_ViewDidLoad (id this, SEL sel)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetViewForFooter (id this, SEL sel, id p0, int p1)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3588,15 +3690,33 @@ native_to_managed_trampoline_SeniorProject_SpeedController_ViewDidLoad (id this,
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_128)));
 		}
-	mono_runtime_invoke (method_128, mthis, arg_ptrs, NULL);
-	return NULL;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_128, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	arg_ptrs [1] = &p1;
+	void* retval = (void *) mono_runtime_invoke (method_128, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
 }
 
 static MonoMethod *method_129 = NULL;
-void *
-native_to_managed_trampoline_SeniorProject_SpeedController_ViewWillAppear (id this, SEL sel, bool p0)
+float
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_GetHeightForFooter (id this, SEL sel, id p0, int p1)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3606,14 +3726,23 @@ native_to_managed_trampoline_SeniorProject_SpeedController_ViewWillAppear (id th
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_129)));
 		}
-	arg_ptrs [0] = &p0;
-	mono_runtime_invoke (method_129, mthis, arg_ptrs, NULL);
-	return NULL;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_129, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	arg_ptrs [1] = &p1;
+	void* retval = (void *) mono_runtime_invoke (method_129, mthis, arg_ptrs, NULL);
+	float res;
+	res = *(float *) mono_object_unbox (retval);
+	return res;
 }
 
 static MonoMethod *method_130 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_SpeedController_ViewWillDisappear (id this, SEL sel, bool p0)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_Scrolled (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -3625,16 +3754,22 @@ native_to_managed_trampoline_SeniorProject_SpeedController_ViewWillDisappear (id
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_130)));
 		}
-	arg_ptrs [0] = &p0;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_130, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_130, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_131 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_LoginController_get_passwordTxtField (id this, SEL sel)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_DraggingStarted (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3644,25 +3779,22 @@ native_to_managed_trampoline_SeniorProject_LoginController_get_passwordTxtField 
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_131)));
 		}
-	void* retval = (void *) mono_runtime_invoke (method_131, mthis, arg_ptrs, NULL);
-	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
-	}
-	return res;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_131, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	mono_runtime_invoke (method_131, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_132 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_LoginController_set_passwordTxtField (id this, SEL sel, id p0)
+native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_DraggingEnded (id this, SEL sel, id p0, bool p1)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3674,29 +3806,152 @@ native_to_managed_trampoline_SeniorProject_LoginController_set_passwordTxtField 
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_132, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_132, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
+	arg_ptrs [1] = &p1;
 	mono_runtime_invoke (method_132, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_133 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_LoginController_get_usernameTxtField (id this, SEL sel)
+native_to_managed_trampoline_SeniorProject_MapController__ctor (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
+	if (monotouch_try_get_nsobject (this))
+		return this;
 	if (!method_133)
 		method_133 = get_method_for_selector ([this class], sel).method->method;
+	int handle = (int) this;
+	handle |= 1;
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_133));
+	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
+	mono_runtime_invoke (method_133, mthis, arg_ptrs, NULL);
+	monotouch_create_managed_ref (this, mthis, true);
+	void *params[2];
+	params[0] = mthis;
+	params[1] = &this;
+	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
+	return this;
+}
+
+static MonoMethod *method_134 = NULL;
+void *
+native_to_managed_trampoline_SeniorProject_MapController_DidReceiveMemoryWarning (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_134)
+		method_134 = get_method_for_selector ([this class], sel).method->method;
 		mthis = NULL;
 		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_133)));
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_134)));
 		}
-	void* retval = (void *) mono_runtime_invoke (method_133, mthis, arg_ptrs, NULL);
+	mono_runtime_invoke (method_134, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_135 = NULL;
+void *
+native_to_managed_trampoline_SeniorProject_MapController_ViewDidLoad (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_135)
+		method_135 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_135)));
+		}
+	mono_runtime_invoke (method_135, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_136 = NULL;
+void *
+native_to_managed_trampoline_SeniorProject_MapController_ViewDidDisappear (id this, SEL sel, bool p0)
+{
+	void *arg_ptrs [1];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_136)
+		method_136 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_136)));
+		}
+	arg_ptrs [0] = &p0;
+	mono_runtime_invoke (method_136, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_137 = NULL;
+void *
+native_to_managed_trampoline_SeniorProject_MapController_ObserveValue (id this, SEL sel, id p0, id p1, id p2, void * p3)
+{
+	void *arg_ptrs [4];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_137)
+		method_137 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_137)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_137, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_137, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	NSObject *nsobj2 = (NSObject *) p2;
+		MonoObject *mobj2 = NULL;
+		bool created2 = false;
+		if (nsobj2) {
+			mobj2 = get_nsobject_with_type_for_ptr_created (nsobj2, false, monotouch_get_parameter_type (method_137, 2), &created2);
+		}
+		arg_ptrs [2] = mobj2;
+	void * a3 = p3;
+	arg_ptrs [3] = &a3;
+	mono_runtime_invoke (method_137, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_138 = NULL;
+void *
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_CurrentSpeed (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_138)
+		method_138 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_138)));
+		}
+	void* retval = (void *) mono_runtime_invoke (method_138, mthis, arg_ptrs, NULL);
 	void * res;
 	if (!retval) {
 		res = NULL;
@@ -3710,118 +3965,9 @@ native_to_managed_trampoline_SeniorProject_LoginController_get_usernameTxtField 
 	return res;
 }
 
-static MonoMethod *method_134 = NULL;
-void *
-native_to_managed_trampoline_SeniorProject_LoginController_set_usernameTxtField (id this, SEL sel, id p0)
-{
-	void *arg_ptrs [1];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_134)
-		method_134 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_134)));
-		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_134, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_134, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_135 = NULL;
-void *
-native_to_managed_trampoline_SeniorProject_LoginController__ctor (id this, SEL sel)
-{
-	void *arg_ptrs [0];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (monotouch_try_get_nsobject (this))
-		return this;
-	if (!method_135)
-		method_135 = get_method_for_selector ([this class], sel).method->method;
-	int handle = (int) this;
-	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_135));
-	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
-	mono_runtime_invoke (method_135, mthis, arg_ptrs, NULL);
-	monotouch_create_managed_ref (this, mthis, true);
-	void *params[2];
-	params[0] = mthis;
-	params[1] = &this;
-	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
-	return this;
-}
-
-static MonoMethod *method_136 = NULL;
-void *
-native_to_managed_trampoline_SeniorProject_LoginController_DidReceiveMemoryWarning (id this, SEL sel)
-{
-	void *arg_ptrs [0];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_136)
-		method_136 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_136)));
-		}
-	mono_runtime_invoke (method_136, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_137 = NULL;
-void *
-native_to_managed_trampoline_SeniorProject_LoginController_ViewDidLoad (id this, SEL sel)
-{
-	void *arg_ptrs [0];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_137)
-		method_137 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_137)));
-		}
-	mono_runtime_invoke (method_137, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_138 = NULL;
-void *
-native_to_managed_trampoline_SeniorProject_LoginController_registerButtonClick (id this, SEL sel, id p0)
-{
-	void *arg_ptrs [1];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_138)
-		method_138 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_138)));
-		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_138, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_138, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
 static MonoMethod *method_139 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_LoginController_loginButtonClick (id this, SEL sel, id p0)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_CurrentSpeed (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -3835,8 +3981,9 @@ native_to_managed_trampoline_SeniorProject_LoginController_loginButtonClick (id 
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_139, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_139, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_139, mthis, arg_ptrs, NULL);
@@ -3845,9 +3992,9 @@ native_to_managed_trampoline_SeniorProject_LoginController_loginButtonClick (id 
 
 static MonoMethod *method_140 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_LoginController_forgotPassButtonClick (id this, SEL sel, id p0)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_greenBar (id this, SEL sel)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -3857,19 +4004,23 @@ native_to_managed_trampoline_SeniorProject_LoginController_forgotPassButtonClick
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_140)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_140, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_140, mthis, arg_ptrs, NULL);
-	return NULL;
+	void* retval = (void *) mono_runtime_invoke (method_140, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
 }
 
 static MonoMethod *method_141 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_LoginController_ViewWillAppear (id this, SEL sel, bool p0)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_greenBar (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -3881,14 +4032,20 @@ native_to_managed_trampoline_SeniorProject_LoginController_ViewWillAppear (id th
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_141)));
 		}
-	arg_ptrs [0] = &p0;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_141, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_141, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_142 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_CurrentSpeed (id this, SEL sel)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_kmhourButton (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -3916,7 +4073,7 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_CurrentSpe
 
 static MonoMethod *method_143 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_CurrentSpeed (id this, SEL sel, id p0)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_kmhourButton (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -3930,8 +4087,9 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_CurrentSpe
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_143, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_143, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_143, mthis, arg_ptrs, NULL);
@@ -3940,7 +4098,7 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_CurrentSpe
 
 static MonoMethod *method_144 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_greenBar (id this, SEL sel)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_redBar (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -3968,7 +4126,7 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_greenBar (
 
 static MonoMethod *method_145 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_greenBar (id this, SEL sel, id p0)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_redBar (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -3982,8 +4140,9 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_greenBar (
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_145, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_145, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_145, mthis, arg_ptrs, NULL);
@@ -3992,7 +4151,7 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_greenBar (
 
 static MonoMethod *method_146 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_kmhourButton (id this, SEL sel)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_ViewMap (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -4020,7 +4179,7 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_kmhourButt
 
 static MonoMethod *method_147 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_kmhourButton (id this, SEL sel, id p0)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_ViewMap (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -4034,8 +4193,9 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_kmhourButt
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_147, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_147, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_147, mthis, arg_ptrs, NULL);
@@ -4044,7 +4204,7 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_kmhourButt
 
 static MonoMethod *method_148 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_redBar (id this, SEL sel)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_yellowBar (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -4072,7 +4232,7 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_redBar (id
 
 static MonoMethod *method_149 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_redBar (id this, SEL sel, id p0)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_yellowBar (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -4086,8 +4246,9 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_redBar (id
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_149, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_149, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_149, mthis, arg_ptrs, NULL);
@@ -4096,37 +4257,34 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_redBar (id
 
 static MonoMethod *method_150 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_ViewMap (id this, SEL sel)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController__ctor (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
+	if (monotouch_try_get_nsobject (this))
+		return this;
 	if (!method_150)
 		method_150 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_150)));
-		}
-	void* retval = (void *) mono_runtime_invoke (method_150, mthis, arg_ptrs, NULL);
-	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
-	}
-	return res;
+	int handle = (int) this;
+	handle |= 1;
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_150));
+	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
+	mono_runtime_invoke (method_150, mthis, arg_ptrs, NULL);
+	monotouch_create_managed_ref (this, mthis, true);
+	void *params[2];
+	params[0] = mthis;
+	params[1] = &this;
+	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
+	return this;
 }
 
 static MonoMethod *method_151 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_ViewMap (id this, SEL sel, id p0)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_DidReceiveMemoryWarning (id this, SEL sel)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -4136,19 +4294,13 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_ViewMap (i
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_151)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_151, 0));
-		}
-		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_151, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_152 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_yellowBar (id this, SEL sel)
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_ViewDidLoad (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -4160,7 +4312,107 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_yellowBar 
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_152)));
 		}
-	void* retval = (void *) mono_runtime_invoke (method_152, mthis, arg_ptrs, NULL);
+	mono_runtime_invoke (method_152, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_153 = NULL;
+void *
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_ViewDidAppear (id this, SEL sel, bool p0)
+{
+	void *arg_ptrs [1];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_153)
+		method_153 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_153)));
+		}
+	arg_ptrs [0] = &p0;
+	mono_runtime_invoke (method_153, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_154 = NULL;
+void *
+native_to_managed_trampoline_SeniorProject_CurrentSpeedController_ViewDidDisappear (id this, SEL sel, bool p0)
+{
+	void *arg_ptrs [1];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_154)
+		method_154 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_154)));
+		}
+	arg_ptrs [0] = &p0;
+	mono_runtime_invoke (method_154, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_155 = NULL;
+void *
+native_to_managed_trampoline_MonoTouch_Dialog_MessageSummaryView__ctor (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (monotouch_try_get_nsobject (this))
+		return this;
+	if (!method_155)
+		method_155 = get_method_for_selector ([this class], sel).method->method;
+	int handle = (int) this;
+	handle |= 1;
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_155));
+	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
+	mono_runtime_invoke (method_155, mthis, arg_ptrs, NULL);
+	monotouch_create_managed_ref (this, mthis, true);
+	void *params[2];
+	params[0] = mthis;
+	params[1] = &this;
+	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
+	return this;
+}
+
+static MonoMethod *method_156 = NULL;
+void *
+native_to_managed_trampoline_MonoTouch_Dialog_MessageSummaryView_Draw (id this, SEL sel, CGRect p0)
+{
+	void *arg_ptrs [1];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_156)
+		method_156 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_156)));
+		}
+	arg_ptrs [0] = &p0;
+	mono_runtime_invoke (method_156, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_157 = NULL;
+void *
+native_to_managed_trampoline_SeniorProject_LoginController_get_passwordTxtField (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_157)
+		method_157 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_157)));
+		}
+	void* retval = (void *) mono_runtime_invoke (method_157, mthis, arg_ptrs, NULL);
 	void * res;
 	if (!retval) {
 		res = NULL;
@@ -4174,113 +4426,9 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_yellowBar 
 	return res;
 }
 
-static MonoMethod *method_153 = NULL;
-void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_yellowBar (id this, SEL sel, id p0)
-{
-	void *arg_ptrs [1];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_153)
-		method_153 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_153)));
-		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_153, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_153, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_154 = NULL;
-void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController__ctor (id this, SEL sel)
-{
-	void *arg_ptrs [0];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (monotouch_try_get_nsobject (this))
-		return this;
-	if (!method_154)
-		method_154 = get_method_for_selector ([this class], sel).method->method;
-	int handle = (int) this;
-	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_154));
-	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
-	mono_runtime_invoke (method_154, mthis, arg_ptrs, NULL);
-	monotouch_create_managed_ref (this, mthis, true);
-	void *params[2];
-	params[0] = mthis;
-	params[1] = &this;
-	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
-	return this;
-}
-
-static MonoMethod *method_155 = NULL;
-void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_DidReceiveMemoryWarning (id this, SEL sel)
-{
-	void *arg_ptrs [0];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_155)
-		method_155 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_155)));
-		}
-	mono_runtime_invoke (method_155, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_156 = NULL;
-void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_ViewDidLoad (id this, SEL sel)
-{
-	void *arg_ptrs [0];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_156)
-		method_156 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_156)));
-		}
-	mono_runtime_invoke (method_156, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_157 = NULL;
-void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_ViewDidAppear (id this, SEL sel, bool p0)
-{
-	void *arg_ptrs [1];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_157)
-		method_157 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_157)));
-		}
-	arg_ptrs [0] = &p0;
-	mono_runtime_invoke (method_157, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
 static MonoMethod *method_158 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_CurrentSpeedController_ViewDidDisappear (id this, SEL sel, bool p0)
+native_to_managed_trampoline_SeniorProject_LoginController_set_passwordTxtField (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -4292,41 +4440,50 @@ native_to_managed_trampoline_SeniorProject_CurrentSpeedController_ViewDidDisappe
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_158)));
 		}
-	arg_ptrs [0] = &p0;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_158, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_158, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_159 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_MapController__ctor (id this, SEL sel)
+native_to_managed_trampoline_SeniorProject_LoginController_get_usernameTxtField (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
-	if (monotouch_try_get_nsobject (this))
-		return this;
 	if (!method_159)
 		method_159 = get_method_for_selector ([this class], sel).method->method;
-	int handle = (int) this;
-	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_159));
-	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
-	mono_runtime_invoke (method_159, mthis, arg_ptrs, NULL);
-	monotouch_create_managed_ref (this, mthis, true);
-	void *params[2];
-	params[0] = mthis;
-	params[1] = &this;
-	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
-	return this;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_159)));
+		}
+	void* retval = (void *) mono_runtime_invoke (method_159, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
 }
 
 static MonoMethod *method_160 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_MapController_DidReceiveMemoryWarning (id this, SEL sel)
+native_to_managed_trampoline_SeniorProject_LoginController_set_usernameTxtField (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -4336,33 +4493,47 @@ native_to_managed_trampoline_SeniorProject_MapController_DidReceiveMemoryWarning
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_160)));
 		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_160, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_160, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_161 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_MapController_ViewDidLoad (id this, SEL sel)
+native_to_managed_trampoline_SeniorProject_LoginController__ctor (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
+	if (monotouch_try_get_nsobject (this))
+		return this;
 	if (!method_161)
 		method_161 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_161)));
-		}
+	int handle = (int) this;
+	handle |= 1;
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_161));
+	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
 	mono_runtime_invoke (method_161, mthis, arg_ptrs, NULL);
-	return NULL;
+	monotouch_create_managed_ref (this, mthis, true);
+	void *params[2];
+	params[0] = mthis;
+	params[1] = &this;
+	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
+	return this;
 }
 
 static MonoMethod *method_162 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_MapController_ViewDidDisappear (id this, SEL sel, bool p0)
+native_to_managed_trampoline_SeniorProject_LoginController_DidReceiveMemoryWarning (id this, SEL sel)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -4372,16 +4543,15 @@ native_to_managed_trampoline_SeniorProject_MapController_ViewDidDisappear (id th
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_162)));
 		}
-	arg_ptrs [0] = &p0;
 	mono_runtime_invoke (method_162, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_163 = NULL;
 void *
-native_to_managed_trampoline_SeniorProject_MapController_ObserveValue (id this, SEL sel, id p0, id p1, id p2, void * p3)
+native_to_managed_trampoline_SeniorProject_LoginController_ViewDidLoad (id this, SEL sel)
 {
-	void *arg_ptrs [4];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -4391,33 +4561,13 @@ native_to_managed_trampoline_SeniorProject_MapController_ObserveValue (id this, 
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_163)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_163, 0));
-		}
-		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_163, 1));
-		}
-		arg_ptrs [1] = mobj1;
-	NSObject *nsobj2 = (NSObject *) p2;
-		MonoObject *mobj2 = NULL;
-		if (nsobj2) {
-			mobj2 = get_nsobject_with_type_for_ptr (nsobj2, false, monotouch_get_parameter_type (method_163, 2));
-		}
-		arg_ptrs [2] = mobj2;
-	void * a3 = p3;
-	arg_ptrs [3] = &a3;
 	mono_runtime_invoke (method_163, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_164 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_HtmlElement_WebViewController_ShouldAutorotateToInterfaceOrientation (id this, SEL sel, int p0)
+native_to_managed_trampoline_SeniorProject_LoginController_registerButtonClick (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -4429,16 +4579,20 @@ native_to_managed_trampoline_MonoTouch_Dialog_HtmlElement_WebViewController_Shou
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_164)));
 		}
-	arg_ptrs [0] = &p0;
-	void* retval = (void *) mono_runtime_invoke (method_164, mthis, arg_ptrs, NULL);
-	void * res;
-	res = *(void * *) mono_object_unbox (retval);
-	return res;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_164, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	mono_runtime_invoke (method_164, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_165 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_ViewWillDisappear (id this, SEL sel, bool p0)
+native_to_managed_trampoline_SeniorProject_LoginController_loginButtonClick (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -4450,14 +4604,20 @@ native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_V
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_165)));
 		}
-	arg_ptrs [0] = &p0;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_165, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_165, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_166 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_DidRotate (id this, SEL sel, int p0)
+native_to_managed_trampoline_SeniorProject_LoginController_forgotPassButtonClick (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -4469,14 +4629,20 @@ native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_D
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_166)));
 		}
-	arg_ptrs [0] = &p0;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_166, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_166, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_167 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_ShouldAutorotateToInterfaceOrientation (id this, SEL sel, int p0)
+native_to_managed_trampoline_SeniorProject_LoginController_ViewWillAppear (id this, SEL sel, bool p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -4489,10 +4655,8 @@ native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_S
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_167)));
 		}
 	arg_ptrs [0] = &p0;
-	void* retval = (void *) mono_runtime_invoke (method_167, mthis, arg_ptrs, NULL);
-	void * res;
-	res = *(void * *) mono_object_unbox (retval);
-	return res;
+	mono_runtime_invoke (method_167, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_168 = NULL;
@@ -4669,14 +4833,16 @@ native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SizingSource_
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_176, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_176, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_176, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_176, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	void* retval = (void *) mono_runtime_invoke (method_176, mthis, arg_ptrs, NULL);
@@ -4801,14 +4967,16 @@ native_to_managed_trampoline_MonoTouch_Dialog_GlassButton_BeginTracking (id this
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_182, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_182, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_182, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_182, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	void* retval = (void *) mono_runtime_invoke (method_182, mthis, arg_ptrs, NULL);
@@ -4833,14 +5001,16 @@ native_to_managed_trampoline_MonoTouch_Dialog_GlassButton_EndTracking (id this, 
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_183, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_183, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_183, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_183, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_183, mthis, arg_ptrs, NULL);
@@ -4863,14 +5033,16 @@ native_to_managed_trampoline_MonoTouch_Dialog_GlassButton_ContinueTracking (id t
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
+		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr (nsobj0, false, monotouch_get_parameter_type (method_184, 0));
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_184, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
 	NSObject *nsobj1 = (NSObject *) p1;
 		MonoObject *mobj1 = NULL;
+		bool created1 = false;
 		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr (nsobj1, false, monotouch_get_parameter_type (method_184, 1));
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_184, 1), &created1);
 		}
 		arg_ptrs [1] = mobj1;
 	void* retval = (void *) mono_runtime_invoke (method_184, mthis, arg_ptrs, NULL);
@@ -4946,141 +5118,141 @@ native_to_managed_trampoline_SeniorProject_RegisterController_ViewWillAppear (id
 
 static MTClassMap __monotouch_class_map [] = {
 	{"NSObject", "MonoTouch.Foundation.NSObject, monotouch", 0},
+	{"MonoTouch.UIKit.UIControlEventProxy", "MonoTouch.UIKit.UIControlEventProxy, monotouch", 0},
+	{"GMSIndoorBuilding", "Google.Maps.IndoorBuilding, GoogleMaps", 0},
+	{"UIDevice", "MonoTouch.UIKit.UIDevice, monotouch", 0},
+	{"UIFont", "MonoTouch.UIKit.UIFont, monotouch", 0},
+	{"UIEvent", "MonoTouch.UIKit.UIEvent, monotouch", 0},
+	{"__NSObject_Disposer", "MonoTouch.Foundation.NSObject+NSObject_Disposer, monotouch", 0},
+	{"UIImage", "MonoTouch.UIKit.UIImage, monotouch", 0},
+	{"UIResponder", "MonoTouch.UIKit.UIResponder, monotouch", 0},
+	{"UIScreen", "MonoTouch.UIKit.UIScreen, monotouch", 0},
+	{"GMSGeocoder", "Google.Maps.Geocoder, GoogleMaps", 0},
+	{"UIColor", "MonoTouch.UIKit.UIColor, monotouch", 0},
+	{"__MonoMac_NSAsyncActionDispatcher", "MonoTouch.Foundation.NSAsyncActionDispatcher, monotouch", 0},
+	{"NSAutoreleasePool", "MonoTouch.Foundation.NSAutoreleasePool, monotouch", 0},
 	{"NSError", "MonoTouch.Foundation.NSError, monotouch", 0},
-	{"NSBundle", "MonoTouch.Foundation.NSBundle, monotouch", 0},
-	{"NSCoder", "MonoTouch.Foundation.NSCoder, monotouch", 0},
-	{"NSData", "MonoTouch.Foundation.NSData, monotouch", 0},
-	{"NSDate", "MonoTouch.Foundation.NSDate, monotouch", 0},
-	{"NSDictionary", "MonoTouch.Foundation.NSDictionary, monotouch", 0},
-	{"NSIndexPath", "MonoTouch.Foundation.NSIndexPath, monotouch", 0},
-	{"NSURLRequest", "MonoTouch.Foundation.NSUrlRequest, monotouch", 0},
-	{"NSSet", "MonoTouch.Foundation.NSSet, monotouch", 0},
-	{"NSString", "MonoTouch.Foundation.NSString, monotouch", 0},
-	{"NSArray", "MonoTouch.Foundation.NSArray, monotouch", 0},
+	{"UITouch", "MonoTouch.UIKit.UITouch, monotouch", 0},
+	{"GMSMapViewDelegate", "Google.Maps.MapViewDelegate, GoogleMaps", 0},
+	{"GMSIndoorLevel", "Google.Maps.IndoorLevel, GoogleMaps", 0},
+	{"GMSIndoorDisplay", "Google.Maps.IndoorDisplay, GoogleMaps", 0},
+	{"UIBarItem", "MonoTouch.UIKit.UIBarItem, monotouch", 0},
+	{"GMSIndoorDisplayDelegate", "Google.Maps.IndoorDisplayDelegate, GoogleMaps", 0},
 	{"GMSCoordinateBounds", "Google.Maps.CoordinateBounds, GoogleMaps", 0},
+	{"NSFormatter", "MonoTouch.Foundation.NSFormatter, monotouch", 0},
+	{"UINavigationItem", "MonoTouch.UIKit.UINavigationItem, monotouch", 0},
+	{"CLBeacon", "MonoTouch.CoreLocation.CLBeacon, monotouch", 0},
+	{"MKOverlayRenderer", "MonoTouch.MapKit.MKOverlayRenderer, monotouch", 0},
+	{"MKUserLocation", "MonoTouch.MapKit.MKUserLocation, monotouch", 0},
+	{"NSEnumerator", "MonoTouch.Foundation.NSEnumerator, monotouch", 0},
 	{"GMSCameraUpdate", "Google.Maps.CameraUpdate, GoogleMaps", 0},
 	{"GMSCameraPosition", "Google.Maps.CameraPosition, GoogleMaps", 0},
 	{"GeometryUtils", "Google.Maps.GeometryUtils, GoogleMaps", 0},
 	{"libGoogleMapsExporter", "Google.Maps.Constants, GoogleMaps", 0},
-	{"CLBeacon", "MonoTouch.CoreLocation.CLBeacon, monotouch", 0},
-	{"CALayer", "MonoTouch.CoreAnimation.CALayer, monotouch", 0},
-	{"CLLocation", "MonoTouch.CoreLocation.CLLocation, monotouch", 0},
-	{"CLLocationManager", "MonoTouch.CoreLocation.CLLocationManager, monotouch", 0},
-	{"NSURL", "MonoTouch.Foundation.NSUrl, monotouch", 0},
+	{"NSIndexSet", "MonoTouch.Foundation.NSIndexSet, monotouch", 0},
+	{"NSURLResponse", "MonoTouch.Foundation.NSUrlResponse, monotouch", 0},
 	{"NSException", "MonoTouch.Foundation.NSException, monotouch", 0},
-	{"NSEnumerator", "MonoTouch.Foundation.NSEnumerator, monotouch", 0},
-	{"NSFormatter", "MonoTouch.Foundation.NSFormatter, monotouch", 0},
-	{"UINavigationItem", "MonoTouch.UIKit.UINavigationItem, monotouch", 0},
-	{"MKOverlayRenderer", "MonoTouch.MapKit.MKOverlayRenderer, monotouch", 0},
-	{"MKUserLocation", "MonoTouch.MapKit.MKUserLocation, monotouch", 0},
-	{"UITouch", "MonoTouch.UIKit.UITouch, monotouch", 0},
+	{"__MonoMac_NSActionDispatcher", "MonoTouch.Foundation.NSActionDispatcher, monotouch", 0},
+	{"GMSOverlay", "Google.Maps.Overlay, GoogleMaps", 0},
+	{"GMSReverseGeocodeResponse", "Google.Maps.ReverseGeocodeResponse, GoogleMaps", 0},
+	{"GMSServices", "Google.Maps.MapServices, GoogleMaps", 0},
+	{"CALayer", "MonoTouch.CoreAnimation.CALayer, monotouch", 0},
+	{"GMSTileReceiver", "Google.Maps.TileReceiver, GoogleMaps", 0},
+	{"CLLocationManager", "MonoTouch.CoreLocation.CLLocationManager, monotouch", 0},
+	{"GMSPanorama", "Google.Maps.Panorama, GoogleMaps", 0},
+	{"GMSPath", "Google.Maps.Path, GoogleMaps", 0},
+	{"GMSProjection", "Google.Maps.Projection, GoogleMaps", 0},
+	{"GMSPanoramaViewDelegate", "Google.Maps.PanoramaViewDelegate, GoogleMaps", 0},
+	{"GMSPanoramaService", "Google.Maps.PanoramaService, GoogleMaps", 0},
+	{"GMSPanoramaLink", "Google.Maps.PanoramaLink, GoogleMaps", 0},
+	{"GMSReverseGeocodeResult", "Google.Maps.ReverseGeocodeResult, GoogleMaps", 0},
+	{"GMSPanoramaCameraUpdate", "Google.Maps.PanoramaCameraUpdate, GoogleMaps", 0},
+	{"GMSPanoramaCamera", "Google.Maps.PanoramaCamera, GoogleMaps", 0},
+	{"CLLocation", "MonoTouch.CoreLocation.CLLocation, monotouch", 0},
+	{"NSURLRequest", "MonoTouch.Foundation.NSUrlRequest, monotouch", 0},
+	{"NSSet", "MonoTouch.Foundation.NSSet, monotouch", 0},
+	{"GMSUISettings", "Google.Maps.UISettings, GoogleMaps", 0},
+	{"NSString", "MonoTouch.Foundation.NSString, monotouch", 0},
+	{"NSURL", "MonoTouch.Foundation.NSUrl, monotouch", 0},
 	{"NSURLConnection", "MonoTouch.Foundation.NSUrlConnection, monotouch", 0},
 	{"CLHeading", "MonoTouch.CoreLocation.CLHeading, monotouch", 0},
 	{"CLRegion", "MonoTouch.CoreLocation.CLRegion, monotouch", 0},
-	{"__MonoMac_NSActionDispatcher", "MonoTouch.Foundation.NSActionDispatcher, monotouch", 0},
-	{"__MonoMac_NSAsyncActionDispatcher", "MonoTouch.Foundation.NSAsyncActionDispatcher, monotouch", 0},
-	{"NSAutoreleasePool", "MonoTouch.Foundation.NSAutoreleasePool, monotouch", 0},
-	{"NSIndexSet", "MonoTouch.Foundation.NSIndexSet, monotouch", 0},
-	{"NSURLResponse", "MonoTouch.Foundation.NSUrlResponse, monotouch", 0},
-	{"GMSGeocoder", "Google.Maps.Geocoder, GoogleMaps", 0},
-	{"GMSPanoramaService", "Google.Maps.PanoramaService, GoogleMaps", 0},
-	{"GMSPanoramaLink", "Google.Maps.PanoramaLink, GoogleMaps", 0},
-	{"GMSPanoramaCameraUpdate", "Google.Maps.PanoramaCameraUpdate, GoogleMaps", 0},
-	{"GMSPanoramaCamera", "Google.Maps.PanoramaCamera, GoogleMaps", 0},
-	{"GMSPanorama", "Google.Maps.Panorama, GoogleMaps", 0},
-	{"GMSOverlay", "Google.Maps.Overlay, GoogleMaps", 0},
-	{"__NSObject_Disposer", "MonoTouch.Foundation.NSObject+NSObject_Disposer, monotouch", 0},
-	{"GMSPanoramaViewDelegate", "Google.Maps.PanoramaViewDelegate, GoogleMaps", 0},
-	{"GMSUISettings", "Google.Maps.UISettings, GoogleMaps", 0},
+	{"NSIndexPath", "MonoTouch.Foundation.NSIndexPath, monotouch", 0},
+	{"NSData", "MonoTouch.Foundation.NSData, monotouch", 0},
+	{"NSBundle", "MonoTouch.Foundation.NSBundle, monotouch", 0},
+	{"NSDate", "MonoTouch.Foundation.NSDate, monotouch", 0},
+	{"NSDictionary", "MonoTouch.Foundation.NSDictionary, monotouch", 0},
+	{"NSArray", "MonoTouch.Foundation.NSArray, monotouch", 0},
 	{"GMSTileLayer", "Google.Maps.TileLayer, GoogleMaps", 0},
-	{"GMSTileReceiver", "Google.Maps.TileReceiver, GoogleMaps", 0},
-	{"GMSServices", "Google.Maps.MapServices, GoogleMaps", 0},
-	{"GMSReverseGeocodeResponse", "Google.Maps.ReverseGeocodeResponse, GoogleMaps", 0},
-	{"GMSReverseGeocodeResult", "Google.Maps.ReverseGeocodeResult, GoogleMaps", 0},
-	{"GMSProjection", "Google.Maps.Projection, GoogleMaps", 0},
-	{"GMSPath", "Google.Maps.Path, GoogleMaps", 0},
-	{"GMSMapViewDelegate", "Google.Maps.MapViewDelegate, GoogleMaps", 0},
-	{"GMSIndoorDisplayDelegate", "Google.Maps.IndoorDisplayDelegate, GoogleMaps", 0},
-	{"UIDevice", "MonoTouch.UIKit.UIDevice, monotouch", 0},
-	{"UIFont", "MonoTouch.UIKit.UIFont, monotouch", 0},
-	{"UIEvent", "MonoTouch.UIKit.UIEvent, monotouch", 0},
-	{"UIImage", "MonoTouch.UIKit.UIImage, monotouch", 0},
-	{"GMSIndoorBuilding", "Google.Maps.IndoorBuilding, GoogleMaps", 0},
-	{"UIResponder", "MonoTouch.UIKit.UIResponder, monotouch", 0},
-	{"UIScreen", "MonoTouch.UIKit.UIScreen, monotouch", 0},
-	{"MonoTouch.UIKit.UIControlEventProxy", "MonoTouch.UIKit.UIControlEventProxy, monotouch", 0},
-	{"GMSIndoorLevel", "Google.Maps.IndoorLevel, GoogleMaps", 0},
-	{"GMSIndoorDisplay", "Google.Maps.IndoorDisplay, GoogleMaps", 0},
-	{"UIBarItem", "MonoTouch.UIKit.UIBarItem, monotouch", 0},
-	{"UIColor", "MonoTouch.UIKit.UIColor, monotouch", 0},
-	{"CLBeaconRegion", "MonoTouch.CoreLocation.CLBeaconRegion, monotouch", 0},
-	{"Google.Maps.MapView+_MapViewDelegate", "Google.Maps.MapView+_MapViewDelegate, GoogleMaps", 0},
+	{"NSCoder", "MonoTouch.Foundation.NSCoder, monotouch", 0},
+	{"NSDateFormatter", "MonoTouch.Foundation.NSDateFormatter, monotouch", 0},
 	{"GMSSyncTileLayer", "Google.Maps.SyncTileLayer, GoogleMaps", 0},
-	{"GMSMapLayer", "Google.Maps.MapLayer, GoogleMaps", 0},
-	{"GMSCircle", "Google.Maps.Circle, GoogleMaps", 0},
 	{"MonoTouch.UIKit.UIWebView+_UIWebViewDelegate", "MonoTouch.UIKit.UIWebView+_UIWebViewDelegate, monotouch", 0},
+	{"CLBeaconRegion", "MonoTouch.CoreLocation.CLBeaconRegion, monotouch", 0},
+	{"GMSPolyline", "Google.Maps.Polyline, GoogleMaps", 0},
+	{"Google.Maps.MapView+_MapViewDelegate", "Google.Maps.MapView+_MapViewDelegate, GoogleMaps", 0},
+	{"GMSMapLayer", "Google.Maps.MapLayer, GoogleMaps", 0},
+	{"Google.Maps.IndoorDisplay+_IndoorDisplayDelegate", "Google.Maps.IndoorDisplay+_IndoorDisplayDelegate, GoogleMaps", 0},
 	{"GMSGroundOverlay", "Google.Maps.GroundOverlay, GoogleMaps", 0},
 	{"GMSMarker", "Google.Maps.Marker, GoogleMaps", 0},
-	{"Google.Maps.IndoorDisplay+_IndoorDisplayDelegate", "Google.Maps.IndoorDisplay+_IndoorDisplayDelegate, GoogleMaps", 0},
-	{"Google.Maps.PanoramaView+_PanoramaViewDelegate", "Google.Maps.PanoramaView+_PanoramaViewDelegate, GoogleMaps", 0},
-	{"GMSMutablePath", "Google.Maps.MutablePath, GoogleMaps", 0},
-	{"GMSPolygon", "Google.Maps.Polygon, GoogleMaps", 0},
-	{"GMSPolyline", "Google.Maps.Polyline, GoogleMaps", 0},
-	{"GMSPanoramaLayer", "Google.Maps.PanoramaLayer, GoogleMaps", 0},
-	{"NSDateFormatter", "MonoTouch.Foundation.NSDateFormatter, monotouch", 0},
 	{"GMSMarkerLayer", "Google.Maps.MarkerLayer, GoogleMaps", 0},
+	{"GMSMutablePath", "Google.Maps.MutablePath, GoogleMaps", 0},
+	{"GMSCircle", "Google.Maps.Circle, GoogleMaps", 0},
+	{"GMSPanoramaLayer", "Google.Maps.PanoramaLayer, GoogleMaps", 0},
+	{"Google.Maps.PanoramaView+_PanoramaViewDelegate", "Google.Maps.PanoramaView+_PanoramaViewDelegate, GoogleMaps", 0},
+	{"GMSPolygon", "Google.Maps.Polygon, GoogleMaps", 0},
 	{"AppDelegate", "SeniorProject.AppDelegate, SeniorProject", 0},
-	{"MonoTouch.CoreLocation.CLLocationManager+_CLLocationManagerDelegate", "MonoTouch.CoreLocation.CLLocationManager+_CLLocationManagerDelegate, monotouch", 0},
+	{"GMSURLTileLayer", "Google.Maps.UrlTileLayer, GoogleMaps", 0},
 	{"UIViewController", "MonoTouch.UIKit.UIViewController, monotouch", 0},
 	{"UIView", "MonoTouch.UIKit.UIView, monotouch", 0},
 	{"MonoTouch.UIKit.UITextField+_UITextFieldDelegate", "MonoTouch.UIKit.UITextField+_UITextFieldDelegate, monotouch", 0},
+	{"MonoTouch.CoreLocation.CLLocationManager+_CLLocationManagerDelegate", "MonoTouch.CoreLocation.CLLocationManager+_CLLocationManagerDelegate, monotouch", 0},
+	{"MonoTouch.MapKit.MKMapView+_MKMapViewDelegate", "MonoTouch.MapKit.MKMapView+_MKMapViewDelegate, monotouch", 0},
 	{"UIBarButtonItem", "MonoTouch.UIKit.UIBarButtonItem, monotouch", 0},
 	{"UIApplication", "MonoTouch.UIKit.UIApplication, monotouch", 0},
-	{"MonoTouch.MapKit.MKMapView+_MKMapViewDelegate", "MonoTouch.MapKit.MKMapView+_MKMapViewDelegate, monotouch", 0},
-	{"GMSURLTileLayer", "Google.Maps.UrlTileLayer, GoogleMaps", 0},
-	{"MonoTouch.Dialog.DialogViewController+Source", "MonoTouch.Dialog.DialogViewController+Source, MonoTouch.Dialog-1", 0},
-	{"MonoTouch.Dialog.MessageSummaryView", "MonoTouch.Dialog.MessageSummaryView, MonoTouch.Dialog-1", 0},
-	{"MonoTouch.Dialog.OwnerDrawnElement+OwnerDrawnCellView", "MonoTouch.Dialog.OwnerDrawnElement+OwnerDrawnCellView, MonoTouch.Dialog-1", 0},
 	{"MonoTouch.Dialog.RefreshTableHeaderView", "MonoTouch.Dialog.RefreshTableHeaderView, MonoTouch.Dialog-1", 0},
-	{"UITableViewController", "MonoTouch.UIKit.UITableViewController, monotouch", 0},
-	{"UIProgressView", "MonoTouch.UIKit.UIProgressView, monotouch", 0},
+	{"SpeedController", "SeniorProject.SpeedController, SeniorProject", 0},
+	{"GMSMapView", "Google.Maps.MapView, GoogleMaps", 0},
+	{"MonoTouch.Dialog.HtmlElement+WebViewController", "MonoTouch.Dialog.HtmlElement+WebViewController, MonoTouch.Dialog-1", 0},
 	{"MKMapView", "MonoTouch.MapKit.MKMapView, monotouch", 0},
 	{"MKOverlayView", "MonoTouch.MapKit.MKOverlayView, monotouch", 0},
-	{"MonoTouch.Dialog.DialogViewController+SearchDelegate", "MonoTouch.Dialog.DialogViewController+SearchDelegate, MonoTouch.Dialog-1", 0},
-	{"MainController", "SeniorProject.MainController, SeniorProject", 0},
 	{"SeniorProject.MockData", "SeniorProject.MockData, SeniorProject", 0},
-	{"SpeedController", "SeniorProject.SpeedController, SeniorProject", 0},
-	{"LoginController", "SeniorProject.LoginController, SeniorProject", 0},
-	{"CurrentSpeedController", "SeniorProject.CurrentSpeedController, SeniorProject", 0},
-	{"MapController", "SeniorProject.MapController, SeniorProject", 0},
-	{"MonoTouch.Dialog.HtmlElement+WebViewController", "MonoTouch.Dialog.HtmlElement+WebViewController, MonoTouch.Dialog-1", 0},
+	{"MainController", "SeniorProject.MainController, SeniorProject", 0},
+	{"MonoTouch.Dialog.OwnerDrawnElement+OwnerDrawnCellView", "MonoTouch.Dialog.OwnerDrawnElement+OwnerDrawnCellView, MonoTouch.Dialog-1", 0},
 	{"GMSPanoramaView", "Google.Maps.PanoramaView, GoogleMaps", 0},
 	{"MonoTouch.Dialog.DateTimeElement+MyViewController", "MonoTouch.Dialog.DateTimeElement+MyViewController, MonoTouch.Dialog-1", 0},
+	{"MonoTouch.Dialog.DialogViewController+SearchDelegate", "MonoTouch.Dialog.DialogViewController+SearchDelegate, MonoTouch.Dialog-1", 0},
+	{"MonoTouch.Dialog.DialogViewController+Source", "MonoTouch.Dialog.DialogViewController+Source, MonoTouch.Dialog-1", 0},
+	{"MapController", "SeniorProject.MapController, SeniorProject", 0},
+	{"CurrentSpeedController", "SeniorProject.CurrentSpeedController, SeniorProject", 0},
+	{"MonoTouch.Dialog.MessageSummaryView", "MonoTouch.Dialog.MessageSummaryView, MonoTouch.Dialog-1", 0},
+	{"LoginController", "SeniorProject.LoginController, SeniorProject", 0},
 	{"UIAlertView", "MonoTouch.UIKit.UIAlertView, monotouch", 0},
-	{"UITableViewCell", "MonoTouch.UIKit.UITableViewCell, monotouch", 0},
-	{"UITabBarController", "MonoTouch.UIKit.UITabBarController, monotouch", 0},
-	{"MKAnnotationView", "MonoTouch.MapKit.MKAnnotationView, monotouch", 0},
-	{"UIWindow", "MonoTouch.UIKit.UIWindow, monotouch", 0},
-	{"UIScrollView", "MonoTouch.UIKit.UIScrollView, monotouch", 0},
 	{"UIActivityIndicatorView", "MonoTouch.UIKit.UIActivityIndicatorView, monotouch", 0},
 	{"UILabel", "MonoTouch.UIKit.UILabel, monotouch", 0},
 	{"UIImageView", "MonoTouch.UIKit.UIImageView, monotouch", 0},
-	{"GMSMapView", "Google.Maps.MapView, GoogleMaps", 0},
-	{"UISearchBar", "MonoTouch.UIKit.UISearchBar, monotouch", 0},
+	{"UIProgressView", "MonoTouch.UIKit.UIProgressView, monotouch", 0},
+	{"UIScrollView", "MonoTouch.UIKit.UIScrollView, monotouch", 0},
+	{"UITabBarController", "MonoTouch.UIKit.UITabBarController, monotouch", 0},
+	{"MKAnnotationView", "MonoTouch.MapKit.MKAnnotationView, monotouch", 0},
 	{"UIWebView", "MonoTouch.UIKit.UIWebView, monotouch", 0},
+	{"UITableViewController", "MonoTouch.UIKit.UITableViewController, monotouch", 0},
+	{"UIWindow", "MonoTouch.UIKit.UIWindow, monotouch", 0},
+	{"UISearchBar", "MonoTouch.UIKit.UISearchBar, monotouch", 0},
+	{"UITableViewCell", "MonoTouch.UIKit.UITableViewCell, monotouch", 0},
 	{"UINavigationController", "MonoTouch.UIKit.UINavigationController, monotouch", 0},
 	{"UIControl", "MonoTouch.UIKit.UIControl, monotouch", 0},
-	{"UIButton", "MonoTouch.UIKit.UIButton, monotouch", 0},
 	{"SeniorProject.MainViewTabBarController", "SeniorProject.MainViewTabBarController, SeniorProject", 0},
-	{"UIDatePicker", "MonoTouch.UIKit.UIDatePicker, monotouch", 0},
+	{"UIButton", "MonoTouch.UIKit.UIButton, monotouch", 0},
+	{"UISwitch", "MonoTouch.UIKit.UISwitch, monotouch", 0},
+	{"UISegmentedControl", "MonoTouch.UIKit.UISegmentedControl, monotouch", 0},
 	{"MonoTouch.Dialog.MessageElement+MessageCell", "MonoTouch.Dialog.MessageElement+MessageCell, MonoTouch.Dialog-1", 0},
-	{"UITableView", "MonoTouch.UIKit.UITableView, monotouch", 0},
+	{"UITextField", "MonoTouch.UIKit.UITextField, monotouch", 0},
 	{"MonoTouch.Dialog.DialogViewController", "MonoTouch.Dialog.DialogViewController, MonoTouch.Dialog-1", 0},
 	{"MonoTouch.Dialog.DialogViewController+SizingSource", "MonoTouch.Dialog.DialogViewController+SizingSource, MonoTouch.Dialog-1", 0},
 	{"MonoTouch.Dialog.OwnerDrawnElement+OwnerDrawnCell", "MonoTouch.Dialog.OwnerDrawnElement+OwnerDrawnCell, MonoTouch.Dialog-1", 0},
-	{"UISegmentedControl", "MonoTouch.UIKit.UISegmentedControl, monotouch", 0},
-	{"UITextField", "MonoTouch.UIKit.UITextField, monotouch", 0},
-	{"UISwitch", "MonoTouch.UIKit.UISwitch, monotouch", 0},
+	{"UITableView", "MonoTouch.UIKit.UITableView, monotouch", 0},
+	{"UIDatePicker", "MonoTouch.UIKit.UIDatePicker, monotouch", 0},
 	{"MonoTouch.Dialog.BaseBooleanImageElement+TextWithImageCellView", "MonoTouch.Dialog.BaseBooleanImageElement+TextWithImageCellView, MonoTouch.Dialog-1", 0},
 	{"SeniorProject.SettingsController", "SeniorProject.SettingsController, SeniorProject", 0},
 	{"MonoTouch.Dialog.GlassButton", "MonoTouch.Dialog.GlassButton, MonoTouch.Dialog-1", 0},
@@ -5088,33 +5260,33 @@ static MTClassMap __monotouch_class_map [] = {
 };
 
 static MTClass __monotouch_classes [] = {
-	{"CLLocationManagerDelegate", "NSObject", 1, 1, 0},
-	{"__MonoMac_NSActionDispatcher", "NSObject", 1, 1, 0},
-	{"__MonoMac_NSAsyncActionDispatcher", "NSObject", 1, 1, 0},
-	{"__NSObject_Disposer", "NSObject", 1, 2, 0},
 	{"MonoTouch.UIKit.UIControlEventProxy", "NSObject", 1, 1, 0},
-	{"Google.Maps.MapView+_MapViewDelegate", "NSObject", 1, 13, 0},
+	{"__NSObject_Disposer", "NSObject", 1, 2, 0},
+	{"__MonoMac_NSAsyncActionDispatcher", "NSObject", 1, 1, 0},
+	{"__MonoMac_NSActionDispatcher", "NSObject", 1, 1, 0},
+	{"CLLocationManagerDelegate", "NSObject", 1, 1, 0},
 	{"MonoTouch.UIKit.UIWebView+_UIWebViewDelegate", "NSObject", 1, 5, 0},
+	{"Google.Maps.MapView+_MapViewDelegate", "NSObject", 1, 13, 0},
 	{"Google.Maps.IndoorDisplay+_IndoorDisplayDelegate", "NSObject", 1, 3, 0},
 	{"Google.Maps.PanoramaView+_PanoramaViewDelegate", "NSObject", 1, 9, 0},
 	{"AppDelegate", "NSObject", 1, 2, 0},
-	{"MonoTouch.CoreLocation.CLLocationManager+_CLLocationManagerDelegate", "NSObject", 1, 17, 0},
 	{"MonoTouch.UIKit.UITextField+_UITextFieldDelegate", "NSObject", 1, 8, 0},
+	{"MonoTouch.CoreLocation.CLLocationManager+_CLLocationManagerDelegate", "NSObject", 1, 17, 0},
 	{"MonoTouch.MapKit.MKMapView+_MKMapViewDelegate", "NSObject", 1, 23, 0},
 	{"UITableViewSource", "NSObject", 1, 1, 0},
-	{"MonoTouch.Dialog.DialogViewController+Source", "NSObject", 1, 16, 0},
-	{"MonoTouch.Dialog.MessageSummaryView", "UIView", 1, 2, 0},
-	{"MonoTouch.Dialog.OwnerDrawnElement+OwnerDrawnCellView", "UIView", 1, 1, 0},
 	{"MonoTouch.Dialog.RefreshTableHeaderView", "UIView", 1, 2, 0},
-	{"MonoTouch.Dialog.DialogViewController+SearchDelegate", "NSObject", 1, 5, 0},
-	{"MainController", "UIViewController", 1, 6, 0},
-	{"SeniorProject.MockData", "NSObject", 1, 2, 0},
 	{"SpeedController", "UIViewController", 1, 9, 0},
-	{"LoginController", "UIViewController", 1, 11, 0},
-	{"CurrentSpeedController", "UIViewController", 1, 17, 0},
-	{"MapController", "UIViewController", 1, 5, 0},
 	{"MonoTouch.Dialog.HtmlElement+WebViewController", "UIViewController", 1, 1, 0},
+	{"SeniorProject.MockData", "NSObject", 1, 2, 0},
+	{"MainController", "UIViewController", 1, 6, 0},
+	{"MonoTouch.Dialog.OwnerDrawnElement+OwnerDrawnCellView", "UIView", 1, 1, 0},
 	{"MonoTouch.Dialog.DateTimeElement+MyViewController", "UIViewController", 1, 3, 0},
+	{"MonoTouch.Dialog.DialogViewController+SearchDelegate", "NSObject", 1, 5, 0},
+	{"MonoTouch.Dialog.DialogViewController+Source", "NSObject", 1, 16, 0},
+	{"MapController", "UIViewController", 1, 5, 0},
+	{"CurrentSpeedController", "UIViewController", 1, 17, 0},
+	{"MonoTouch.Dialog.MessageSummaryView", "UIView", 1, 2, 0},
+	{"LoginController", "UIViewController", 1, 11, 0},
 	{"SeniorProject.MainViewTabBarController", "UITabBarController", 1, 1, 0},
 	{"MonoTouch.Dialog.MessageElement+MessageCell", "UITableViewCell", 1, 2, 0},
 	{"MonoTouch.Dialog.DialogViewController", "UITableViewController", 1, 5, 0},
@@ -5166,12 +5338,17 @@ static MTIvar __monotouch_ivars [] = {
 };
 
 static MTMethod __monotouch_methods [] = {
-	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManagerDelegate__ctor},
-	{"xamarinApplySelector","v@:",0, &native_to_managed_trampoline_MonoTouch_Foundation_NSActionDispatcher_Apply},
-	{"xamarinApplySelector","v@:",0, &native_to_managed_trampoline_MonoTouch_Foundation_NSAsyncActionDispatcher_Apply},
+	{"BridgeSelector","v@:",0, &native_to_managed_trampoline_MonoTouch_UIKit_UIControlEventProxy_Activated},
 	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_Foundation_NSObject_NSObject_Disposer__ctor},
 	{"drain:","v@:@",1, &native_to_managed_trampoline_MonoTouch_Foundation_NSObject_NSObject_Disposer_Drain},
-	{"BridgeSelector","v@:",0, &native_to_managed_trampoline_MonoTouch_UIKit_UIControlEventProxy_Activated},
+	{"xamarinApplySelector","v@:",0, &native_to_managed_trampoline_MonoTouch_Foundation_NSAsyncActionDispatcher_Apply},
+	{"xamarinApplySelector","v@:",0, &native_to_managed_trampoline_MonoTouch_Foundation_NSActionDispatcher_Apply},
+	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManagerDelegate__ctor},
+	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate__ctor},
+	{"webView:shouldStartLoadWithRequest:navigationType:","B@:@@i",0, &native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_ShouldStartLoad},
+	{"webViewDidStartLoad:","v@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadStarted},
+	{"webViewDidFinishLoad:","v@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadingFinished},
+	{"webView:didFailLoadWithError:","v@:@@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadFailed},
 	{"init","@@:",0, &native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate__ctor},
 	{"mapView:willMove:","v@:@B",0, &native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_WillMove},
 	{"mapView:didChangeCameraPosition:","v@:@@",0, &native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidChangeCameraPosition},
@@ -5185,11 +5362,6 @@ static MTMethod __monotouch_methods [] = {
 	{"mapView:didBeginDraggingMarker:","v@:@@",0, &native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidBeginDraggingMarker},
 	{"mapView:didEndDraggingMarker:","v@:@@",0, &native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidEndDraggingMarker},
 	{"mapView:didDragMarker:","v@:@@",0, &native_to_managed_trampoline_Google_Maps_MapView__MapViewDelegate_DidDragMarker},
-	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate__ctor},
-	{"webView:shouldStartLoadWithRequest:navigationType:","B@:@@i",0, &native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_ShouldStartLoad},
-	{"webViewDidStartLoad:","v@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadStarted},
-	{"webViewDidFinishLoad:","v@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadingFinished},
-	{"webView:didFailLoadWithError:","v@:@@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UIWebView__UIWebViewDelegate_LoadFailed},
 	{"init","@@:",0, &native_to_managed_trampoline_Google_Maps_IndoorDisplay__IndoorDisplayDelegate__ctor},
 	{"didChangeActiveBuilding:","v@:@",0, &native_to_managed_trampoline_Google_Maps_IndoorDisplay__IndoorDisplayDelegate_DidChangeActiveBuilding},
 	{"didChangeActiveLevel:","v@:@",0, &native_to_managed_trampoline_Google_Maps_IndoorDisplay__IndoorDisplayDelegate_DidChangeActiveLevel},
@@ -5204,6 +5376,14 @@ static MTMethod __monotouch_methods [] = {
 	{"panoramaView:didTapMarker:","B@:@@",0, &native_to_managed_trampoline_Google_Maps_PanoramaView__PanoramaViewDelegate_TappedMarker},
 	{"init","@@:",0, &native_to_managed_trampoline_SeniorProject_AppDelegate__ctor},
 	{"application:didFinishLaunchingWithOptions:","B@:@@",0, &native_to_managed_trampoline_SeniorProject_AppDelegate_FinishedLaunching},
+	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate__ctor},
+	{"textFieldShouldBeginEditing:","B@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldBeginEditing},
+	{"textFieldDidBeginEditing:","v@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_EditingStarted},
+	{"textFieldShouldEndEditing:","B@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldEndEditing},
+	{"textFieldDidEndEditing:","v@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_EditingEnded},
+	{"textFieldShouldClear:","B@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldClear},
+	{"textFieldShouldReturn:","B@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldReturn},
+	{"textField:shouldChangeCharactersInRange:replacementString:","B@:@{NSRange=ii}@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldChangeCharacters},
 	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate__ctor},
 	{"locationManager:didUpdateToLocation:fromLocation:","v@:@@@",0, &native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_UpdatedLocation},
 	{"locationManager:didUpdateHeading:","v@:@@",0, &native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_UpdatedHeading},
@@ -5221,14 +5401,6 @@ static MTMethod __monotouch_methods [] = {
 	{"locationManagerDidPauseLocationUpdates:","v@:@",0, &native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_LocationUpdatesPaused},
 	{"locationManagerDidResumeLocationUpdates:","v@:@",0, &native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_LocationUpdatesResumed},
 	{"locationManager:didFinishDeferredUpdatesWithError:","v@:@@",0, &native_to_managed_trampoline_MonoTouch_CoreLocation_CLLocationManager__CLLocationManagerDelegate_DeferredUpdatesFinished},
-	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate__ctor},
-	{"textFieldShouldBeginEditing:","B@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldBeginEditing},
-	{"textFieldDidBeginEditing:","v@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_EditingStarted},
-	{"textFieldShouldEndEditing:","B@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldEndEditing},
-	{"textFieldDidEndEditing:","v@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_EditingEnded},
-	{"textFieldShouldClear:","B@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldClear},
-	{"textFieldShouldReturn:","B@:@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldReturn},
-	{"textField:shouldChangeCharactersInRange:replacementString:","B@:@{NSRange=ii}@",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITextField__UITextFieldDelegate_ShouldChangeCharacters},
 	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate__ctor},
 	{"mapView:regionWillChangeAnimated:","v@:@B",0, &native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_RegionWillChange},
 	{"mapView:regionDidChangeAnimated:","v@:@B",0, &native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_RegionChanged},
@@ -5253,6 +5425,35 @@ static MTMethod __monotouch_methods [] = {
 	{"mapViewWillStartRenderingMap:","v@:@",0, &native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_WillStartRenderingMap},
 	{"mapViewDidFinishRenderingMap:fullyRendered:","v@:@B",0, &native_to_managed_trampoline_MonoTouch_MapKit_MKMapView__MKMapViewDelegate_DidFinishRenderingMap},
 	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITableViewSource__ctor},
+	{"layoutSubviews","v@:",0, &native_to_managed_trampoline_MonoTouch_Dialog_RefreshTableHeaderView_LayoutSubviews},
+	{"drawRect:","v@:{RectangleF=ffff}",0, &native_to_managed_trampoline_MonoTouch_Dialog_RefreshTableHeaderView_Draw},
+	{"map","@@:",0, &native_to_managed_trampoline_SeniorProject_SpeedController_get_map},
+	{"setMap:","v@:@",0, &native_to_managed_trampoline_SeniorProject_SpeedController_set_map},
+	{"segmentedControl","@@:",0, &native_to_managed_trampoline_SeniorProject_SpeedController_get_segmentedControl},
+	{"setSegmentedControl:","v@:@",0, &native_to_managed_trampoline_SeniorProject_SpeedController_set_segmentedControl},
+	{"init","@@:",0, &native_to_managed_trampoline_SeniorProject_SpeedController__ctor},
+	{"didReceiveMemoryWarning","v@:",0, &native_to_managed_trampoline_SeniorProject_SpeedController_DidReceiveMemoryWarning},
+	{"viewDidLoad","v@:",0, &native_to_managed_trampoline_SeniorProject_SpeedController_ViewDidLoad},
+	{"viewWillAppear:","v@:B",0, &native_to_managed_trampoline_SeniorProject_SpeedController_ViewWillAppear},
+	{"viewWillDisappear:","v@:B",0, &native_to_managed_trampoline_SeniorProject_SpeedController_ViewWillDisappear},
+	{"shouldAutorotateToInterfaceOrientation:","B@:i",0, &native_to_managed_trampoline_MonoTouch_Dialog_HtmlElement_WebViewController_ShouldAutorotateToInterfaceOrientation},
+	{"tableView:numberOfRowsInSection:","i@:@i",0, &native_to_managed_trampoline_SeniorProject_MockData_RowsInSection},
+	{"tableView:cellForRowAtIndexPath:","@@:@@",0, &native_to_managed_trampoline_SeniorProject_MockData_GetCell},
+	{"InformationTable","@@:",0, &native_to_managed_trampoline_SeniorProject_MainController_get_InformationTable},
+	{"setInformationTable:","v@:@",0, &native_to_managed_trampoline_SeniorProject_MainController_set_InformationTable},
+	{"WelcomeMessage","@@:",0, &native_to_managed_trampoline_SeniorProject_MainController_get_WelcomeMessage},
+	{"setWelcomeMessage:","v@:@",0, &native_to_managed_trampoline_SeniorProject_MainController_set_WelcomeMessage},
+	{"didReceiveMemoryWarning","v@:",0, &native_to_managed_trampoline_SeniorProject_MainController_DidReceiveMemoryWarning},
+	{"viewDidLoad","v@:",0, &native_to_managed_trampoline_SeniorProject_MainController_ViewDidLoad},
+	{"drawRect:","v@:{RectangleF=ffff}",0, &native_to_managed_trampoline_MonoTouch_Dialog_OwnerDrawnElement_OwnerDrawnCellView_Draw},
+	{"viewWillDisappear:","v@:B",0, &native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_ViewWillDisappear},
+	{"didRotateFromInterfaceOrientation:","v@:i",0, &native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_DidRotate},
+	{"shouldAutorotateToInterfaceOrientation:","B@:i",0, &native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_ShouldAutorotateToInterfaceOrientation},
+	{"searchBarTextDidBeginEditing:","v@:@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_OnEditingStarted},
+	{"searchBarTextDidEndEditing:","v@:@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_OnEditingStopped},
+	{"searchBar:textDidChange:","v@:@@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_TextChanged},
+	{"searchBarCancelButtonClicked:","v@:@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_CancelButtonClicked},
+	{"searchBarSearchButtonClicked:","v@:@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_SearchButtonClicked},
 	{"tableView:accessoryButtonTappedForRowWithIndexPath:","v@:@@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_AccessoryButtonTapped},
 	{"tableView:numberOfRowsInSection:","i@:@i",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_RowsInSection},
 	{"numberOfSectionsInTableView:","i@:@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_NumberOfSections},
@@ -5269,44 +5470,11 @@ static MTMethod __monotouch_methods [] = {
 	{"scrollViewDidScroll:","v@:@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_Scrolled},
 	{"scrollViewWillBeginDragging:","v@:@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_DraggingStarted},
 	{"scrollViewDidEndDragging:willDecelerate:","v@:@B",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_Source_DraggingEnded},
-	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_Dialog_MessageSummaryView__ctor},
-	{"drawRect:","v@:{RectangleF=ffff}",0, &native_to_managed_trampoline_MonoTouch_Dialog_MessageSummaryView_Draw},
-	{"drawRect:","v@:{RectangleF=ffff}",0, &native_to_managed_trampoline_MonoTouch_Dialog_OwnerDrawnElement_OwnerDrawnCellView_Draw},
-	{"layoutSubviews","v@:",0, &native_to_managed_trampoline_MonoTouch_Dialog_RefreshTableHeaderView_LayoutSubviews},
-	{"drawRect:","v@:{RectangleF=ffff}",0, &native_to_managed_trampoline_MonoTouch_Dialog_RefreshTableHeaderView_Draw},
-	{"searchBarTextDidBeginEditing:","v@:@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_OnEditingStarted},
-	{"searchBarTextDidEndEditing:","v@:@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_OnEditingStopped},
-	{"searchBar:textDidChange:","v@:@@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_TextChanged},
-	{"searchBarCancelButtonClicked:","v@:@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_CancelButtonClicked},
-	{"searchBarSearchButtonClicked:","v@:@",0, &native_to_managed_trampoline_MonoTouch_Dialog_DialogViewController_SearchDelegate_SearchButtonClicked},
-	{"InformationTable","@@:",0, &native_to_managed_trampoline_SeniorProject_MainController_get_InformationTable},
-	{"setInformationTable:","v@:@",0, &native_to_managed_trampoline_SeniorProject_MainController_set_InformationTable},
-	{"WelcomeMessage","@@:",0, &native_to_managed_trampoline_SeniorProject_MainController_get_WelcomeMessage},
-	{"setWelcomeMessage:","v@:@",0, &native_to_managed_trampoline_SeniorProject_MainController_set_WelcomeMessage},
-	{"didReceiveMemoryWarning","v@:",0, &native_to_managed_trampoline_SeniorProject_MainController_DidReceiveMemoryWarning},
-	{"viewDidLoad","v@:",0, &native_to_managed_trampoline_SeniorProject_MainController_ViewDidLoad},
-	{"tableView:numberOfRowsInSection:","i@:@i",0, &native_to_managed_trampoline_SeniorProject_MockData_RowsInSection},
-	{"tableView:cellForRowAtIndexPath:","@@:@@",0, &native_to_managed_trampoline_SeniorProject_MockData_GetCell},
-	{"map","@@:",0, &native_to_managed_trampoline_SeniorProject_SpeedController_get_map},
-	{"setMap:","v@:@",0, &native_to_managed_trampoline_SeniorProject_SpeedController_set_map},
-	{"segmentedControl","@@:",0, &native_to_managed_trampoline_SeniorProject_SpeedController_get_segmentedControl},
-	{"setSegmentedControl:","v@:@",0, &native_to_managed_trampoline_SeniorProject_SpeedController_set_segmentedControl},
-	{"init","@@:",0, &native_to_managed_trampoline_SeniorProject_SpeedController__ctor},
-	{"didReceiveMemoryWarning","v@:",0, &native_to_managed_trampoline_SeniorProject_SpeedController_DidReceiveMemoryWarning},
-	{"viewDidLoad","v@:",0, &native_to_managed_trampoline_SeniorProject_SpeedController_ViewDidLoad},
-	{"viewWillAppear:","v@:B",0, &native_to_managed_trampoline_SeniorProject_SpeedController_ViewWillAppear},
-	{"viewWillDisappear:","v@:B",0, &native_to_managed_trampoline_SeniorProject_SpeedController_ViewWillDisappear},
-	{"passwordTxtField","@@:",0, &native_to_managed_trampoline_SeniorProject_LoginController_get_passwordTxtField},
-	{"setPasswordTxtField:","v@:@",0, &native_to_managed_trampoline_SeniorProject_LoginController_set_passwordTxtField},
-	{"usernameTxtField","@@:",0, &native_to_managed_trampoline_SeniorProject_LoginController_get_usernameTxtField},
-	{"setUsernameTxtField:","v@:@",0, &native_to_managed_trampoline_SeniorProject_LoginController_set_usernameTxtField},
-	{"init","@@:",0, &native_to_managed_trampoline_SeniorProject_LoginController__ctor},
-	{"didReceiveMemoryWarning","v@:",0, &native_to_managed_trampoline_SeniorProject_LoginController_DidReceiveMemoryWarning},
-	{"viewDidLoad","v@:",0, &native_to_managed_trampoline_SeniorProject_LoginController_ViewDidLoad},
-	{"registerButtonClick:","v@:@",0, &native_to_managed_trampoline_SeniorProject_LoginController_registerButtonClick},
-	{"loginButtonClick:","v@:@",0, &native_to_managed_trampoline_SeniorProject_LoginController_loginButtonClick},
-	{"forgotPassButtonClick:","v@:@",0, &native_to_managed_trampoline_SeniorProject_LoginController_forgotPassButtonClick},
-	{"viewWillAppear:","v@:B",0, &native_to_managed_trampoline_SeniorProject_LoginController_ViewWillAppear},
+	{"init","@@:",0, &native_to_managed_trampoline_SeniorProject_MapController__ctor},
+	{"didReceiveMemoryWarning","v@:",0, &native_to_managed_trampoline_SeniorProject_MapController_DidReceiveMemoryWarning},
+	{"viewDidLoad","v@:",0, &native_to_managed_trampoline_SeniorProject_MapController_ViewDidLoad},
+	{"viewDidDisappear:","v@:B",0, &native_to_managed_trampoline_SeniorProject_MapController_ViewDidDisappear},
+	{"observeValueForKeyPath:ofObject:change:context:","v@:@@@^v",0, &native_to_managed_trampoline_SeniorProject_MapController_ObserveValue},
 	{"CurrentSpeed","@@:",0, &native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_CurrentSpeed},
 	{"setCurrentSpeed:","v@:@",0, &native_to_managed_trampoline_SeniorProject_CurrentSpeedController_set_CurrentSpeed},
 	{"greenBar","@@:",0, &native_to_managed_trampoline_SeniorProject_CurrentSpeedController_get_greenBar},
@@ -5324,15 +5492,19 @@ static MTMethod __monotouch_methods [] = {
 	{"viewDidLoad","v@:",0, &native_to_managed_trampoline_SeniorProject_CurrentSpeedController_ViewDidLoad},
 	{"viewDidAppear:","v@:B",0, &native_to_managed_trampoline_SeniorProject_CurrentSpeedController_ViewDidAppear},
 	{"viewDidDisappear:","v@:B",0, &native_to_managed_trampoline_SeniorProject_CurrentSpeedController_ViewDidDisappear},
-	{"init","@@:",0, &native_to_managed_trampoline_SeniorProject_MapController__ctor},
-	{"didReceiveMemoryWarning","v@:",0, &native_to_managed_trampoline_SeniorProject_MapController_DidReceiveMemoryWarning},
-	{"viewDidLoad","v@:",0, &native_to_managed_trampoline_SeniorProject_MapController_ViewDidLoad},
-	{"viewDidDisappear:","v@:B",0, &native_to_managed_trampoline_SeniorProject_MapController_ViewDidDisappear},
-	{"observeValueForKeyPath:ofObject:change:context:","v@:@@@^v",0, &native_to_managed_trampoline_SeniorProject_MapController_ObserveValue},
-	{"shouldAutorotateToInterfaceOrientation:","B@:i",0, &native_to_managed_trampoline_MonoTouch_Dialog_HtmlElement_WebViewController_ShouldAutorotateToInterfaceOrientation},
-	{"viewWillDisappear:","v@:B",0, &native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_ViewWillDisappear},
-	{"didRotateFromInterfaceOrientation:","v@:i",0, &native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_DidRotate},
-	{"shouldAutorotateToInterfaceOrientation:","B@:i",0, &native_to_managed_trampoline_MonoTouch_Dialog_DateTimeElement_MyViewController_ShouldAutorotateToInterfaceOrientation},
+	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_Dialog_MessageSummaryView__ctor},
+	{"drawRect:","v@:{RectangleF=ffff}",0, &native_to_managed_trampoline_MonoTouch_Dialog_MessageSummaryView_Draw},
+	{"passwordTxtField","@@:",0, &native_to_managed_trampoline_SeniorProject_LoginController_get_passwordTxtField},
+	{"setPasswordTxtField:","v@:@",0, &native_to_managed_trampoline_SeniorProject_LoginController_set_passwordTxtField},
+	{"usernameTxtField","@@:",0, &native_to_managed_trampoline_SeniorProject_LoginController_get_usernameTxtField},
+	{"setUsernameTxtField:","v@:@",0, &native_to_managed_trampoline_SeniorProject_LoginController_set_usernameTxtField},
+	{"init","@@:",0, &native_to_managed_trampoline_SeniorProject_LoginController__ctor},
+	{"didReceiveMemoryWarning","v@:",0, &native_to_managed_trampoline_SeniorProject_LoginController_DidReceiveMemoryWarning},
+	{"viewDidLoad","v@:",0, &native_to_managed_trampoline_SeniorProject_LoginController_ViewDidLoad},
+	{"registerButtonClick:","v@:@",0, &native_to_managed_trampoline_SeniorProject_LoginController_registerButtonClick},
+	{"loginButtonClick:","v@:@",0, &native_to_managed_trampoline_SeniorProject_LoginController_loginButtonClick},
+	{"forgotPassButtonClick:","v@:@",0, &native_to_managed_trampoline_SeniorProject_LoginController_forgotPassButtonClick},
+	{"viewWillAppear:","v@:B",0, &native_to_managed_trampoline_SeniorProject_LoginController_ViewWillAppear},
 	{"viewWillAppear:","v@:B",0, &native_to_managed_trampoline_SeniorProject_MainViewTabBarController_ViewWillAppear},
 	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_Dialog_MessageElement_MessageCell__ctor},
 	{"layoutSubviews","v@:",0, &native_to_managed_trampoline_MonoTouch_Dialog_MessageElement_MessageCell_LayoutSubviews},
@@ -5381,7 +5553,7 @@ void monotouch_create_classes (void) {
 		class_addMethod (handle, sel_registerName ("retain"), (IMP) &monotouch_retain_trampoline, "@@:");
 		class_addMethod (handle, sel_registerName ("conformsToProtocol:"), (IMP) &monotouch_trampoline, "B@:^v");
 		for (j = 0; j < __monotouch_classes [i].method_count; j++, method_offset++) {
-			Class h = (__monotouch_methods [method_offset].isstatic ? handle->isa : handle);
+			Class h = (__monotouch_methods [method_offset].isstatic ? object_getClass (handle) : handle);
 			class_addMethod (h, sel_registerName (__monotouch_methods [method_offset].selector), __monotouch_methods [method_offset].trampoline, __monotouch_methods [method_offset].signature);
 		}
 		for (j = 0; j < __monotouch_classes [i].prop_count; j++, prop_offset++) {

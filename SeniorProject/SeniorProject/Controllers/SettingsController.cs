@@ -23,14 +23,14 @@ namespace SeniorProject
 		protected void Initialize() {
 
 			Root = new RootElement ("Settings") {
-				new Section () {
-					new RootElement ("User Account") {
-						new Section(){
-							new StringElement ("Username Info"),
-							new StringElement ("Name info")
-						}
-					}
-				},
+//				new Section () {
+//					new RootElement ("User Account") {
+//						new Section(){
+//							new StringElement ("Username Info"),
+//							new StringElement ("Name info")
+//						}
+//					}
+//				},
 				new Section ("Texting while driving") {
 					(_settingsDialog.BlockSMS = new BooleanElement ("Block SMS", _settingsModel.TextMessage)),
 					(_settingsDialog.SMSVoiceUtility = new BooleanElement ("Voice Utility", _settingsModel.VoiceUtility))
@@ -52,6 +52,8 @@ namespace SeniorProject
 							_settingsModel.OverSpeeding = _settingsDialog.NotifyOverspeeding.Value;
 							_settingsModel.DrunkDriving = _settingsDialog.BlockDrunkDriving.Value;
 							_settingsModel.CallForHelp = _settingsDialog.EmergencyHelp.Value;
+							var alert = new UIAlertView("", "Save Succeed!", null, "", "OK");
+							alert.Show();
 						})
 				},
 				new Section ("Privacy"){

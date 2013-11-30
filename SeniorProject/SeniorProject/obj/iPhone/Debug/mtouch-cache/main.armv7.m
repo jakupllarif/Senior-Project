@@ -4,8 +4,8 @@ extern void *mono_aot_module_SeniorProject_info;
 extern void *mono_aot_module_MonoTouch_Dialog_1_info;
 extern void *mono_aot_module_monotouch_info;
 extern void *mono_aot_module_mscorlib_info;
-extern void *mono_aot_module_System_Core_info;
 extern void *mono_aot_module_System_info;
+extern void *mono_aot_module_System_Core_info;
 extern void *mono_aot_module_GoogleMaps_info;
 
 void monotouch_register_modules ()
@@ -14,8 +14,8 @@ void monotouch_register_modules ()
 	mono_aot_register_module (mono_aot_module_MonoTouch_Dialog_1_info);
 	mono_aot_register_module (mono_aot_module_monotouch_info);
 	mono_aot_register_module (mono_aot_module_mscorlib_info);
-	mono_aot_register_module (mono_aot_module_System_Core_info);
 	mono_aot_register_module (mono_aot_module_System_info);
+	mono_aot_register_module (mono_aot_module_System_Core_info);
 	mono_aot_register_module (mono_aot_module_GoogleMaps_info);
 
 }

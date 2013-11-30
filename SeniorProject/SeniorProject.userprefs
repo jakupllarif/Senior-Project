@@ -1,10 +1,29 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/LoginController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/SpeedController.cs">
     <Files>
-      <File FileName="SeniorProject/Controllers/LoginController.cs" Line="77" Column="42" />
       <File FileName="SeniorProject/Controllers/RegisterController.cs" Line="75" Column="9" />
+      <File FileName="SeniorProject/Controllers/SettingsController.cs" Line="21" Column="4" />
+      <File FileName="SeniorProject/Models/DataUploadModel.cs" Line="11" Column="40" />
+      <File FileName="SeniorProject/Controllers/MainViewTabBarController.cs" Line="1" Column="1" />
+      <File FileName="SeniorProject/Controllers/MapController.cs" Line="25" Column="34" />
+      <File FileName="SeniorProject/Controllers/SpeedController.cs" Line="13" Column="3" />
+      <File FileName="SeniorProject/Controllers/MainController.cs" Line="17" Column="27" />
+      <File FileName="SeniorProject/Controllers/LoginController.cs" Line="79" Column="15" />
+      <File FileName="SeniorProject/AppDelegate.cs" Line="13" Column="28" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="SeniorProject" expanded="True">
+            <Node name="Controllers" expanded="True">
+              <Node name="SpeedController.cs" selected="True" />
+            </Node>
+            <Node name="Models" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

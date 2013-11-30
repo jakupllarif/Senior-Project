@@ -129,6 +129,7 @@
     <Compile Include="Controllers\MapController.designer.cs">
       <DependentUpon>MapController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataUploadModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>

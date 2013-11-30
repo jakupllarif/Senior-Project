@@ -14,6 +14,7 @@ namespace SeniorProject
 		private RegisterController _registerController;
 		private MainViewTabBarController _mainController;
 		static public List<RegisterModel> _users;
+		private int Times = 0;
 
 		public LoginController () : base ("LoginController", null)
 		{
@@ -83,9 +84,15 @@ namespace SeniorProject
 						NavigationController.PushViewController (_mainController, true);
 						ReleaseViewController ();
 					} else {
-						var alert = new UIAlertView("Password doesn't match", "Please re-enter your password", null, "Cancel", "Ok");
-						alert.Show();
-						passwordTxtField.Text = "";
+						Times++;
+						if (Times == 4) {
+							var alert1 = new UIAlertView ("Account locked!", "Please reset your password!", null, "Cancel", "Reset");
+							alert1.Show ();
+						} else {
+							var alert = new UIAlertView ("Password doesn't match", "Please re-enter your password", null, "Cancel", "Ok");
+							alert.Show ();
+							passwordTxtField.Text = "";
+						}
 					}
 				} else {
 					var alert = new UIAlertView("User Doesn't exist", "You need to create user first", null, "Cancel", "Ok");
