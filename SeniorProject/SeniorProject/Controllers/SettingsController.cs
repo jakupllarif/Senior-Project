@@ -57,8 +57,16 @@ namespace SeniorProject
 						})
 				},
 				new Section ("Privacy"){
-					new StringElement("Sign Out", () => { new UIAlertView("","Are you sure you want to sign out?"
-						                                                      , null,"No", "Yes").Show(); })
+					new StringElement("Sign Out", () => { 
+						var alert = new UIAlertView("","Are you sure you want to sign out?" , null,"No", "Yes");
+						alert.Show();
+						alert.Clicked += (sender, e) => {
+							if(e.ButtonIndex == 1) {
+								var loginController = new LoginController();
+								NavigationController.PushViewController(loginController, true);
+							}
+						}; 
+					})
 				}
 			};
 		}
