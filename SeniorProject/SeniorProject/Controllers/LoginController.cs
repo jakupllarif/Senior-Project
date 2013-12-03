@@ -89,7 +89,7 @@ namespace SeniorProject
 							var alert1 = new UIAlertView ("Account locked!", "Please reset your password!", null, "Cancel", "Reset");
 							alert1.Show ();
 						} else {
-							var alert = new UIAlertView ("Password doesn't match", "Please re-enter your password", null, "Cancel", "Ok");
+							var alert = new UIAlertView ("username/password is incorrect.", "Please try again!", null, "Cancel", "Ok");
 							alert.Show ();
 							passwordTxtField.Text = "";
 						}
