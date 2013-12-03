@@ -34,7 +34,7 @@ namespace SeniorProject
 			//test Login
 			var user = new RegisterModel()
 			{
-				Name = "Gabriel",
+				Name = "test",
 				Password = "123456"
 			};
 
