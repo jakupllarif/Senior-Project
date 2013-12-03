@@ -71,8 +71,8 @@ namespace SeniorProject
 		protected void UserLogin(){
 			if (usernameTxtField.Text == "" || passwordTxtField.Text == "")
 			{
-				var message = string.Format("Please enter Username/Password.");
-				var alert = new UIAlertView("Empty input!", message, null, "Ok");
+				var message = string.Format("Please enter Username/Password");
+				var alert = new UIAlertView("Error", message, null, "Cancel", "Ok");
 				alert.Show();
 			} else {
 				var has = _users.Any (s => s.Name == usernameTxtField.Text.ToString ());
@@ -86,16 +86,16 @@ namespace SeniorProject
 					} else {
 						Times++;
 						if (Times == 4) {
-							var alert1 = new UIAlertView ("Account locked!", "Send email to reset the password!", null, "Cancel", "Reset");
+							var alert1 = new UIAlertView ("Account locked!", "Please reset your password!", null, "Cancel", "Reset");
 							alert1.Show ();
 						} else {
-							var alert = new UIAlertView ("Username/Password is incorrect!", "Please, try again!", null, "Ok");
+							var alert = new UIAlertView ("username/password is incorrect.", "Please try again!", null, "Cancel", "Ok");
 							alert.Show ();
 							passwordTxtField.Text = "";
 						}
 					}
 				} else {
-					var alert = new UIAlertView("User does not exist!", "Create a new account?", null, "Cancel", "Create");
+					var alert = new UIAlertView("User Doesn't exist", "You need to create user first", null, "Cancel", "Ok");
 					alert.Show();
 					/* -- alert view call back -- */
 					alert.Clicked += (sender, e) => {

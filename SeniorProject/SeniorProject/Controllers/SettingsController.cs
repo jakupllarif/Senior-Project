@@ -52,39 +52,15 @@ namespace SeniorProject
 							_settingsModel.OverSpeeding = _settingsDialog.NotifyOverspeeding.Value;
 							_settingsModel.DrunkDriving = _settingsDialog.BlockDrunkDriving.Value;
 							_settingsModel.CallForHelp = _settingsDialog.EmergencyHelp.Value;
-							var alert = new UIAlertView("", "Save Succeed!", null, "OK");
+							var alert = new UIAlertView("", "Save Succeed!", null, "", "OK");
 							alert.Show();
 						})
 				},
 				new Section ("Privacy"){
-					new StringElement("Sign Out", () => { 
-						var alert = new UIAlertView("","Are you sure you want to sign out?" , null,"No", "Yes");
-						alert.Show();
-						alert.Clicked += (sender, e) => {
-							if (e.ButtonIndex == 1) {
-								var loginController = new LoginController();
-								NavigationController.PushViewController(loginController, true);
-								ReleaseViewController();
-							}
-						}; 
-					})
+					new StringElement("Sign Out", () => { new UIAlertView("","Are you sure you want to sign out?"
+						                                                      , null,"No", "Yes").Show(); })
 				}
 			};
-		}
-
-		protected void ReleaseViewController() {
-			if (this.NavigationController != null) {
-				var controllers = this.NavigationController.ViewControllers;
-				var newcontrollers = new UIViewController[controllers.Length - 1];
-				int index = 0;
-				foreach (var item in controllers) {
-					if (item != this) {
-						newcontrollers [index] = item;
-						index++;
-					}
-				}
-				this.NavigationController.ViewControllers = newcontrollers;
-			}
 		}
 
 	}
