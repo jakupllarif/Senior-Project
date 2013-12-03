@@ -27,7 +27,7 @@ namespace SeniorProject
 			_mainTab = new MainController (_message);
 			//_speedTab = new SpeedController ();
 			_speedTab = new CurrentSpeedController ();
-			_settingsTab = new SettingsController ();
+			_settingsTab = new SettingsController (this);
 
 			var mainTab = new UINavigationController (_mainTab) ;
 			var speedTab = new UINavigationController (_speedTab) { Title = "Speed"};

@@ -12,15 +12,15 @@ namespace SeniorProject
 		SettingsDialogModel _settingsDialog;
 		SettingsModel _settingsModel;
 
-		public SettingsController () : base (UITableViewStyle.Grouped, null)
+		public SettingsController (MainViewTabBarController model) : base (UITableViewStyle.Grouped, null)
 		{
 			this.Title = "Settings";
 			_settingsDialog = new SettingsDialogModel ();
 			_settingsModel = new SettingsModel ();
-			Initialize ();
+			Initialize (model);
 		}
 
-		protected void Initialize() {
+		protected void Initialize(MainViewTabBarController model) {
 
 			Root = new RootElement ("Settings") {
 //				new Section () {
@@ -62,6 +62,8 @@ namespace SeniorProject
 						alert.Show();
 						alert.Clicked += (sender, e) => {
 							if(e.ButtonIndex == 1) {
+								model.ViewControllers = new UIViewController[0];
+								model.TabBar.Hidden = true;
 								var loginController = new LoginController();
 								NavigationController.PushViewController(loginController, true);
 							}
