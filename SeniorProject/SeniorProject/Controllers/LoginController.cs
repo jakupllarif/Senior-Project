@@ -97,9 +97,14 @@ namespace SeniorProject
 				} else {
 					var alert = new UIAlertView("User Doesn't exist", "You need to create user first", null, "Cancel", "Ok");
 					alert.Show();
-					if (_registerController == null)
-						_registerController = new RegisterController();
-					NavigationController.PushViewController(_registerController, true);
+					/* -- alert view call back -- */
+					alert.Clicked += (sender, e) => {
+						if (e.ButtonIndex == 1) {
+							if (_registerController == null)
+								_registerController = new RegisterController();
+							NavigationController.PushViewController(_registerController, true);
+						}
+					};
 				}
 			}       
 		}
