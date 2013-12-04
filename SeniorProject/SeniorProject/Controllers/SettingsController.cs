@@ -63,11 +63,11 @@ namespace SeniorProject
 						alert.Clicked += (sender, e) => {
 							if(e.ButtonIndex == 1) {
 								//it works, but I do NOT know if all the views are released or there are still there.
-								var count = model.NavigationController.ViewControllers.Length;
+								//var count = model.NavigationController.ViewControllers.Length;
 								model.ViewControllers = new UIViewController[0];
 								model.TabBar.Hidden = true;
 								NavigationController.PopToRootViewController(true);
-								var count1 = model.NavigationController.ViewControllers.Length;
+								//var count1 = model.NavigationController.ViewControllers.Length;
 								var loginController = new LoginController();
 								NavigationController.PushViewController(loginController, true);
 							}
