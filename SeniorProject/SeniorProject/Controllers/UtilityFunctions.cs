@@ -5,7 +5,7 @@ using MonoTouch.UIKit;
 
 namespace SeniorProject
 {
-	public partial class UtilityFunctions
+	public class UtilityFunctions
 	{
 		public UtilityFunctions ()
 		{
