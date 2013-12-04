@@ -25,6 +25,22 @@ namespace SeniorProject
 			
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
+
+		public void emergencyNotification(){
+
+		}
+
+		public void speedTrack(){
+
+		}
+
+		public void smsBlocking(){
+
+		}
+
+		public void drunkDriving(){
+
+		}
 	}
 }
 
