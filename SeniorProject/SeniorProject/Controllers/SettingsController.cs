@@ -70,6 +70,7 @@ namespace SeniorProject
 								//var count1 = model.NavigationController.ViewControllers.Length;
 								var loginController = new LoginController();
 								NavigationController.PushViewController(loginController, true);
+
 							}
 						}; 
 					})

@@ -5,9 +5,9 @@ using MonoTouch.UIKit;
 
 namespace SeniorProject
 {
-	public partial class UtilityFunctions : UIViewController
+	public partial class UtilityFunctions
 	{
-		public UtilityFunctions () : base ("UtilityFunctions", null)
+		public UtilityFunctions ()
 		{
 		}
 
