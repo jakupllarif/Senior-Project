@@ -11,14 +11,36 @@ namespace SeniorProject
 	{
 		public List<RegisterModel> _data;
 		public List<DataUploadModel> _utility;
+		RegisterModel testAccount;
+		DataUploadModel testAccount_1;
 
 		public UtilityFunctions ()
 		{
+			testAccount = new RegisterModel (){
+				ID = 1,
+				Name = "Test",
+				Birthday  = new DateTime(),
+				LicenseNumber = "294872645",
+				Address = "5151 park ave, fairfield CT",
+				IssueState = "CT",
+				ExpireDate = new DateTime(),
+				Password = "123456",
+				BloodGroup = "A"
+			};
+			testAccount_1 = new DataUploadModel () {
+				OverSpeed = true,
+				CurrentSpeed = 78.8,
+				DrunkDrive = false,
+				DrunkLevel = "not drink",
+				TextReceived = 3
+			};
 			_data = new List<RegisterModel> ();
 			_utility = new List<DataUploadModel> ();
 		}
 
 		public void emergencyNotification(){
+
+			_data.Add (testAccount);
 
 		}
 
