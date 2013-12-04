@@ -52,7 +52,7 @@ namespace SeniorProject
 							_settingsModel.OverSpeeding = _settingsDialog.NotifyOverspeeding.Value;
 							_settingsModel.DrunkDriving = _settingsDialog.BlockDrunkDriving.Value;
 							_settingsModel.CallForHelp = _settingsDialog.EmergencyHelp.Value;
-							var alert = new UIAlertView("", "Save Succeed!", null, "", "OK");
+							var alert = new UIAlertView("", "Save Succeed!", null, "OK");
 							alert.Show();
 						})
 				},
@@ -62,8 +62,12 @@ namespace SeniorProject
 						alert.Show();
 						alert.Clicked += (sender, e) => {
 							if(e.ButtonIndex == 1) {
+								//it works, but I do NOT know if all the views are released or there are still there.
+								var count = model.NavigationController.ViewControllers.Length;
 								model.ViewControllers = new UIViewController[0];
 								model.TabBar.Hidden = true;
+								NavigationController.PopToRootViewController(true);
+								var count1 = model.NavigationController.ViewControllers.Length;
 								var loginController = new LoginController();
 								NavigationController.PushViewController(loginController, true);
 							}
