@@ -130,6 +130,10 @@
       <DependentUpon>MapController.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\DataUploadModel.cs" />
+    <Compile Include="Controllers\UtilityFunctions.cs" />
+    <Compile Include="Controllers\UtilityFunctions.designer.cs">
+      <DependentUpon>UtilityFunctions.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
@@ -138,6 +142,7 @@
     <InterfaceDefinition Include="Controllers\LoginController.xib" />
     <InterfaceDefinition Include="Controllers\CurrentSpeedController.xib" />
     <InterfaceDefinition Include="Controllers\MapController.xib" />
+    <InterfaceDefinition Include="Controllers\UtilityFunctions.xib" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="googlemapsios">
