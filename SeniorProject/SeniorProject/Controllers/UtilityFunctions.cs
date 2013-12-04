@@ -7,7 +7,7 @@ using SeniorProject.Models;
 
 namespace SeniorProject
 {
-	public static class UtilityFunctions
+	public class UtilityFunctions
 	{
 		public List<RegisterModel> _data;
 		public List<DataUploadModel> _utility;
