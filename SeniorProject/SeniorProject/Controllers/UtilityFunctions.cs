@@ -44,7 +44,7 @@ namespace SeniorProject
 		public void emergencyNotification(string username){
 			_data.Add (testAccount);
 			_utility.Add (testAccount_1);
-			var user = _data.Select (x => {x.Name = username; return x;});
+			var user = _data.Select (x => {x.Name = username; return x;}).FirstOrDefault();
 			var active = _utility.Any (s => s.UserName == username && s.EmergencyHelp == true);
 			if (active) {
 				//send email/text message or upload object to cloud and send email
