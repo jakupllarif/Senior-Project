@@ -58,6 +58,7 @@ namespace SeniorProject
 
 		//can use loop in the CurrentSpeedController.cs keep calling this method
 		public void smsBlocking(string username){
+			//when data connection project built, can be a method inside that project, so here just need to call a method get the object
 			var user = _data.Select (x => {x.Name = username; return x;}).FirstOrDefault();
 			if (user != null) {
 				var active = _utility.Any (s => s.UserName == user.Name && s.TextBlocking == true);
