@@ -35,16 +35,17 @@ namespace SeniorProject
 				DrunkDrive = false,
 				DrunkLevel = "not drink",
 				TextReceived = 3,
-				EmergencyHelp = true
+				EmergencyHelp = true,
+				TextBlocking = true
 			};
 			_data = new List<RegisterModel> ();
 			_utility = new List<DataUploadModel> ();
+			_data.Add (testAccount);
+			_utility.Add (testAccount_1);
 		}
 
 		public void emergencyNotification(string username){
-			_data.Add (testAccount);
-			_utility.Add (testAccount_1);
-			var user = _data.Select (x => {x.Name = username; return x;}).FirstOrDefault();
+			var user = _data.Select (x => {x.Name = username; return x;}).FirstOrDefault();//get existing user model
 			var active = _utility.Any (s => s.UserName == username && s.EmergencyHelp == true);
 			if (active) {
 				//send email/text message or upload object to cloud and send email
@@ -55,8 +56,16 @@ namespace SeniorProject
 
 		}
 
-		public void smsBlocking(){
-
+		//can use loop in the CurrentSpeedController.cs keep calling this method
+		public void smsBlocking(string username){
+			var user = _data.Select (x => {x.Name = username; return x;}).FirstOrDefault();
+			if (user != null) {
+				var active = _utility.Any (s => s.UserName == user.Name && s.TextBlocking == true);
+				if (active) {
+					var alert = new UIAlertView ("Texting while driving is dangerous", "You are driving now, text block", null, "OK");
+					alert.Show ();
+				}
+			}
 		}
 
 		public void drunkDriving(){

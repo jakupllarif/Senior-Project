@@ -11,6 +11,7 @@ namespace SeniorProject
 		public string DrunkLevel { get; set; }
 		public int TextReceived { get; set; }
 		public bool EmergencyHelp { get; set; }
+		public bool TextBlocking { get; set; }
 	}
 }
 
