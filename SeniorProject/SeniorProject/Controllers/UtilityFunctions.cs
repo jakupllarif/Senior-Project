@@ -61,6 +61,7 @@ namespace SeniorProject
 			//when data connection project built, can be a method inside that project, so here just need to call a method get the object
 			var user = _data.Select (x => {x.Name = username; return x;}).FirstOrDefault();
 			if (user != null) {
+				//when data connection project built, can be a method inside that project, so here just need to call a method get the object
 				var active = _utility.Any (s => s.UserName == user.Name && s.TextBlocking == true);
 				if (active) {
 					var alert = new UIAlertView ("Texting while driving is dangerous", "You are driving now, text block", null, "OK");
