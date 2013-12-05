@@ -4,7 +4,7 @@ namespace SeniorProject
 {
 	public class DataUploadModel
 	{
-		public string UserName { get; set; }
+		public string LicenseNumber { get; set; }
 		public bool OverSpeed { get; set; }
 		public double CurrentSpeed { get; set; }
 		public bool DrunkDrive { get; set; }

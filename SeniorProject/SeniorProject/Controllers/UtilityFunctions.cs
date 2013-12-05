@@ -29,7 +29,7 @@ namespace SeniorProject
 				BloodGroup = "A"
 			};
 			testAccount_1 = new DataUploadModel () {
-				UserName = "Test",
+				LicenseNumber = "294872645",
 				OverSpeed = true,
 				CurrentSpeed = 78.8,
 				DrunkDrive = false,
@@ -46,9 +46,11 @@ namespace SeniorProject
 
 		public void emergencyNotification(string username){
 			var user = _data.Select (x => {x.Name = username; return x;}).FirstOrDefault();//get existing user model
-			var active = _utility.Any (s => s.UserName == username && s.EmergencyHelp == true);
-			if (active) {
-				//send email/text message or upload object to cloud and send email
+			if (user != null) {
+				var active = _utility.Any (s => s.LicenseNumber == user.LicenseNumber && s.EmergencyHelp == true);
+				if (active) {
+					//send email/text message or upload object to cloud and send email
+				}
 			}
 		}
 
@@ -62,7 +64,7 @@ namespace SeniorProject
 			var user = _data.Select (x => {x.Name = username; return x;}).FirstOrDefault();
 			if (user != null) {
 				//when data connection project built, can be a method inside that project, so here just need to call a method get the object
-				var active = _utility.Any (s => s.UserName == user.Name && s.TextBlocking == true);
+				var active = _utility.Any (s => s.LicenseNumber == user.LicenseNumber && s.TextBlocking == true);
 				if (active) {
 					var alert = new UIAlertView ("Texting while driving is dangerous", "You are driving now, text block", null, "OK");
 					alert.Show ();
