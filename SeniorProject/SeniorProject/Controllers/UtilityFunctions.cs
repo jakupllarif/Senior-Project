@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.Collections.Generic;
+using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using SeniorProject.Models;
@@ -28,20 +29,26 @@ namespace SeniorProject
 				BloodGroup = "A"
 			};
 			testAccount_1 = new DataUploadModel () {
+				UserName = "Test",
 				OverSpeed = true,
 				CurrentSpeed = 78.8,
 				DrunkDrive = false,
 				DrunkLevel = "not drink",
-				TextReceived = 3
+				TextReceived = 3,
+				EmergencyHelp = true
 			};
 			_data = new List<RegisterModel> ();
 			_utility = new List<DataUploadModel> ();
 		}
 
-		public void emergencyNotification(){
-
+		public void emergencyNotification(string username){
 			_data.Add (testAccount);
-
+			_utility.Add (testAccount_1);
+			var user = _data.Select (x => {x.Name = username; return x;});
+			var active = _utility.Any (s => s.UserName == username && s.EmergencyHelp == true);
+			if (active) {
+				//send email/text message or upload object to cloud and send email
+			}
 		}
 
 		public void speedTrack(){
