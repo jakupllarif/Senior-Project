@@ -40,8 +40,9 @@ namespace SeniorProject
 
 			//update location based on the specified metric system
 			_iPhoneLocationManager.LocationsUpdated += (object sender, CLLocationsUpdatedEventArgs e) => {
-				UpdateLocation (speedSystem, e.Locations [e.Locations.Length - 1]);
+				UpdateLocation (speedSystem, e.Locations [e.Locations.Length - 1].Speed);
 			};
+
 
 			if (CLLocationManager.LocationServicesEnabled)
 				_iPhoneLocationManager.StartUpdatingLocation ();
@@ -58,11 +59,27 @@ namespace SeniorProject
 
 		bool alertOn = false;
 
-		protected void UpdateLocation(int speedSystem, CLLocation newLocation)
+		protected void UpdateLocation(int speedSystem, double speedNumber)
 		{
-			double speedNumber = newLocation.Speed <= 0 ? 0 : newLocation.Speed;
-			//var alert2 = new UIAlertView ("Texting while driving is dangerous", "You are driving now, text block", null, "OK");
-			var alert = new UIAlertView ("The phone is locked for your safety.", "Please stop the car to use your phone!", null, "OK");
+			//double speedNumber = newLocation.Speed <= 0 ? 0 : newLocation.Speed;
+			var alert = new UIAlertView ("You cannot use the phone while driving!", "Please stop the car to use your phone!", null, "OK");
+
+			//Show the alert if the car is moving
+			if (speedNumber > 0 && alertOn == false) {
+				alert.Show ();
+				alertOn = true;
+			}
+
+			//Hide the alert if the car stops
+			if (speedNumber == 0 && alertOn == true)
+				alertOn = false;
+			else {
+				alert.Clicked += (sender, e) => {
+					if (e.ButtonIndex == 0) {
+						alertOn = false;
+					}
+				};
+			}
 
 			updateProgressBars (speedNumber);
 
@@ -76,8 +93,6 @@ namespace SeniorProject
 
 			//CurrentSpeed.Text = speedNumber.ToString();
 			CurrentSpeed.Text = String.Format ("{0:f2}", speedNumber);
-
-
 		}
 
 		//update progress bars according to the current speed
