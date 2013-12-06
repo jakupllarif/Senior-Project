@@ -60,6 +60,11 @@ namespace SeniorProject
 		{
 			double speedNumber = newLocation.Speed <= 0 ? 0 : newLocation.Speed;
 
+			while (speedNumber > 0) {
+				var alert = new UIAlertView ("Texting while driving is dangerous", "You are driving now, text block", null, "OK");
+				alert.Show ();
+			}
+
 			updateProgressBars (speedNumber);
 
 			//change between km/h and m/h
