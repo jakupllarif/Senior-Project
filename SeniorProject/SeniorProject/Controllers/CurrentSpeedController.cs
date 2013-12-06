@@ -56,14 +56,13 @@ namespace SeniorProject
 
 		}
 
+		bool alertOn = false;
+
 		protected void UpdateLocation(int speedSystem, CLLocation newLocation)
 		{
 			double speedNumber = newLocation.Speed <= 0 ? 0 : newLocation.Speed;
-
-			if (speedNumber > 0) {
-				var alert = new UIAlertView ("Texting while driving is dangerous", "You are driving now, text block", null, "OK");
-				alert.Show ();
-			}
+			//var alert2 = new UIAlertView ("Texting while driving is dangerous", "You are driving now, text block", null, "OK");
+			var alert = new UIAlertView ("The phone is locked for your safety.", "Please stop the car to use your phone!", null, "OK");
 
 			updateProgressBars (speedNumber);
 
@@ -77,6 +76,8 @@ namespace SeniorProject
 
 			//CurrentSpeed.Text = speedNumber.ToString();
 			CurrentSpeed.Text = String.Format ("{0:f2}", speedNumber);
+
+
 		}
 
 		//update progress bars according to the current speed
