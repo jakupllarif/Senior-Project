@@ -8,8 +8,10 @@ using SeniorProject.Models;
 
 namespace SeniorProject
 {
-	public class UtilityFunctions
+	public static class UtilityFunctions
 	{
+		public static bool alertOn = false;
+		/* The verson with user selet
 		public List<RegisterModel> _data;
 		public List<DataUploadModel> _utility;
 		RegisterModel testAccount;
@@ -44,25 +46,29 @@ namespace SeniorProject
 			_utility.Add (testAccount_1);
 		}
 
-		public void emergencyNotification(string username){
-			var user = _data.Select (x => {x.Name = username; return x;}).FirstOrDefault();//get existing user model
-			if (user != null) {
-				var active = _utility.Any (s => s.LicenseNumber == user.LicenseNumber && s.EmergencyHelp == true);
-				if (active) {
-					//send email/text message or upload object to cloud and send email
-				}
-			}
+*/
+
+		public static void emergencyNotification(string username){
+//			var user = _data.Select (x => {x.Name = username; return x;}).FirstOrDefault();//get existing user model
+//			if (user != null) {
+//				var active = _utility.Any (s => s.LicenseNumber == user.LicenseNumber && s.EmergencyHelp == true);
+//				if (active) {
+//					//send email/text message or upload object to cloud and send email
+//				}
+//			}
 		}
 
-		public void speedTrack(){
+		public static void speedTrack(){
 
 		}
 
 		//can use loop in the CurrentSpeedController.cs keep calling this method
 		//later maybe need to change pass a model instead of just a string
-		public void smsBlocking(string username){
+		//should pass string username
+		public static void smsBlocking(double currentSpeed){
 			//when data connection project built, can be a method inside that project, so here just need to call a method get the object
-			var user = _data.Select (x => {x.Name = username; return x;}).FirstOrDefault();
+			#region later use for test user & active
+			/*var user = _data.Select (x => {x.Name = username; return x;}).FirstOrDefault();
 			if (user != null) {
 				//when data connection project built, can be a method inside that project, so here just need to call a method get the object
 				var active = _utility.Any (s => s.LicenseNumber == user.LicenseNumber && s.TextBlocking == true);
@@ -70,10 +76,28 @@ namespace SeniorProject
 					var alert = new UIAlertView ("Texting while driving is dangerous", "You are driving now, text block", null, "OK");
 					alert.Show ();
 				}
+			}*/
+			#endregion
+			var alert = new UIAlertView ("You cannot use the phone while driving!", "Please stop the car to use your phone!", null, "OK");
+			//Show the alert if the car is moving
+			if (currentSpeed > 0 && alertOn == false) {
+				alert.Show ();
+				alertOn = true;
+			}
+
+			//Hide the alert if the car stops
+			if (currentSpeed == 0 && alertOn == true)
+				alertOn = false;
+			else {
+				alert.Clicked += (sender, e) => {
+					if (e.ButtonIndex == 0) {
+						alertOn = false;
+					}
+				};
 			}
 		}
 
-		public void drunkDriving(){
+		public static void drunkDriving(){
 
 		}
 	}

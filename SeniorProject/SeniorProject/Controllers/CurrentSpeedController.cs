@@ -11,6 +11,7 @@ namespace SeniorProject
 	{
 		private CLLocationManager _iPhoneLocationManager;
 		private SpeedController _speedController;
+		//bool alertOn = false;
 
 		public CurrentSpeedController () : base ("CurrentSpeedController", null)
 		{
@@ -57,13 +58,14 @@ namespace SeniorProject
 
 		}
 
-		bool alertOn = false;
-
 		protected void UpdateLocation(int speedSystem, double speedNumber)
 		{
 			//double speedNumber = newLocation.Speed <= 0 ? 0 : newLocation.Speed;
-			var alert = new UIAlertView ("You cannot use the phone while driving!", "Please stop the car to use your phone!", null, "OK");
+			speedNumber = speedNumber <= 0 ? 0 : speedNumber;
+			//var alert = new UIAlertView ("You cannot use the phone while driving!", "Please stop the car to use your phone!", null, "OK");
 
+			#region replaced in UtilityFunctions.cs
+			/*
 			//Show the alert if the car is moving
 			if (speedNumber > 0 && alertOn == false) {
 				alert.Show ();
@@ -80,6 +82,10 @@ namespace SeniorProject
 					}
 				};
 			}
+			*/
+			#endregion
+
+			UtilityFunctions.smsBlocking(speedNumber);
 
 			updateProgressBars (speedNumber);
 
