@@ -58,7 +58,7 @@ namespace SeniorProject
 //			}
 		}
 
-		public static void speedTrack(){
+		public static void speedTrack(double currentSpeed, double speedLimit){
 
 		}
 
