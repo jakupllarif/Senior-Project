@@ -1,5 +1,5 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina4.7.0" />
   <MonoDevelop.Ide.Workbench ActiveDocument="SeniorProject/Controllers/UtilityFunctions.cs">
     <Files>
       <File FileName="SeniorProject/Controllers/RegisterController.cs" Line="1" Column="1" />
@@ -7,11 +7,12 @@
       <File FileName="SeniorProject/Models/DataUploadModel.cs" Line="1" Column="1" />
       <File FileName="SeniorProject/Controllers/MainViewTabBarController.cs" Line="1" Column="1" />
       <File FileName="SeniorProject/Controllers/MapController.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/Controllers/SpeedController.cs" Line="1" Column="1" />
+      <File FileName="SeniorProject/Controllers/SpeedController.cs" Line="75" Column="17" />
       <File FileName="SeniorProject/Controllers/MainController.cs" Line="1" Column="1" />
       <File FileName="SeniorProject/Controllers/LoginController.cs" Line="1" Column="1" />
       <File FileName="SeniorProject/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="SeniorProject/Controllers/UtilityFunctions.cs" Line="44" Column="33" />
+      <File FileName="SeniorProject/Controllers/UtilityFunctions.cs" Line="67" Column="52" />
+      <File FileName="SeniorProject/Controllers/CurrentSpeedController.cs" Line="89" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -86,7 +86,7 @@ namespace SeniorProject
 			#endregion
 
 			UtilityFunctions.smsBlocking(speedNumber);
-			UtilityFunctions.speedTrack (speedNumber, 50);
+			UtilityFunctions.speedTrack (speedNumber);
 
 			updateProgressBars (speedNumber);
 

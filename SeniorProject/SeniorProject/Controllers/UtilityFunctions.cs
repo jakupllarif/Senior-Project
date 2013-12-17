@@ -10,7 +10,8 @@ namespace SeniorProject
 {
 	public static class UtilityFunctions
 	{
-		public static bool alertOn = false;
+		public static bool smsAlert = false;
+		public static bool speedAlert = false;
 		/* The verson with user selet
 		public List<RegisterModel> _data;
 		public List<DataUploadModel> _utility;
@@ -58,17 +59,24 @@ namespace SeniorProject
 //			}
 		}
 
-		public static void speedTrack(double currentSpeed, double speedLimit){
+		public static void speedTrack(double currentSpeed){
+			double speedLimit = 30.0;
 
-			var alert = new UIAlertView ("Overspeeding", "Slow down for your safety.", null, null);
+			var alert = new UIAlertView ("Overspeeding", "Slow down for your safety.", null, "OK");
 
 			//if the driver is driving over the allowed speed limit, display warning message.
-			if (currentSpeed > (speedLimit + 10)) {
+			if (currentSpeed > speedLimit && speedAlert == false) {
 				alert.Show ();
-			} else {
-				alert.Hidden;
+				speedAlert = true;
+			} 
+			else if (currentSpeed <= speedLimit && speedAlert == true) {
+				speedAlert = false;
 			}
 
+			alert.Clicked += (sender, e) => {
+				if (e.ButtonIndex == 0)
+					speedAlert = false;
+			};
 		}
 
 		//can use loop in the CurrentSpeedController.cs keep calling this method
@@ -88,22 +96,19 @@ namespace SeniorProject
 			}*/
 			#endregion
 			var alert = new UIAlertView ("You cannot use the phone while driving!", "Please stop the car to use your phone!", null, "OK");
-			//Show the alert if the car is moving
-			if (currentSpeed > 0 && alertOn == false) {
-				alert.Show ();
-				alertOn = true;
-			}
 
-			//Hide the alert if the car stops
-			if (currentSpeed == 0 && alertOn == true)
-				alertOn = false;
-			else {
-				alert.Clicked += (sender, e) => {
-					if (e.ButtonIndex == 0) {
-						alertOn = false;
-					}
-				};
+			//Show the alert if the car is moving. Hide the alert if the car stops
+			if (currentSpeed > 0 && smsAlert == false) {
+				alert.Show ();
+				smsAlert = true;
 			}
+			else if (currentSpeed == 0 && smsAlert == true)
+				smsAlert = false;
+
+			alert.Clicked += (sender, e) => {
+				if (e.ButtonIndex == 0) 
+					smsAlert = false;
+			};
 		}
 
 		public static void drunkDriving(){
