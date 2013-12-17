@@ -75,7 +75,8 @@ namespace SeniorProject
 			alert.Clicked += (sender, e) => {
 				if (e.ButtonIndex == 0)
 					speedAlert = false;
-			};
+				};
+			}
 		}
 
 		//can use loop in the CurrentSpeedController.cs keep calling this method
