@@ -131,6 +131,7 @@
     </Compile>
     <Compile Include="Models\DataUploadModel.cs" />
     <Compile Include="Controllers\UtilityFunctions.cs" />
+    <Compile Include="Models\DrunkLevel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
