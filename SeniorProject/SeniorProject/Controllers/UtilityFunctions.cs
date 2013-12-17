@@ -58,7 +58,16 @@ namespace SeniorProject
 //			}
 		}
 
-		public static void speedTrack(){
+		public static void speedTrack(double currentSpeed, double speedLimit){
+
+			var alert = new UIAlertView ("Overspeeding", "Slow down for your safety.", null, null);
+
+			//if the driver is driving over the allowed speed limit, display warning message.
+			if (currentSpeed > (speedLimit + 10)) {
+				alert.Show ();
+			} else {
+				alert.Hidden;
+			}
 
 		}
 
