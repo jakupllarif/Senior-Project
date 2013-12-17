@@ -71,7 +71,6 @@ namespace SeniorProject
 			} 
 			else if (currentSpeed <= speedLimit && speedAlert == true) {
 				speedAlert = false;
-			}
 
 			alert.Clicked += (sender, e) => {
 				if (e.ButtonIndex == 0)
@@ -111,8 +110,25 @@ namespace SeniorProject
 			};
 		}
 
-		public static void drunkDriving(){
-
+		public static void drunkDriving(DrunkLevel currentDrunkLevel){
+			var alert = new UIAlertView();
+			switch (currentDrunkLevel) {
+			case DrunkLevel.Level1:
+				alert = new UIAlertView ("Don't drive after drunk!", "You current drink level is : 1\nPlease be careful while driving!", null, "OK");
+				alert.Show ();
+				break;
+			case DrunkLevel.Level2:
+				alert = new UIAlertView ("Don't drive after drunk!", "You current drink level is : 2\nPlease be careful while driving!", null, "OK");
+				alert.Show ();
+				break;
+			case DrunkLevel.Level3:
+			case DrunkLevel.Level4:
+				alert = new UIAlertView ("Don't drive after drunk!", "You current drink level is over 3\nPlease find someone else to drive!", null, "OK");
+				alert.Show ();
+				break;
+			default:
+				break;
+			}
 		}
 	}
 }

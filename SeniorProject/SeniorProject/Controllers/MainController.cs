@@ -33,6 +33,13 @@ namespace SeniorProject
 			var source = new MockData (new SettingsModel ());
 			this.InformationTable.Source = source;
 			// Perform any additional setup after loading the view, typically from a nib.
+			#region drunkDriving utility test
+			//UtilityFunctions.drunkDriving (DrunkLevel.None);
+			//UtilityFunctions.drunkDriving (DrunkLevel.Level1);
+			//UtilityFunctions.drunkDriving (DrunkLevel.Level2);
+			UtilityFunctions.drunkDriving (DrunkLevel.Level3);
+			//UtilityFunctions.drunkDriving (DrunkLevel.Level4);
+			#endregion
 		}
 	}
 }
